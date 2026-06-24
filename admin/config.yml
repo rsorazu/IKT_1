@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
-  # repo: rsorazu/IKT_1    ← Aldatu zure GitHub erabiltzailea eta repositorioa
   branch: main
 
+site_url: https://rsorazu.github.io/IKT_1
 media_folder: images
 public_folder: /images
 
