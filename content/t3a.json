@@ -3,12 +3,26 @@
   "title": "Baldintzak eta Aldagaiak",
   "eyebrow": "T3a · Teoria",
   "description": "Programak nola hartzen ditu erabakiak",
-  "chips": ["if / else", "Aldagaiak", "Erabakiak"],
+  "chips": [
+    "if / else",
+    "Aldagaiak",
+    "Erabakiak"
+  ],
   "accent": "#8B7355",
   "tabs": [
-    { "id": "baldintzak", "label": "Baldintzak" },
-    { "id": "aldagaiak",  "label": "Aldagaiak" },
-    { "id": "exercicis",  "label": "Ariketak", "heading": "Ariketak" }
+    {
+      "id": "baldintzak",
+      "label": "Baldintzak"
+    },
+    {
+      "id": "aldagaiak",
+      "label": "Aldagaiak"
+    },
+    {
+      "id": "exercicis",
+      "label": "Ariketak",
+      "heading": "Ariketak"
+    }
   ],
   "baldintzak_heading": "Baldintzak: programak erabakiak hartzen ditu",
   "baldintzak_intro": "Eguneroko bizitzan etengabe hartzen ditugu erabakiak baldintzen arabera. Programek gauza bera egiten dute — baldintza bat ebaluatu eta emaitzaren arabera ekintza bat edo beste bat exekutatu.",
@@ -17,26 +31,83 @@
   "analogy_yes": "Aterkia hartu",
   "analogy_no": "Aterkia utzi etxean",
   "analogy_code_title": "💻 Programak horrela idazten da:",
-  "baldintzak_photo": { "description": "Arbela batean if/else diagrama bat marraztuta — ikasleek ulergarriago duten eskema bisual bat" },
+  "baldintzak_photo": {
+    "description": "Arbela batean if/else diagrama bat marraztuta — ikasleek ulergarriago duten eskema bisual bat",
+    "image": ""
+  },
   "aldagaiak_heading": "Aldagaiak: informazioa gordetzen",
   "aldagaiak_intro": "Aldagai bat izendatutako kutxa bat da, balio bat gordetzeko. Programa exekutatzen den bitartean balioa alda daiteke.",
   "variable_examples": [
-    { "name": "puntuazioa", "value": "42" },
-    { "name": "izena",      "value": "\"Ane\"" },
-    { "name": "tenperatura","value": "23.5" }
+    {
+      "name": "puntuazioa",
+      "value": "42"
+    },
+    {
+      "name": "izena",
+      "value": "\"Ane\""
+    },
+    {
+      "name": "tenperatura",
+      "value": "23.5"
+    }
   ],
   "aldagaiak_warning": "Akats ohikoena: aldagaiaren hasieraketa begizta barruan jartzea. Begiztan jartzen baduzu, iterazio bakoitzean berrezartzen da. Beti jarri begiztatik KANPO.",
-  "aldagaiak_photo": { "description": "Kutxa fisiko bat ikasgelako mahai gainean, 'aldagaia' idatzita — barruan paper bat balioa aldatzen duela erakusten" },
+  "aldagaiak_photo": {
+    "description": "Kutxa fisiko bat ikasgelako mahai gainean, 'aldagaia' idatzita — barruan paper bat balioa aldatzen duela erakusten",
+    "image": ""
+  },
   "block_match_pairs": [
-    { "situation": "Kanpoan euria egiten ari bada → aterkia hartu", "correct": "bada / bestela" },
-    { "situation": "Kolorea GORRIA, HORIA edo BERDEA den arabera ekintza desberdina", "correct": "bada / bestela bada / bestela" },
-    { "situation": "Puntuazioa 100 baino handiagoa bada → irabazi", "correct": "bada" },
-    { "situation": "Tenperatura 0 baino txikiagoa bada → izotza; berdina bada → ura; handiagoa bada → lurruna", "correct": "bada / bestela bada / bestela" }
+    {
+      "situation": "Kanpoan euria egiten ari bada → aterkia hartu",
+      "correct": "bada / bestela"
+    },
+    {
+      "situation": "Kolorea GORRIA, HORIA edo BERDEA den arabera ekintza desberdina",
+      "correct": "bada / bestela bada / bestela"
+    },
+    {
+      "situation": "Puntuazioa 100 baino handiagoa bada → irabazi",
+      "correct": "bada"
+    },
+    {
+      "situation": "Tenperatura 0 baino txikiagoa bada → izotza; berdina bada → ura; handiagoa bada → lurruna",
+      "correct": "bada / bestela bada / bestela"
+    }
   ],
   "quiz": [
-    { "question": "Baldintza batek zer egiten du programa batean?", "options": ["Programa azkarrago exekutatzen du", "Baldintza bat egia ala gezurra den arabera kode desberdina exekutatzen du", "Aldagaiak memorian gordetzen ditu", "Begizta bat sortzen du"], "correct": 1, "feedback": "Zuzena! Baldintzak (if/else) programari erabakiak hartzeko aukera ematen dio." },
-    { "question": "Aldagai baten hasieraketa non jarri behar da?", "options": ["Begizta barruan, hasieran", "Begizta barruan, bukaeran", "Begiztatik kanpo, programa hasi aurretik", "Edozein lekutan, berdin da"], "correct": 2, "feedback": "Zuzena! Hasieraketa beti begiztatik KANPO joan behar da. Begiztan jartzen baduzu, iterazio bakoitzean berrezartzen da." },
-    { "question": "Semaforoan, kolore-sentsoreak HORIA irakurtzen du. Zer egin behar du programak?", "options": ["Beti lehenengo baldintza exekutatu (GORRIA)", "Baldintza guztiak ebaluatu eta HORIA-ri dagokion kodea exekutatu", "Programa berrabiarazi", "Ezer ez egin — HORIA ez dago programatuta"], "correct": 1, "feedback": "Zuzena! if/else if/else katearekin, programak baldintzak ordena batean ebaluatzen ditu eta HORIA-ri dagokion adarrean exekutatzen du." }
+    {
+      "question": "Baldintza batek zer egiten du programa batean?",
+      "options": [
+        "Programa azkarrago exekutatzen du",
+        "Baldintza bat egia ala gezurra den arabera kode desberdina exekutatzen du",
+        "Aldagaiak memorian gordetzen ditu",
+        "Begizta bat sortzen du"
+      ],
+      "correct": 1,
+      "feedback": "Zuzena! Baldintzak (if/else) programari erabakiak hartzeko aukera ematen dio."
+    },
+    {
+      "question": "Aldagai baten hasieraketa non jarri behar da?",
+      "options": [
+        "Begizta barruan, hasieran",
+        "Begizta barruan, bukaeran",
+        "Begiztatik kanpo, programa hasi aurretik",
+        "Edozein lekutan, berdin da"
+      ],
+      "correct": 2,
+      "feedback": "Zuzena! Hasieraketa beti begiztatik KANPO joan behar da. Begiztan jartzen baduzu, iterazio bakoitzean berrezartzen da."
+    },
+    {
+      "question": "Semaforoan, kolore-sentsoreak HORIA irakurtzen du. Zer egin behar du programak?",
+      "options": [
+        "Beti lehenengo baldintza exekutatu (GORRIA)",
+        "Baldintza guztiak ebaluatu eta HORIA-ri dagokion kodea exekutatu",
+        "Programa berrabiarazi",
+        "Ezer ez egin — HORIA ez dago programatuta"
+      ],
+      "correct": 1,
+      "feedback": "Zuzena! if/else if/else katearekin, programak baldintzak ordena batean ebaluatzen ditu eta HORIA-ri dagokion adarrean exekutatzen du."
+    }
   ],
   "summary": {
     "heading": "T3a — Laburpena",
