@@ -1,0 +1,68 @@
+{
+  "id": "t2",
+  "title": "Sentsoreak eta Eragileak",
+  "eyebrow": "T2 · Teoria",
+  "description": "Hardwarearen sarrerak eta irteerak",
+  "chips": ["Sarrerak", "Irteerak", "SPIKE Prime"],
+  "accent": "#8B7355",
+  "tabs": [
+    { "id": "sarirte", "label": "Sarrerak eta Irteerak" },
+    { "id": "spike",   "label": "SPIKE Prime" },
+    { "id": "exercicis", "label": "Ariketak", "heading": "Ariketak" }
+  ],
+  "sensor_heading": "Sentsorea (Sarrera)",
+  "sensor_icon": "👁️",
+  "sensor_color": "#2E7DD1",
+  "sensor_description": "Ingurunetik informazioa jasotzen du eta sistemari bidaltzen dio. Sistema 'ikusten' edo 'sentitzen' uzten du.",
+  "sensor_examples": ["Termometro bat → tenperatura neurtu", "Mikrofonoa → soinua hauteman", "Kamera bat → argia hauteman", "Ukipen-pantaila → sakatzea hauteman"],
+  "sensor_photo": { "description": "SPIKE Prime-ko sentsore desberdinak mahai gainean (kolore, distantzia, indar)" },
+  "actuator_heading": "Eragilea (Irteera)",
+  "actuator_icon": "⚡",
+  "actuator_color": "#D94060",
+  "actuator_description": "Sistemaren aginduak munduan eragiten ditu. Sistema 'egiten' uzten du gauzak.",
+  "actuator_examples": ["Motorra → mugimendua sortu", "LED argia → argia piztu", "Bozgorailua → soinua ekoitzi", "Pantaila → testua erakutsi"],
+  "actuator_photo": { "description": "SPIKE Prime-ko motorrak eta hubeko LED argia piztuta" },
+  "real_examples": [
+    { "title": "🌡️ Termostatoa", "input": "Tenperatura-sentsorea", "output": "Berogailua (on/off)" },
+    { "title": "🚗 Auto modernoa", "input": "Radar, kamera, GPS", "output": "Balaztak, bolantea, motorra" },
+    { "title": "📱 Mugikorra", "input": "Ukipen-pantaila, mikro, kamera", "output": "Pantaila, bozgorailua, bibrazioa" },
+    { "title": "🏭 Lantegiko robota", "input": "Bisio artifiziala, indar-sentsorea", "output": "Beso mekanikoa, korrea" }
+  ],
+  "spike_photo_top": { "description": "SPIKE Prime kit osoa mahai gainean hedatuta — hub, motorrak, sentsoreak eta kableak ikusgai" },
+  "spike_components": [
+    { "type": "sensor", "icon": "🎨", "name": "Kolore-sentsorea", "description": "Azaleraren kolorea eta argiaren intentsitatea hautematen du. P1 eta P4 proiektuetan erabiliko duzu." },
+    { "type": "sensor", "icon": "📡", "name": "Distantzia-sentsorea", "description": "Soinu-uhinak igorriz objektuengandik distantzia neurtzen du. P2 eta P4 proiektuetan." },
+    { "type": "sensor", "icon": "👆", "name": "Indar-sentsorea", "description": "Sakatzeko indarra neurtzen du. Botoi gisa erabiltzen da maiz. P3 proiektuan." },
+    { "type": "actuator", "icon": "⚙️", "name": "Motor handia", "description": "Gurpilak eta besoak mugitzen ditu. P2 eta P4 proiektuetan." },
+    { "type": "actuator", "icon": "⚙️", "name": "Motor ertaina", "description": "Mugimendu zehatzagoak egiteko. P1-eko hesia eta P4-ko barrera." },
+    { "type": "both", "icon": "🧱", "name": "Hub-a", "description": "Sentsorea: botoiak eta azelerometroa. Eragilea: pantaila, LED argia eta bozgorailua." }
+  ],
+  "spike_photo_bottom": { "description": "Hub-a gertu — pantaila piztuta, ataketako konexioak ikusgai (A, B, C, D, E, F letrak)" },
+  "classify_items": [
+    { "label": "Kolore-sentsorea",     "correct": "sentsore" },
+    { "label": "Distantzia-sentsorea", "correct": "sentsore" },
+    { "label": "Indar-sentsorea",      "correct": "sentsore" },
+    { "label": "Hubeko botoia",        "correct": "sentsore" },
+    { "label": "Motorra",              "correct": "eragile" },
+    { "label": "LED argia",            "correct": "eragile" },
+    { "label": "Pantaila",             "correct": "eragile" },
+    { "label": "Bozgorailua",          "correct": "eragile" }
+  ],
+  "quiz": [
+    { "question": "Termometro batek zein funtzio betetzen du sistema batean?", "options": ["Eragilea — berotzeko agindua ematen du", "Sentsorea — tenperatura neurtzen du eta sisteman sartu", "Prozesadorea — erabakiak hartzen ditu", "Irteera — informazioa erakusten du"], "correct": 1, "feedback": "Zuzena! Termometro bat sentsorea da: ingurunetik informazioa jasotzen du eta sistemara bidaltzen du." },
+    { "question": "SPIKE Prime-ko hubaren LEDa zein da?", "options": ["Sentsorea — argia hautematen du", "Prozesadorea — erabakiak hartzen ditu", "Eragilea — argia ekoizten du aginduaren arabera", "Biak, sentsorea eta eragilea"], "correct": 2, "feedback": "Zuzena! LEDa eragilea da: sistemaren aginduak argia sortzeko edo itzaltzeko erabiltzen du." },
+    { "question": "SPIKE Prime-ko distantzia-sentsoreak nola neurtzen du distantzia?", "options": ["Kamera batekin irudiak hartuta", "Soinu-uhinak igorrriz eta hauek objektuetan errebotatu arte denbora neurtuta", "Magnetismoa neurtuta", "Argiak argazki bat hartuta"], "correct": 1, "feedback": "Zuzena! Distantzia-sentsorea ultrasonikoa da: soinu-uhinak igortzen ditu, oztopo batean errebotatu, eta itzuli diren arteko denbora neurtzen du." },
+    { "question": "Auto moderno batean, balazkak zein osagaiek dira?", "options": ["Sentsoreak — abiadura hautematen dute", "Eragileak — aginduei erantzunez mugimendua geldiarazten dute", "Prozesadoreak — erabakiak hartzen dituzte", "Sentsoreak eta eragileak biak"], "correct": 1, "feedback": "Zuzena! Balazkak eragileak dira — sistemaren aginduak ingurunean eragiten dituzte." }
+  ],
+  "summary": {
+    "heading": "T2 — Laburpena",
+    "intro": "Bloke honetan ikasitakoa:",
+    "points": [
+      "Sentsorea: ingurunetik informazioa jasotzen du (sarrera)",
+      "Eragilea: sistemaren aginduak munduan eragiten ditu (irteera)",
+      "SPIKE Prime-k 3 sentsore mota ditu: kolorea, distantzia eta indarra",
+      "Hub-ak biak ditu: botoiak (sentsoreak) eta pantaila/LED/bozgorailua (eragileak)"
+    ],
+    "next": "Hurrengo blokea: T3a — Baldintzak eta Aldagaiak"
+  }
+}

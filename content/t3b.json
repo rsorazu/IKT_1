@@ -1,0 +1,62 @@
+{
+  "id": "t3b",
+  "title": "Begiztak",
+  "eyebrow": "T3b · Teoria",
+  "description": "Ekintzak behin eta berriz errepikatu",
+  "chips": ["FOR begiztа", "WHILE begiztа", "Errepikapenak"],
+  "accent": "#8B7355",
+  "tabs": [
+    { "id": "zergatik",  "label": "Zergatik begiztak?" },
+    { "id": "for",       "label": "FOR begiztа" },
+    { "id": "while",     "label": "WHILE begiztа" },
+    { "id": "exercicis", "label": "Ariketak", "heading": "Ariketak" }
+  ],
+  "zergatik_heading": "Zergatik errepikatu koderik idatzi gabe?",
+  "zergatik_intro": "Imajinatu robot batek 10 aldiz aurrera joan behar duela. Horrela idatz zenezake...",
+  "zergatik_photo": { "description": "Robot bat zirkuitu bat egiten — argazki sekuentzia bat begiztaren kontzeptua irudikatzeko" },
+  "for_heading": "FOR begiztа: zenbat aldiz badakizunean",
+  "for_intro": "FOR begiztа erabiltzen da zehazki zenbat aldiz errepikatu nahi duzun badakizunean.",
+  "for_real_examples": ["Egin 10 flexio", "Irakurri 3 orrialde", "Eman 4 buelta pilara"],
+  "for_real_note": "Kopurua aldez aurretik ezagutzen duzu.",
+  "for_info": { "icon": "🔁", "color": "#7A4FC9", "title": "SPIKE-n non aurkitzen den", "text": "Kategoria: Kontrola (bloke anbarrak) → 'X aldiz errepikatu'. Zenbakia aldatzeko klik egin zenbakian eta idatzi." },
+  "while_heading": "WHILE begiztа: baldintza bat bete arte",
+  "while_intro": "WHILE begiztа erabiltzen da noiz gelditu nahi duzun badakizunean, baina zenbat aldiz errepikatu ez dakizunean.",
+  "while_real_examples": ["Ibili euririk egon arte", "Itxaron autobusa etorri arte", "Sukaldatu janaria prest egon arte"],
+  "while_real_note": "Kopurua ez dakizu — baldintza dakizu.",
+  "while_warning": { "icon": "⚠️", "color": "#D94060", "title": "Begizte infinitoa", "text": "WHILE begiztan baldintza betetzen ez bada inoiz, programa ez da bukatzen. Adibidea: sentsoreak ez badu irakurtzen, robotak ez du inoiz gelditzen. Beti ziurtatu begiztan zerbaitek baldintza aldatuko duela." },
+  "while_photo": { "description": "Robot bat oztopo baten aurrean gelditzen — distantzia-sentsorearen detekzioa erakusten" },
+  "compare_rows": [
+    { "for": "Kopurua aldez aurretik ezagutzen da", "while": "Kopurua ez da aldez aurretik ezagutzen" },
+    { "for": "'4 aldiz errepikatu'", "while": "'baldintza arte errepikatu'" },
+    { "for": "Karratu bat egin (4 aldiz)", "while": "Oztopoa topatu arte aurrera joan" },
+    { "for": "Bukaera ziurtatuta dago", "while": "Begizte infinitoa gerta daiteke ⚠️" }
+  ],
+  "sort_exercise": {
+    "title": "Ordenatu robot batek karratu bat egiteko programa-urratsak:",
+    "items": [
+      { "id": "1", "text": "Hasi programa" },
+      { "id": "2", "text": "'4 aldiz errepikatu' begiztа ireki" },
+      { "id": "3", "text": "Motor A eta B 360° aurrera biratu (aurrera joan)" },
+      { "id": "4", "text": "Motor A 95° aurrera, Motor B 95° atzera (eskuinera biratu)" },
+      { "id": "5", "text": "Begiztа itxi — robotak karratu bat osatu du" }
+    ],
+    "correct_order": ["1","2","3","4","5"]
+  },
+  "quiz": [
+    { "question": "Robotak karratu bat egin behar du (4 aldiz aurrera joan + biratu). Zein begiztа erabiltzen duzu?", "options": ["WHILE — distantzia arte", "FOR — 4 aldiz errepikatu", "Betirako errepikatu baldintza batekin", "Ez da begiztarik behar — 4 bloke idazten dira"], "correct": 1, "feedback": "Zuzena! Zehazki 4 aldiz errepikatu behar denean, FOR (4 aldiz errepikatu) da aukera egokia." },
+    { "question": "Zer gertatzen da WHILE begizt batean baldintza inoiz betetzen ez bada?", "options": ["Programa automatikoki gelditzen da 10 segundoren buruan", "Begizte infinitoa: programa ez da inoiz bukatzen", "Programa errorea eman eta berrabiarazten da", "Begizta behin bakarrik exekutatzen da"], "correct": 1, "feedback": "Zuzena! Begizte infinitoa da WHILE-ren arriskurik handiena." },
+    { "question": "Robotak aurrera joan behar du oztopo bat hauteman arte. Zein begiztа?", "options": ["FOR — 100 aldiz errepikatu", "WHILE — distantzia > 20 cm den bitartean", "Betirako errepikatu eta gero gelditu", "Baldintza soil bat, begiztarik gabe"], "correct": 1, "feedback": "Zuzena! WHILE (edo SPIKE-n 'baldintza arte errepikatu'). Zenbat aldiz ez dakigu — baldintza dakigu." },
+    { "question": "Zein da FOR eta WHILE-ren arteko desberdintasun nagusia?", "options": ["FOR azkarragoa da WHILE baino", "FOR errepikapen kopurua aldez aurretik ezagutzen denean erabiltzen da; WHILE baldintza batean oinarritzen da", "WHILE soilik motorrak kontrolatzeko erabiltzen da", "Ez dago desberdintasunik, baliokideak dira"], "correct": 1, "feedback": "Zuzena! FOR errepikapen kopuru finkoa denean. WHILE kopurua ez dakigunean baina noiz gelditu badakigunean." }
+  ],
+  "summary": {
+    "heading": "T3b — Laburpena",
+    "intro": "Bloke honetan ikasitakoa:",
+    "points": [
+      "Begiztak ekintza berak behin eta berriz errepikatzeko erabiltzen dira",
+      "FOR: errepikapen kopurua aldez aurretik ezagutzen denean (4 aldiz, 10 aldiz...)",
+      "WHILE: kopurua ez dakigunean, baina noiz gelditu badakigunean (oztopo bat topatu arte...)",
+      "Begizte infinitoa: WHILE-ren baldintza inoiz betetzen ez bada, programa ez da bukatzen"
+    ],
+    "next": "Hurrengo blokea: P2 — Esploratzaile Robota"
+  }
+}

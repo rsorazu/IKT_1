@@ -1,0 +1,60 @@
+{
+  "id": "p4",
+  "title": "Aparkaleku Adimenduna",
+  "eyebrow": "Azken Proiektua",
+  "description": "Sistema automatikoaren sarbide-kontrola eta leku kudeaketa",
+  "chips": ["Integrazio osoa", "Mugak dituzten zenbatzaileak", "Azpiprogramak", "6–7 saio"],
+  "accent": "#3A8C3A",
+  "research_question": "Nola kudea dezake sistema automatiko batek baliabide mugatua (aparkaleku-lekuak) gizakiaren esku-hartzerik gabe?",
+  "objectives": [
+    "Baldintzak, begiztak, gertaerak eta aldagaiak sistema bakarrean integratzea",
+    "Mugak dituen zenbatzailea inplementatzea (0 eta 5 artean beti)",
+    "Azpiprogramak erabiliz kode konplexua antolatzea",
+    "Proba sistematikoak diseinatu eta exekutatzea"
+  ],
+  "material": [
+    { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
+    { "icon": "📡", "name": "Distantzia-sentsorea — sarrera", "qty": "×1 — A ataka" },
+    { "icon": "📡", "name": "Distantzia-sentsorea — irteera", "qty": "×1 — B ataka" },
+    { "icon": "⚙️", "name": "Motor ertaina — sarrerako barrera", "qty": "×1 — C ataka" },
+    { "icon": "⚙️", "name": "Motor ertaina — irteerako barrera (aukerazkoa)", "qty": "×1 — D ataka" }
+  ],
+  "phases": [
+    { "num": "1", "title": "Eraikuntza eta diagnostikoa", "session": "1. saioa", "content": "Maketa eraiki eta diagnostiko-programa batekin sentsoreak egiaztatu. Atariak zehaztu. Diseinu-taula bete (aldagaiak, azpiprogramak).", "checkpoint": ["Bi sentsoreak ondo detektatzen dute", "Barrera igotzen eta jaisten da", "Diseinu-taula irakasleak onartuta"] },
+    { "num": "2", "title": "Sarrerako logika + zenbatzailea", "session": "2–3. saioa", "content": "leku_libre = 5 hasieratu. Sarreran: autoa detektatu → leku_libre > 0 bada → barrera ireki → leku_libre - 1 → display eguneratu. Leku_libre = 0 bada → BETEA erakutsi.", "checkpoint": ["Sarrerak ondo funtzionatzen du", "Zenbatzailea ez da inoiz 0 azpitik jaisten", "LED kolore egokia erakusten du"] },
+    { "num": "3", "title": "Irteera + mantentze modua", "session": "4. saioa", "content": "Irteera-logika gehitu (leku_libre + 1, muga: ez 5 gora). Mantentze modua botoia sakatuta (barreras irekita, MANT pantailan).", "checkpoint": ["Sarrera eta irteera modu independentean funtzionatzen dute", "Zenbatzailea ez da inoiz 5 gora igotzen", "Mantentze modua ondo funtzionatzen du"] },
+    { "num": "★", "title": "Erronka zabalgarria", "session": "5–6. saioa", "challenges": [
+      { "stars": "★", "title": "Tarifa", "text": "Auto bakoitzeko sarrera-zenbatzailea" },
+      { "stars": "★", "title": "Erreserba", "text": "Leku bat beti erreserbatuta" },
+      { "stars": "★★", "title": "Bi eremu", "text": "A eremua (3 leku) eta B eremua (2 leku)" }
+    ]}
+  ],
+  "proof_items": [
+    { "num": "P1", "desc": "Sarrera normala", "expected": "Atea irekitzen da, zenbatzaileak 4ra jaisten da, LED berdea" },
+    { "num": "P2", "desc": "Bosgarren sarrera", "expected": "Atea irekitzen da, zenbatzailea = 0, LED gorria" },
+    { "num": "P3", "desc": "Aparkalekua beteta", "expected": "Atea EZ da irekitzen, 'BETEA' erakusten du, pitua" },
+    { "num": "P4", "desc": "Irteera normala", "expected": "Atea irekitzen da, zenbatzaileak 1era igotzen da" },
+    { "num": "P5", "desc": "Irteera aparkalekua hutsik", "expected": "Atea EZ da irekitzen, ezer ez da aldatzen" },
+    { "num": "P6", "desc": "Sekuentzia osoa: 3 sarrera, 2 irteera, 4 sarrera", "expected": "Zenbatzailea: 5→2→3→0 — Urrats bakoitzean zuzena" },
+    { "num": "P7", "desc": "Mantentze modua: aktibatu", "expected": "Pantailak 'MANT' erakusten du, ateak irekita" },
+    { "num": "P8", "desc": "Mantentze modua: desaktibatu", "expected": "Aurreko egoerara itzultzen da zenbatzaile berarekin" },
+    { "num": "P9", "desc": "Bikoiztu detekzioa", "expected": "Autoa oso astiro pasatu: sarrera bakarra zenbatuta" },
+    { "num": "P10", "desc": "Berrabiaraztea", "expected": "Sistema 5 leku librerekin abiatzen da" }
+  ],
+  "quiz": [
+    { "question": "Aparkalekua beteta dagoenean eta auto bat sartu nahi denean zenbatzaileak -1era iristen da. Zein da arazoa?", "options": ["Atea oso azkar irekitzen da", "'leku_libre > 0 bada' baldintza falta da atea ireki aurretik", "Aldagaia ez da ondo hasieratu", "Sentsoreak ez du autoa hautematen"], "correct": 1, "feedback": "Zuzena! 'leku_libre > 0 bada' baldintza zenbatzaileak inoiz 0 azpitik ez duela jaitsi bermatzen duen beheko muga da." },
+    { "question": "Auto bat jarraian bi aldiz hautematen da sarrerako sentsorean. Nola konpontzen da?", "options": ["Sentsorea aldatu", "Ateko azpiprogramaren bukaeran itxaronaldi bat gehitu (1-2 s)", "LEKU_TOTAL bikoiztu", "WHILE bat erabili if baten ordez"], "correct": 1, "feedback": "Zuzena! Teknika honi debounce deitzen zaio. Atea jaitsi ondoren, itxaron 1-2 s. Denbora horretan autoa pasa da." },
+    { "question": "'bistaratzea_eguneratu()' azpiprograman, zein ordentan jarri behar dira LEDaren baldintzak?", "options": ["Berdea → Horia → Gorria", "Gorria (= 0) → Horia (≤ 2) → Berdea (gainerakoak)", "Ordena ez da garrantzitsua", "Horia → Gorria → Berdea"], "correct": 1, "feedback": "Zuzena! Ordena garrantzitsua da bada/bestela bada-rekin. Jarri lehenengo kasu murriztaileena (Gorria = 0)." }
+  ],
+  "summary": {
+    "heading": "P4 — Zorionak! Hau da azken proiektua",
+    "intro": "Kurtso osoan ikasitakoa:",
+    "points": [
+      "Baldintzak (P1) → Begiztak (P2) → Gertaerak eta Egoerak (P3) → Integrazio osoa (P4)",
+      "Mugak dituen zenbatzaile bat inplementatu duzu",
+      "Azpiprogramak erabiliz kode konplexua antolatu duzu",
+      "Proba sistematikoak diseinatu eta exekutatu dituzu"
+    ],
+    "next": "Ikasturtea bukatu da — SPIKE Prime ikas dezakezu orain Python-ekin ere!"
+  }
+}

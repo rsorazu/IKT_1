@@ -1,0 +1,26 @@
+{
+  "entries": [
+    { "term": "Baldintza (bada/bestela)", "definition": "Baldintza bat egia ala gezurra den arabera kode desberdina exekutatzen duen egitura. Testuan 'if/else if/else'-ren baliokidea.", "tag": "T3a", "color": "#2E7DD1" },
+    { "term": "Aldagaia", "definition": "Exekuzioan alda daitekeen balio bat gordetzen duen izendatutako memoria-espazioa.", "tag": "T3a", "color": "#D4880A" },
+    { "term": "Kolore-sentsorea", "definition": "Aurrean duen azaleraren edo argiaren kolorea hautematen duen osagaia. SPIKE-n A-F ataketan konektatzen da.", "tag": "P1", "color": "#2E7DD1" },
+    { "term": "FOR begiztа", "definition": "Kode-bloke bat aldez aurretik ezarritako zenbakitan errepikatu egiten du. SPIKE-n: 'X aldiz errepikatu'.", "tag": "T3b", "color": "#7A4FC9" },
+    { "term": "WHILE begiztа", "definition": "Kode-bloke bat baldintza bat betetzen den bitartean errepikatu egiten du. SPIKE-n: '[baldintza] arte errepikatu'.", "tag": "T3b", "color": "#7A4FC9" },
+    { "term": "Distantzia-sentsorea", "definition": "Soinu-uhinak igorriz (ultrasonikoa) eta oztopo batean islatutako denbora neurtuz distantziak neurtzen ditu. Tartea: 0–200 cm.", "tag": "P2", "color": "#3A8FAA" },
+    { "term": "Tracción diferencial", "definition": "Gurpil bakoitzeko motor independente batek kontrolatzen duen mugimendua. Bata bestea baino gehiago biratuz norabidea alda daiteke.", "tag": "P2", "color": "#7A4FC9" },
+    { "term": "Azpiprograma (Nire blokeak)", "definition": "Izendatutako kode-blokea, programaren edozein lekutatik dei daitekeena errepikatzea saihesteko. Itzulpen-baliorik gabeko funtzioaren baliokidea.", "tag": "P2", "color": "#D94060" },
+    { "term": "Gertaera", "definition": "Ekintza bat pizten duen une jakin bateko gertakizuna (sakatu, sentsorearen irakurketa, kronometro). SPIKE-n 'noiz...' blokeekin kudeatzen da.", "tag": "T3c", "color": "#D94060" },
+    { "term": "Sistemaren egoera", "definition": "Programa une jakin batean dagoen egoera, osoko aldagai batean irudikatua.", "tag": "T3c", "color": "#D94060" },
+    { "term": "Egoera-makina", "definition": "Sistemak egoera multzo finitu bat eta horien arteko trantsizioak definituta dituen diseinu-eredua.", "tag": "T3c", "color": "#D94060" },
+    { "term": "Konkurrentzia", "definition": "Programa batek aldi berean hainbat zeregin kudeatzeko gaitasuna. SPIKE-n, hainbat 'noiz...' bloke paraleloan exekutatzen dira.", "tag": "T3c", "color": "#D94060" },
+    { "term": "Zenbatzailea", "definition": "Zerbait zenbatzeko gehitzen edo kentzen den zenbakizko aldagaia. Mugak ez dituela gainditzen bermatu behar da.", "tag": "P4", "color": "#3A8C3A" },
+    { "term": "Muga (boundary check)", "definition": "Aldagai batek gainditu ez behar duen gutxieneko edo gehieneko balioa.", "tag": "P4", "color": "#3A8C3A" },
+    { "term": "Bikoiztu detekzioa (debounce)", "definition": "Objektu bera pasada bakarrean hainbat aldiz hautematen den errorea. Itxaronaldiekin saihesten da.", "tag": "P4", "color": "#3A8C3A" },
+    { "term": "Indar-sentsorea", "definition": "Gainean aplikatutako presioa neurtzen du (0–100%). SPIKE-n erabiltzaile-ekintzetarako botoi gisa erabiltzen da.", "tag": "P3", "color": "#3A8FAA" },
+    { "term": "Ataria", "definition": "Baldintza bat egia dela kontsideratzen den balioa (adib: distantzia < 15 cm = autoa presente). Esperimentalki kalibratu behar da.", "tag": "P2", "color": "#3A8FAA" },
+    { "term": "Kalibrazioa", "definition": "Programa baten parametroak benetako baldintzetan nahi den portaera lortu arte doitzeko prozesua.", "tag": "P2", "color": "#7A4FC9" },
+    { "term": "Algoritmo", "definition": "Arazo bat konpontzeko urrats zehatzen segida ordenatu bat. Programa bat algoritmo bat ordenagailuak uler dezakeen lengoaian idatzita da.", "tag": "T1", "color": "#8B7355" },
+    { "term": "Deskonposaketa", "definition": "Arazo handiak zati txikiagotan banatzeko gaitasuna. Pentsamendu konputazionalaren oinarrietako bat.", "tag": "T1", "color": "#8B7355" },
+    { "term": "Sentsorea", "definition": "Ingurunetik informazioa jasotzen duen osagaia eta sistemari bidaltzen dio. Sistema sarrera-osagaia da.", "tag": "T2", "color": "#2E7DD1" },
+    { "term": "Eragilea", "definition": "Sistemaren aginduak munduan eragiten dituen osagaia. Sistema irteera-osagaia da.", "tag": "T2", "color": "#D94060" }
+  ]
+}

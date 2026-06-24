@@ -1,0 +1,47 @@
+{
+  "id": "p2",
+  "title": "Esploratzaile Robota",
+  "eyebrow": "P2 · Proiektua",
+  "description": "Nabigazioa modu autonomoan begiztekin eta distantzia-sentsorea",
+  "chips": ["FOR begiztа", "WHILE begiztа", "Distantzia-sentsorea", "5–6 saio"],
+  "accent": "#7A4FC9",
+  "research_question": "Nola mugitzen da robota modu autonomoan eta nola erreakzionatzen du ingurunera?",
+  "objectives": [
+    "FOR begiztak erabiltzea ekintzak behin eta berriz errepikatzeko",
+    "WHILE begiztak erabiltzea baldintza bat bete arte errepikatzeko",
+    "Distantzia irakurtzea ultrasonikoaren sentsorea erabiliz",
+    "Begiztak eta baldintzak programa konplexu batean konbinatzea"
+  ],
+  "material": [
+    { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
+    { "icon": "⚙️", "name": "Motor handiak (gurpilak)", "qty": "×2 — A eta B atakak" },
+    { "icon": "📡", "name": "Distantzia-sentsorea", "qty": "×1 — C ataka" },
+    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" }
+  ],
+  "phases": [
+    { "num": "1", "title": "Txasisa eraiki", "session": "1. saioa", "content": "Trakzio diferentzialeko robota eraiki: bi motor independente, bat gurpil bakoitzeko. A motorra → ezkerreko gurpila. B motorra → eskuineko gurpila. Sentsorea → aurrean.", "checkpoint": ["Bi motorrak ondo konektatuta", "Robota zuzen doa bi motorrak abiaduran egonda", "Sentsoreak distantzia irakurtzen du"] },
+    { "num": "2", "title": "Karratu ibilbidea FOR-ekin", "session": "2. saioa", "content": "Robota programatu FOR begizt bat erabiliz karratu ibilbidea egiteko: 4 aldiz aurrera joan + 90° eskuinera biratu.", "challenge_tip": "Gradu zehatza kalibrazioaren araberakoa da. Doitu 80° eta 120° artean.", "checkpoint": ["Robota karratuaren forma egiten du", "FOR begiztа erabiltzen da (ez 4 bloke berdin)", "Giro-graduak kalibratu dira"] },
+    { "num": "3", "title": "Oztopoak saihestu WHILE-rekin", "session": "3. saioa", "content": "Robota aurrera doa oztopo bat hauteman arte (distantzia < 20 cm), gero gelditu eta biratu.", "checkpoint": ["Robotak oztopo bat hautematean gelditzen da", "WHILE begiztа erabiltzen da", "Biratzen du eta aurrera jarraitzen du"] },
+    { "num": "★", "title": "Erronka zabalgarria", "session": "4–5. saioa", "challenges": [
+      { "stars": "★", "title": "Erregistroa", "text": "Hautemandako gutxieneko distantzia gorde" },
+      { "stars": "★", "title": "Lerro-jarraitzailea", "text": "Kolore-sentsorea lurrean" },
+      { "stars": "★★", "title": "Esplorazio ausazkoa", "text": "3s biratzen badago, norabidea aldatu" }
+    ]}
+  ],
+  "quiz": [
+    { "question": "Robotak karratu bat egin behar du. Zein begiztа erabiltzen duzu?", "options": ["WHILE — distantzia arte", "FOR — 4 aldiz errepikatu", "Betirako errepikatu baldintza batekin", "Ez da begiztarik behar"], "correct": 1, "feedback": "Zuzena! Zehazki 4 aldiz errepikatu behar denean, FOR da aukera egokia." },
+    { "question": "Robotak aurrera joan behar du oztopo bat hauteman arte. Zein begiztа?", "options": ["FOR — 100 aldiz errepikatu", "WHILE — distantzia > 20 cm den bitartean", "Betirako errepikatu eta gero gelditu", "Baldintza soil bat"], "correct": 1, "feedback": "Zuzena! WHILE. Zenbat aldiz ez dakigu — baldintza dakigu (oztopo bat topatu arte)." },
+    { "question": "FOR begizta barruko blokeak begiztatik kanpo badaude, zer gertatzen da?", "options": ["Behin bakarrik exekutatzen dira, ez 4 aldiz", "4 aldiz exekutatzen dira berdin", "Errorea sortzen du", "Azkarrago exekutatzen da"], "correct": 0, "feedback": "Zuzena! Blokeak begiztatik kanpo badaude, behin bakarrik exekutatzen dira. Ziurtatu blokeak begiztan txertatuta daudela." }
+  ],
+  "summary": {
+    "heading": "P2 — Laburpena",
+    "intro": "Proiektu honetan ikasitakoa:",
+    "points": [
+      "FOR begiztа: errepikapen kopurua aldez aurretik ezagutzen denean",
+      "WHILE begiztа: baldintza bat bete arte errepikatzeko",
+      "Distantzia-sentsorea irakurri eta programa-erabakietan erabili",
+      "FOR eta WHILE konbinatu programa konplexu batean"
+    ],
+    "next": "Hurrengo blokea: T3c — Gertaerak eta Egoerak"
+  }
+}
