@@ -1,11 +1,101 @@
 {
-  "id": "t1",
-  "title": "Pentsamendu Konputazionala",
+  "summary": {
+    "heading": "T1 — Laburpena",
+    "intro": "Bloke honetan ikasitakoa:",
+    "points": [
+      "Pentsamendu konputazionala arazo bat modu sistematikoan pentsatzeko gaitasuna da — ez soilik programazioa",
+      "Lau oinarri ditu: deskonposaketa, patroiak, abstrakzioa eta algoritmoak",
+      "Algoritmo bat urrats zehatzen segida ordenatu bat da — anbiguotasunik gabe",
+      "Deskonposaketa proiektu guztietan erabiliko dugun lehenengo pausoa da"
+    ],
+    "next": "Hurrengo blokea: T2 — Sentsoreak eta Eragileak"
+  },
+  "chips": [
+    "Algoritmoak",
+    "Deskonposaketa",
+    "Patroiak"
+  ],
   "eyebrow": "T1 · Teoria",
-  "description": "Ordenagailu baten moduan pentsatzen ikasi",
-  "chips": ["Algoritmoak", "Deskonposaketa", "Patroiak"],
   "accent": "#8B7355",
-
+  "tabs[0].photo": {
+    "description": "images/pensamiento-computacional.jpg"
+  },
+  "tabs[1].example_intro": "E?",
+  "quiz": [
+    {
+      "question": "Zer da algoritmo bat?",
+      "options": [
+        "Ordenagailu mota bat",
+        "Arazo bat konpontzeko urrats zehatzen segida ordenatu bat",
+        "Programazio-lengoaia bat",
+        "Hardware osagai bat"
+      ],
+      "correct": 1,
+      "feedback": "Zuzena! Algoritmo bat urrats zehatzen sekuentzia bat da, arazo bat konpontzeko edo helburu bat lortzeko. Programa bat algoritmo bat ordenagailuak uler dezakeen lengoaian idatzita baino ez da."
+    },
+    {
+      "question": "Pentsamendu konputazionalaren lau oinarrietatik zein da arazo handiak zati txikiagotan banatzea?",
+      "options": [
+        "Abstrakzioa",
+        "Patroiak",
+        "Deskonposaketa",
+        "Algoritmoa"
+      ],
+      "correct": 2,
+      "feedback": "Zuzena! Deskonposaketa da arazo handiak zati txikiagotan banatzeko gaitasuna. Ingeniariek eta programatzaileek etengabe erabiltzen dute."
+    },
+    {
+      "question": "Zergatik ez da nahikoa robot bati 'egin ogitartekoa' esatea?",
+      "options": [
+        "Robotak ez du ogitartekoa gustatzen",
+        "Agindu hori anbiguoa da — robotak urrats zehatzekin behar du",
+        "Robotak ezin du janaria ukitu",
+        "Agindu hori ingelesez eman behar da"
+      ],
+      "correct": 1,
+      "feedback": "Zuzena! Gizakiok anbiguotasuna onartzen dugu, baina ordenagailuak ez. Urrats guztiak modu zehatzan idatzi behar dira pausoz pauso."
+    }
+  ],
+  "title": "Pentsamendu Konputazionala",
+  "sort_exercise": {
+    "title": "Ordenatu ogitarteko bat egiteko urratsak orden logikoan:",
+    "items": [
+      {
+        "id": "1",
+        "text": "Hartu bi ogi xerra"
+      },
+      {
+        "id": "2",
+        "text": "Ireki esnekiaren ontzia"
+      },
+      {
+        "id": "3",
+        "text": "Hartu labana bat"
+      },
+      {
+        "id": "4",
+        "text": "Zabaldu esnekia lehen xerran"
+      },
+      {
+        "id": "5",
+        "text": "Jarri bigarren xerra gainean"
+      },
+      {
+        "id": "6",
+        "text": "Moztu erdian"
+      }
+    ],
+    "correct_order": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  "id": "t1",
+  "description": "Ordenagailu baten moduan pentsatzen ikasi",
   "tabs": [
     {
       "id": "zer",
@@ -16,19 +106,38 @@
         "Lau oinarri ditu:"
       ],
       "pillars": [
-        { "icon": "🔍", "title": "Deskonposaketa", "color": "#2E7DD1", "text": "Arazo handiak zati txikiagotan banatzea. 'Nola eraiki etxe bat?' → lehenengo zimendua, gero hormak, gero teilatua." },
-        { "icon": "🔎", "title": "Patroiak", "color": "#7A4FC9", "text": "Arazo desberdinetan antza duten gauzak aurkitzea. Semaforoa eta alarma sistema bi baino ez dira 'egoeren arabera erreakzionatzen' duten sistemak." },
-        { "icon": "🗺️", "title": "Abstrakzioa", "color": "#3A8C3A", "text": "Garrantzitsuena gorde eta ez-garrantzitsuena alde batera utzi. Robot batek ez du jakin behar zer kolore duen txasisa — bai, ordea, zein abiaduran doan." },
-        { "icon": "📋", "title": "Algoritmoak", "color": "#D4880A", "text": "Arazo bat konpontzeko urrats zehatzen zerrenda ordenatua. Ordenagailuak ulertzen duen gauza bakarra da." }
+        {
+          "icon": "🔍",
+          "title": "Deskonposaketa",
+          "color": "#2E7DD1",
+          "text": "Arazo handiak zati txikiagotan banatzea. 'Nola eraiki etxe bat?' → lehenengo zimendua, gero hormak, gero teilatua."
+        },
+        {
+          "icon": "🔎",
+          "title": "Patroiak",
+          "color": "#7A4FC9",
+          "text": "Arazo desberdinetan antza duten gauzak aurkitzea. Semaforoa eta alarma sistema bi baino ez dira 'egoeren arabera erreakzionatzen' duten sistemak."
+        },
+        {
+          "icon": "🗺️",
+          "title": "Abstrakzioa",
+          "color": "#3A8C3A",
+          "text": "Garrantzitsuena gorde eta ez-garrantzitsuena alde batera utzi. Robot batek ez du jakin behar zer kolore duen txasisa — bai, ordea, zein abiaduran doan."
+        },
+        {
+          "icon": "📋",
+          "title": "Algoritmoak",
+          "color": "#D4880A",
+          "text": "Arazo bat konpontzeko urrats zehatzen zerrenda ordenatua. Ordenagailuak ulertzen duen gauza bakarra da."
+        }
       ],
       "photo": {
         "description": "Ikasgelako taldea arazo bat paperen gainean deskonposatzen — post-it-ak edo arbela erabiltzen"
       }
     },
     {
-      "id": "algo",
-      "label": "Algoritmoak",
       "heading": "Zer da algoritmo bat?",
+      "example_title": "Adibidea: ogitartekoa nola egin",
       "paragraphs": [
         "Algoritmo bat urrats zehatzen segida ordenatu bat da, arazo bat konpontzeko edo helburu bat lortzeko. Hiru ezaugarri ditu:"
       ],
@@ -37,7 +146,11 @@
         "Finitua: noizbait bukatzen da",
         "Eraginkorra: arazo jakin bat konpontzen du"
       ],
-      "example_title": "Adibidea: ogitartekoa nola egin",
+      "photo": {
+        "description": "Arbela batean idatzitako algoritmo bat urrats zenbakituekin — adibide erreala (gela ordenatzea, esaterako)"
+      },
+      "label": "Algoritmoak",
+      "closing": "Programa bat algoritmo bat ordenagailuak uler dezakeen lengoaian idatzita baino ez da. Algoritmo bera hainbat lengoaiatan idatz daiteke — SPIKE blokeekin, Python-ekin, edo paperean.",
       "example_intro": "Imajinatu robot bati ogitartekoa egiten erakutsi nahi diozula. 'Egin ogitarteko bat' ez da nahikoa — gehiegi anbiguoa da. Hau behar du:",
       "info_box": {
         "icon": "💡",
@@ -45,10 +158,7 @@
         "title": "Kontuan hartu",
         "text": "Gizakiok anbiguotasuna onartzen dugu: 'egin ogitartekoa' esaten badiozu lagun bati, badaki zer egin. Ordenagailuak ez — urrats guztiak zehazki idatzi behar dira."
       },
-      "photo": {
-        "description": "Arbela batean idatzitako algoritmo bat urrats zenbakituekin — adibide erreala (gela ordenatzea, esaterako)"
-      },
-      "closing": "Programa bat algoritmo bat ordenagailuak uler dezakeen lengoaian idatzita baino ez da. Algoritmo bera hainbat lengoaiatan idatz daiteke — SPIKE blokeekin, Python-ekin, edo paperean."
+      "id": "algo"
     },
     {
       "id": "deskomposa",
@@ -73,50 +183,8 @@
       "heading": "Ariketak"
     }
   ],
-
-  "sort_exercise": {
-    "title": "Ordenatu ogitarteko bat egiteko urratsak orden logikoan:",
-    "items": [
-      { "id": "1", "text": "Hartu bi ogi xerra" },
-      { "id": "2", "text": "Ireki esnekiaren ontzia" },
-      { "id": "3", "text": "Hartu labana bat" },
-      { "id": "4", "text": "Zabaldu esnekia lehen xerran" },
-      { "id": "5", "text": "Jarri bigarren xerra gainean" },
-      { "id": "6", "text": "Moztu erdian" }
-    ],
-    "correct_order": ["1","2","3","4","5","6"]
-  },
-
-  "quiz": [
-    {
-      "question": "Zer da algoritmo bat?",
-      "options": ["Ordenagailu mota bat", "Arazo bat konpontzeko urrats zehatzen segida ordenatu bat", "Programazio-lengoaia bat", "Hardware osagai bat"],
-      "correct": 1,
-      "feedback": "Zuzena! Algoritmo bat urrats zehatzen sekuentzia bat da, arazo bat konpontzeko edo helburu bat lortzeko. Programa bat algoritmo bat ordenagailuak uler dezakeen lengoaian idatzita baino ez da."
-    },
-    {
-      "question": "Pentsamendu konputazionalaren lau oinarrietatik zein da arazo handiak zati txikiagotan banatzea?",
-      "options": ["Abstrakzioa", "Patroiak", "Deskonposaketa", "Algoritmoa"],
-      "correct": 2,
-      "feedback": "Zuzena! Deskonposaketa da arazo handiak zati txikiagotan banatzeko gaitasuna. Ingeniariek eta programatzaileek etengabe erabiltzen dute."
-    },
-    {
-      "question": "Zergatik ez da nahikoa robot bati 'egin ogitartekoa' esatea?",
-      "options": ["Robotak ez du ogitartekoa gustatzen", "Agindu hori anbiguoa da — robotak urrats zehatzekin behar du", "Robotak ezin du janaria ukitu", "Agindu hori ingelesez eman behar da"],
-      "correct": 1,
-      "feedback": "Zuzena! Gizakiok anbiguotasuna onartzen dugu, baina ordenagailuak ez. Urrats guztiak modu zehatzan idatzi behar dira pausoz pauso."
-    }
-  ],
-
-  "summary": {
-    "heading": "T1 — Laburpena",
-    "intro": "Bloke honetan ikasitakoa:",
-    "points": [
-      "Pentsamendu konputazionala arazo bat modu sistematikoan pentsatzeko gaitasuna da — ez soilik programazioa",
-      "Lau oinarri ditu: deskonposaketa, patroiak, abstrakzioa eta algoritmoak",
-      "Algoritmo bat urrats zehatzen segida ordenatu bat da — anbiguotasunik gabe",
-      "Deskonposaketa proiektu guztietan erabiliko dugun lehenengo pausoa da"
-    ],
-    "next": "Hurrengo blokea: T2 — Sentsoreak eta Eragileak"
+  "tabs[1].info_box": {
+    "title": ".",
+    "text": "."
   }
 }
