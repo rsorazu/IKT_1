@@ -1,56 +1,57 @@
 {
-  "classify_items": [
-    {
-      "label": "Kolore-sentsorea",
-      "correct": "sentsore"
-    },
-    {
-      "label": "Distantzia-sentsorea",
-      "correct": "sentsore"
-    },
-    {
-      "label": "Indar-sentsorea",
-      "correct": "sentsore"
-    },
-    {
-      "label": "Hubeko botoia",
-      "correct": "sentsore"
-    },
-    {
-      "label": "Motorra",
-      "correct": "eragile"
-    },
-    {
-      "label": "LED argia",
-      "correct": "eragile"
-    },
-    {
-      "label": "Pantaila",
-      "correct": "eragile"
-    },
-    {
-      "label": "Bozgorailua",
-      "correct": "eragile"
-    }
-  ],
-  "summary": {
-    "heading": "T2 — Laburpena",
-    "intro": "Bloke honetan ikasitakoa:",
-    "points": [
-      "Sentsorea: ingurunetik informazioa jasotzen du (sarrera)",
-      "Eragilea: sistemaren aginduak munduan eragiten ditu (irteera)",
-      "SPIKE Prime-k 3 sentsore mota ditu: kolorea, distantzia eta indarra",
-      "Hub-ak biak ditu: botoiak (sentsoreak) eta pantaila/LED/bozgorailua (eragileak)"
-    ],
-    "next": "Hurrengo blokea: T3a — Baldintzak eta Aldagaiak"
-  },
+  "id": "t2",
+  "title": "Sentsoreak eta Eragileak",
+  "eyebrow": "T2 · Teoria",
+  "description": "Hardwarearen sarrerak eta irteerak",
   "chips": [
     "Sarrerak",
     "Irteerak",
     "SPIKE Prime"
   ],
-  "eyebrow": "T2 · Teoria",
   "accent": "#8B7355",
+  "tabs": [
+    {
+      "id": "sarirte",
+      "label": "Sarrerak eta Irteerak"
+    },
+    {
+      "id": "spike",
+      "label": "SPIKE Prime"
+    },
+    {
+      "id": "exercicis",
+      "label": "Ariketak",
+      "heading": "Ariketak"
+    }
+  ],
+  "sensor_heading": "Sentsorea (Sarrera)",
+  "sensor_icon": "👁️",
+  "sensor_color": "#2E7DD1",
+  "sensor_description": "Ingurunetik informazioa jasotzen du eta sistemari bidaltzen dio. Sistema 'ikusten' edo 'sentitzen' uzten du.",
+  "sensor_examples": [
+    "Termometro bat → tenperatura neurtu",
+    "Mikrofonoa → soinua hauteman",
+    "Kamera bat → argia hauteman",
+    "Ukipen-pantaila → sakatzea hauteman"
+  ],
+  "sensor_photo": {
+    "description": "SPIKE Prime-ko sentsore desberdinak mahai gainean (kolore, distantzia, indar)",
+    "image": ""
+  },
+  "actuator_heading": "Eragilea (Irteera)",
+  "actuator_icon": "⚡",
+  "actuator_color": "#D94060",
+  "actuator_description": "Sistemaren aginduak munduan eragiten ditu. Sistema 'egiten' uzten du gauzak.",
+  "actuator_examples": [
+    "Motorra → mugimendua sortu",
+    "LED argia → argia piztu",
+    "Bozgorailua → soinua ekoitzi",
+    "Pantaila → testua erakutsi"
+  ],
+  "actuator_photo": {
+    "description": "SPIKE Prime-ko motorrak eta hubeko LED argia piztuta",
+    "image": ""
+  },
   "real_examples": [
     {
       "title": "🌡️ Termostatoa",
@@ -73,20 +74,9 @@
       "output": "Beso mekanikoa, korrea"
     }
   ],
-  "actuator_photo": {
-    "description": "images/actuadores.webp"
-  },
-  "sensor_photo": {
-    "description": "images/sensores.webp"
-  },
-  "sensor_examples": [
-    "Termometro bat → tenperatura neurtu",
-    "Mikrofonoa → soinua hauteman",
-    "Kamera bat → argia hauteman",
-    "Ukipen-pantaila → sakatzea hauteman"
-  ],
   "spike_photo_top": {
-    "description": "SPIKE Prime kit osoa mahai gainean hedatuta — hub, motorrak, sentsoreak eta kableak ikusgai"
+    "description": "SPIKE Prime kit osoa mahai gainean hedatuta — hub, motorrak, sentsoreak eta kableak ikusgai",
+    "image": ""
   },
   "spike_components": [
     {
@@ -126,15 +116,44 @@
       "description": "Sentsorea: botoiak eta azelerometroa. Eragilea: pantaila, LED argia eta bozgorailua."
     }
   ],
-  "actuator_examples": [
-    "Motorra → mugimendua sortu",
-    "LED argia → argia piztu",
-    "Bozgorailua → soinua ekoitzi",
-    "Pantaila → testua erakutsi"
-  ],
   "spike_photo_bottom": {
-    "description": "Hub-a gertu — pantaila piztuta, ataketako konexioak ikusgai (A, B, C, D, E, F letrak)"
+    "description": "Hub-a gertu — pantaila piztuta, ataketako konexioak ikusgai (A, B, C, D, E, F letrak)",
+    "image": ""
   },
+  "classify_items": [
+    {
+      "label": "Kolore-sentsorea",
+      "correct": "sentsore"
+    },
+    {
+      "label": "Distantzia-sentsorea",
+      "correct": "sentsore"
+    },
+    {
+      "label": "Indar-sentsorea",
+      "correct": "sentsore"
+    },
+    {
+      "label": "Hubeko botoia",
+      "correct": "sentsore"
+    },
+    {
+      "label": "Motorra",
+      "correct": "eragile"
+    },
+    {
+      "label": "LED argia",
+      "correct": "eragile"
+    },
+    {
+      "label": "Pantaila",
+      "correct": "eragile"
+    },
+    {
+      "label": "Bozgorailua",
+      "correct": "eragile"
+    }
+  ],
   "quiz": [
     {
       "question": "Termometro batek zein funtzio betetzen du sistema batean?",
@@ -181,30 +200,15 @@
       "feedback": "Zuzena! Balazkak eragileak dira — sistemaren aginduak ingurunean eragiten dituzte."
     }
   ],
-  "actuator_description": "Sistemaren aginduak munduan eragiten ditu. Sistema 'egiten' uzten du gauzak.",
-  "sensor_description": "Ingurunetik informazioa jasotzen du eta sistemari bidaltzen dio. Sistema 'ikusten' edo 'sentitzen' uzten du.",
-  "title": "Sentsoreak eta Eragileak",
-  "id": "t2",
-  "actuator_heading": "Eragilea (Irteera)",
-  "description": "Hardwarearen sarrerak eta irteerak",
-  "actuator_color": "#D94060",
-  "sensor_heading": "Sentsorea (Sarrera)",
-  "sensor_icon": "👁️",
-  "sensor_color": "#2E7DD1",
-  "tabs": [
-    {
-      "id": "sarirte",
-      "label": "Sarrerak eta Irteerak"
-    },
-    {
-      "id": "spike",
-      "label": "SPIKE Prime"
-    },
-    {
-      "id": "exercicis",
-      "label": "Ariketak",
-      "heading": "Ariketak"
-    }
-  ],
-  "actuator_icon": "⚡"
+  "summary": {
+    "heading": "T2 — Laburpena",
+    "intro": "Bloke honetan ikasitakoa:",
+    "points": [
+      "Sentsorea: ingurunetik informazioa jasotzen du (sarrera)",
+      "Eragilea: sistemaren aginduak munduan eragiten ditu (irteera)",
+      "SPIKE Prime-k 3 sentsore mota ditu: kolorea, distantzia eta indarra",
+      "Hub-ak biak ditu: botoiak (sentsoreak) eta pantaila/LED/bozgorailua (eragileak)"
+    ],
+    "next": "Hurrengo blokea: T3a — Baldintzak eta Aldagaiak"
+  }
 }
