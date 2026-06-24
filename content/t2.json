@@ -74,7 +74,7 @@
     }
   ],
   "actuator_photo": {
-    "description": "SPIKE Prime-ko motorrak eta hubeko LED argia piztuta"
+    "description": "images/actuadores.webp"
   },
   "sensor_photo": {
     "description": "images/sensores.webp"
