@@ -29,14 +29,13 @@ function el(tag, cls, html) {
 }
 function photoPlaceholder(photo) {
   if (!photo) return '';
-  const desc = photo.description || '';
-  // Si la descripción es una ruta de imagen, mostrarla como <img>
-  if (desc.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i)) {
-    return `<img src="${desc}" alt="" 
-      style="width:100%;border-radius:10px;margin:16px 0;
-      display:block;border:0.5px solid var(--border)">`;
+  const src = photo.image || '';
+  if (src && src.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i)) {
+    return `<img src="${src}" alt="${photo.description||''}"
+      style="width:100%;border-radius:10px;margin:16px 0;display:block;border:0.5px solid var(--border)">`;
   }
-  // Si no, mostrar el placeholder gris de siempre
+  const desc = photo.description || '';
+  if (!desc) return '';
   return `<div class="photo-placeholder">
     <div class="photo-ph-icon">📷</div>
     <div class="photo-ph-text">
