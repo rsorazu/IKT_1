@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: rsorazu/IKT_1   # ← Aldatu zure GitHub erabiltzailea eta repositorioa
+  name: git-gateway
+  # repo: rsorazu/IKT_1    ← Aldatu zure GitHub erabiltzailea eta repositorioa
   branch: main
 
 media_folder: images
