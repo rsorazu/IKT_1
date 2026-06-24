@@ -3,27 +3,90 @@
   "title": "Gertaerak eta Egoerak",
   "eyebrow": "T3c · Teoria",
   "description": "Sistemak nola erreakzionatzen duten ingurunera",
-  "chips": ["Gertaerak", "Egoerak", "Paralelotasuna"],
+  "chips": [
+    "Gertaerak",
+    "Egoerak",
+    "Paralelotasuna"
+  ],
   "accent": "#8B7355",
   "tabs": [
-    { "id": "gertaerak", "label": "Gertaerak" },
-    { "id": "egoerak",   "label": "Egoerak" },
-    { "id": "exercicis", "label": "Ariketak", "heading": "Ariketak" }
+    {
+      "id": "gertaerak",
+      "label": "Gertaerak"
+    },
+    {
+      "id": "egoerak",
+      "label": "Egoerak"
+    },
+    {
+      "id": "exercicis",
+      "label": "Ariketak",
+      "heading": "Ariketak"
+    }
   ],
   "gertaerak_heading": "Gertaerak: une jakin batean gertatzen dena",
   "gertaerak_intro": "Gertaera bat une zehatz batean gertatzen den zerbait da eta programa baten ekintza pizten du. Begizta batek etengabe egiaztatzen du baldintza bat — gertaera batek aldaketa puntual bati erantzuten dio.",
-  "gertaerak_real": ["Ateko txilina jo → atera joan", "Mugikorra jo → hartu", "Su-alarma jo → irten eraikinетik"],
+  "gertaerak_real": [
+    "Ateko txilina jo → atera joan",
+    "Mugikorra jo → hartu",
+    "Su-alarma jo → irten eraikinетik"
+  ],
   "gertaerak_note": "Gertaerak ez dira etengabe gertatzen — une jakin batean gertatzen dira.",
-  "gertaerak_photo": { "description": "SPIKE Prime-ko hub-a botoia sakatuta — LED argia aldatzen den momentua" },
+  "gertaerak_photo": {
+    "description": "SPIKE Prime-ko hub-a botoia sakatuta — LED argia aldatzen den momentua",
+    "image": ""
+  },
   "egoerak_heading": "Egoerak: sistemak nola 'gogoratzen' du non dagoen",
   "egoerak_intro": "Egoera sistema baten 'egoera' da une jakin batean. Aldagai batekin adierazten da eta sistema osoaren portaera aldatzen du.",
-  "egoerak_real": ["Argi-itzalgailua: piztuta / itzalita", "Atea: irekita / itxita / giltzatuta", "Jokalaria: jokatzen / geldituta / jokoaren bukaera"],
-  "egoerak_key_info": { "icon": "💡", "color": "#2E7DD1", "title": "Gakoa", "text": "Gertaera berdina — 'mugimendua hauteman' — egoeraren arabera emaitza desberdina sortzen du. DESERMATUTAN: ezer ez gertatzen. ARMATUTAN: alarma pizten da. Hori da egoera-makinaren boterea." },
-  "egoerak_photo": { "description": "Ikasleek paperean marraztutako egoera-makina bat — zirkuluak eta geziak egoeren artean" },
+  "egoerak_real": [
+    "Argi-itzalgailua: piztuta / itzalita",
+    "Atea: irekita / itxita / giltzatuta",
+    "Jokalaria: jokatzen / geldituta / jokoaren bukaera"
+  ],
+  "egoerak_key_info": {
+    "icon": "💡",
+    "color": "#2E7DD1",
+    "title": "Gakoa",
+    "text": "Gertaera berdina — 'mugimendua hauteman' — egoeraren arabera emaitza desberdina sortzen du. DESERMATUTAN: ezer ez gertatzen. ARMATUTAN: alarma pizten da. Hori da egoera-makinaren boterea."
+  },
+  "egoerak_photo": {
+    "description": "Ikasleek paperean marraztutako egoera-makina bat — zirkuluak eta geziak egoeren artean",
+    "image": ""
+  },
   "quiz": [
-    { "question": "Zer da gertaera bat programazioan?", "options": ["Etengabe egiaztatzen den baldintza bat", "Aldagai mota bat", "Une jakin batean gertatzen den zerbait eta ekintza bat pizten du", "Begizt mota bat"], "correct": 2, "feedback": "Zuzena! Gertaera bat aldaketa puntual bat da — botoia sakatzea, sentsore batek balio bat gainditzea — eta berehalako ekintza bat pizten du." },
-    { "question": "SPIKE-n, zer erabiltzen da gertaerak kudeatzeko?", "options": ["Baldintza blokeak (bada/bestela)", "'Noiz...' sombreroa duten blokeak, programa nagusiarekin paraleloan", "Aldagai blokeak", "FOR begiztak"], "correct": 1, "feedback": "Zuzena! 'Noiz...' sombreroa duten blokeak gertaerak dira SPIKE-n. Programa nagusiarekin paraleloan exekutatzen dira." },
-    { "question": "Alarma sistema batek 3 egoera ditu: 0, 1, 2. 'Mugimendua hauteman' gertaera egoera 0an gertatzen da. Zer egin behar du sistemak?", "options": ["Alarma piztu (egoera 2ra pasa)", "Ezer ez egin — egoera 0an sentsoreak ignoratzen dira", "Programa berrabiarazi", "Armatuta jarri (egoera 1era pasa)"], "correct": 1, "feedback": "Zuzena! Egoera 0 (desarmatua) denean, sentsoreak ignoratzen dira. Hori da egoera-makinaren gakoa." }
+    {
+      "question": "Zer da gertaera bat programazioan?",
+      "options": [
+        "Etengabe egiaztatzen den baldintza bat",
+        "Aldagai mota bat",
+        "Une jakin batean gertatzen den zerbait eta ekintza bat pizten du",
+        "Begizt mota bat"
+      ],
+      "correct": 2,
+      "feedback": "Zuzena! Gertaera bat aldaketa puntual bat da — botoia sakatzea, sentsore batek balio bat gainditzea — eta berehalako ekintza bat pizten du."
+    },
+    {
+      "question": "SPIKE-n, zer erabiltzen da gertaerak kudeatzeko?",
+      "options": [
+        "Baldintza blokeak (bada/bestela)",
+        "'Noiz...' sombreroa duten blokeak, programa nagusiarekin paraleloan",
+        "Aldagai blokeak",
+        "FOR begiztak"
+      ],
+      "correct": 1,
+      "feedback": "Zuzena! 'Noiz...' sombreroa duten blokeak gertaerak dira SPIKE-n. Programa nagusiarekin paraleloan exekutatzen dira."
+    },
+    {
+      "question": "Alarma sistema batek 3 egoera ditu: 0, 1, 2. 'Mugimendua hauteman' gertaera egoera 0an gertatzen da. Zer egin behar du sistemak?",
+      "options": [
+        "Alarma piztu (egoera 2ra pasa)",
+        "Ezer ez egin — egoera 0an sentsoreak ignoratzen dira",
+        "Programa berrabiarazi",
+        "Armatuta jarri (egoera 1era pasa)"
+      ],
+      "correct": 1,
+      "feedback": "Zuzena! Egoera 0 (desarmatua) denean, sentsoreak ignoratzen dira. Hori da egoera-makinaren gakoa."
+    }
   ],
   "summary": {
     "heading": "T3c — Laburpena",
