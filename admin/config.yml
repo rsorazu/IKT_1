@@ -3,10 +3,11 @@ backend:
   branch: main
 
 site_url: https://rsorazu.github.io/IKT_1
+
 media_folder: images
 public_folder: /images
 
-locale: es   # Panel hizkuntza: gaztelania (interfazea)
+locale: es
 
 collections:
 
@@ -26,6 +27,7 @@ collections:
           - label: "📢 Abisua"
             name: announcement
             widget: text
+            required: false
             hint: "Ikasleentzako abisua portadan (hutsik badago, ez da agertzen)"
           - label: "Abisua aktibo"
             name: announcement_active
@@ -81,24 +83,35 @@ collections:
             name: pillars
             widget: list
             fields:
-              - { label: "Ikonoa", name: icon, widget: string, hint: "Emoji bat" }
+              - { label: "Ikonoa (emoji)", name: icon, widget: string }
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Testua", name: text, widget: text }
-              - { label: "Kolorea", name: color, widget: string }
-          - label: "Argazkia (Zer da? fitxa)"
+              - { label: "Kolorea (hex)", name: color, widget: string }
+          - label: "Argazkia — 'Zer da?' fitxa"
             name: "tabs[0].photo"
             widget: object
             fields:
-              - { label: "Argazki deskribapena", name: description, widget: text }
-          - label: "Algoritmo-adibidea intro testua"
-            name: "tabs[1].example_intro"
-            widget: text
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - { label: "Algoritmo adibide sarrera testua", name: "tabs[1].example_intro", widget: text }
           - label: "Info-kutxa (Kontuan hartu)"
             name: "tabs[1].info_box"
             widget: object
             fields:
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Testua", name: text, widget: text }
+          - label: "Argazkia — Algoritmoak fitxa"
+            name: "tabs[1].photo"
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - label: "Argazkia — Deskonposaketa fitxa"
+            name: "tabs[2].photo"
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
           - label: "Laburpena"
             name: summary
             widget: object
@@ -136,22 +149,24 @@ collections:
             name: sensor_examples
             widget: list
             field: { label: "Adibidea", name: item, widget: string }
-          - label: "Sentsore-argazkia"
+          - label: "Argazkia — Sentsorea"
             name: sensor_photo
             widget: object
             fields:
-              - { label: "Deskribapena", name: description, widget: text }
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
           - { label: "Eragile-izenburua", name: actuator_heading, widget: string }
           - { label: "Eragile-deskribapena", name: actuator_description, widget: text }
           - label: "Eragile-adibideak"
             name: actuator_examples
             widget: list
             field: { label: "Adibidea", name: item, widget: string }
-          - label: "Eragile-argazkia"
+          - label: "Argazkia — Eragilea"
             name: actuator_photo
             widget: object
             fields:
-              - { label: "Deskribapena", name: description, widget: text }
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
           - label: "Adibide errealak"
             name: real_examples
             widget: list
@@ -170,10 +185,22 @@ collections:
                   - { label: "Sentsorea", value: "sensor" }
                   - { label: "Eragilea", value: "actuator" }
                   - { label: "Biak", value: "both" }
-              - { label: "Ikonoa", name: icon, widget: string }
+              - { label: "Ikonoa (emoji)", name: icon, widget: string }
               - { label: "Izena", name: name, widget: string }
               - { label: "Deskribapena", name: description, widget: text }
-          - label: "Sailkatu ariketa (drag&drop) elementuak"
+          - label: "Argazkia — SPIKE kit osoa (goikoa)"
+            name: spike_photo_top
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - label: "Argazkia — Hub-a gertu (behekoa)"
+            name: spike_photo_bottom
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - label: "Sailkatu ariketa — elementuak"
             name: classify_items
             widget: list
             fields:
@@ -219,6 +246,12 @@ collections:
           - { label: "Baldintza-adibidea (euria)", name: analogy_condition, widget: string }
           - { label: "Baldintza BAI erantzuna", name: analogy_yes, widget: string }
           - { label: "Baldintza EZ erantzuna", name: analogy_no, widget: string }
+          - label: "Argazkia — Baldintzak fitxa"
+            name: baldintzak_photo
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
           - { label: "Aldagaiak intro testua", name: aldagaiak_intro, widget: text }
           - { label: "Aldagaiak oharra", name: aldagaiak_warning, widget: text }
           - label: "Aldagai adibideak"
@@ -227,7 +260,13 @@ collections:
             fields:
               - { label: "Izena", name: name, widget: string }
               - { label: "Balioa", name: value, widget: string }
-          - label: "Bloke-aukeraketa ariketa (drag&drop)"
+          - label: "Argazkia — Aldagaiak fitxa"
+            name: aldagaiak_photo
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - label: "Bloke-aukeraketa ariketa"
             name: block_match_pairs
             widget: list
             fields:
@@ -244,7 +283,7 @@ collections:
                 widget: list
                 field: { label: "Puntua", name: item, widget: string }
               - { label: "Hurrengo blokea", name: next, widget: string }
-          - label: "Ariketak (test galderak)"
+          - label: "Ariketak"
             name: quiz
             widget: list
             label_singular: "Galdera"
@@ -264,14 +303,37 @@ collections:
         fields:
           - { label: "Izenburua", name: title, widget: string }
           - { label: "Deskribapena", name: description, widget: string }
-          - { label: "FOR adibide errealak (koma bereizita)", name: for_real_examples, widget: list, field: { label: "Adibidea", name: item, widget: string } }
-          - { label: "WHILE adibide errealak", name: while_real_examples, widget: list, field: { label: "Adibidea", name: item, widget: string } }
-          - label: "WHILE oharra"
+          - { label: "Zergatik begiztak — sarrera", name: zergatik_intro, widget: text }
+          - label: "Argazkia — Zergatik begiztak fitxa"
+            name: zergatik_photo
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - { label: "FOR sarrera testua", name: for_intro, widget: text }
+          - label: "FOR adibide errealak"
+            name: for_real_examples
+            widget: list
+            field: { label: "Adibidea", name: item, widget: string }
+          - { label: "FOR oharra", name: for_real_note, widget: string }
+          - { label: "WHILE sarrera testua", name: while_intro, widget: text }
+          - label: "WHILE adibide errealak"
+            name: while_real_examples
+            widget: list
+            field: { label: "Adibidea", name: item, widget: string }
+          - { label: "WHILE oharra", name: while_real_note, widget: string }
+          - label: "WHILE abisua"
             name: while_warning
             widget: object
             fields:
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Testua", name: text, widget: text }
+          - label: "Argazkia — WHILE fitxa"
+            name: while_photo
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
           - label: "FOR vs WHILE konparazio-taula"
             name: compare_rows
             widget: list
@@ -289,7 +351,7 @@ collections:
                 widget: list
                 field: { label: "Puntua", name: item, widget: string }
               - { label: "Hurrengo blokea", name: next, widget: string }
-          - label: "Ariketak (test galderak)"
+          - label: "Ariketak"
             name: quiz
             widget: list
             label_singular: "Galdera"
@@ -309,12 +371,19 @@ collections:
         fields:
           - { label: "Izenburua", name: title, widget: string }
           - { label: "Deskribapena", name: description, widget: string }
-          - { label: "Gertaerak intro", name: gertaerak_intro, widget: text }
+          - { label: "Gertaerak sarrera testua", name: gertaerak_intro, widget: text }
           - label: "Gertaera adibideak"
             name: gertaerak_real
             widget: list
             field: { label: "Adibidea", name: item, widget: string }
-          - { label: "Egoerak intro", name: egoerak_intro, widget: text }
+          - { label: "Gertaerak oharra", name: gertaerak_note, widget: string, required: false }
+          - label: "Argazkia — Gertaerak fitxa"
+            name: gertaerak_photo
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
+          - { label: "Egoerak sarrera testua", name: egoerak_intro, widget: text }
           - label: "Egoera adibideak"
             name: egoerak_real
             widget: list
@@ -325,6 +394,12 @@ collections:
             fields:
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Testua", name: text, widget: text }
+          - label: "Argazkia — Egoerak fitxa"
+            name: egoerak_photo
+            widget: object
+            fields:
+              - { label: "Argazkia", name: image, widget: image, required: false }
+              - { label: "Deskribapena (argazkirik ez badago)", name: description, widget: text, required: false }
           - label: "Laburpena"
             name: summary
             widget: object
@@ -336,7 +411,7 @@ collections:
                 widget: list
                 field: { label: "Puntua", name: item, widget: string }
               - { label: "Hurrengo blokea", name: next, widget: string }
-          - label: "Ariketak (test galderak)"
+          - label: "Ariketak"
             name: quiz
             widget: list
             label_singular: "Galdera"
@@ -361,14 +436,20 @@ collections:
         fields:
           - { label: "Izenburua", name: title, widget: string }
           - { label: "Deskribapena", name: description, widget: string }
-          - { label: "Testuinguru paragrafoak", name: context_paragraphs, widget: list, field: { label: "Paragrafoa", name: item, widget: text } }
+          - label: "Testuinguru paragrafoak"
+            name: context_paragraphs
+            widget: list
+            field: { label: "Paragrafoa", name: item, widget: text }
           - { label: "Ikerketa-galdera", name: research_question, widget: text }
-          - { label: "Helburuak", name: objectives, widget: list, field: { label: "Helburua", name: item, widget: string } }
+          - label: "Helburuak"
+            name: objectives
+            widget: list
+            field: { label: "Helburua", name: item, widget: string }
           - label: "Materiala"
             name: material
             widget: list
             fields:
-              - { label: "Ikonoa", name: icon, widget: string }
+              - { label: "Ikonoa (emoji)", name: icon, widget: string }
               - { label: "Izena", name: name, widget: string }
               - { label: "Kantitatea", name: qty, widget: string }
           - label: "Faseak"
@@ -380,6 +461,24 @@ collections:
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Saioa", name: session, widget: string }
               - { label: "Edukia", name: content, widget: text }
+              - label: "Kontrol-puntua"
+                name: checkpoint
+                widget: list
+                required: false
+                field: { label: "Elementua", name: item, widget: string }
+              - label: "Hausnarketa"
+                name: reflection
+                widget: list
+                required: false
+                field: { label: "Galdera", name: item, widget: string }
+              - label: "Erronkak"
+                name: challenges
+                widget: list
+                required: false
+                fields:
+                  - { label: "Izarrak", name: stars, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Testua", name: text, widget: string }
           - label: "Laburpena"
             name: summary
             widget: object
@@ -391,7 +490,7 @@ collections:
                 widget: list
                 field: { label: "Puntua", name: item, widget: string }
               - { label: "Hurrengo blokea", name: next, widget: string }
-          - label: "Ariketak (test galderak)"
+          - label: "Ariketak"
             name: quiz
             widget: list
             label_singular: "Galdera"
@@ -412,7 +511,17 @@ collections:
           - { label: "Izenburua", name: title, widget: string }
           - { label: "Deskribapena", name: description, widget: string }
           - { label: "Ikerketa-galdera", name: research_question, widget: text }
-          - { label: "Helburuak", name: objectives, widget: list, field: { label: "Helburua", name: item, widget: string } }
+          - label: "Helburuak"
+            name: objectives
+            widget: list
+            field: { label: "Helburua", name: item, widget: string }
+          - label: "Materiala"
+            name: material
+            widget: list
+            fields:
+              - { label: "Ikonoa (emoji)", name: icon, widget: string }
+              - { label: "Izena", name: name, widget: string }
+              - { label: "Kantitatea", name: qty, widget: string }
           - label: "Faseak"
             name: phases
             widget: list
@@ -422,6 +531,19 @@ collections:
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Saioa", name: session, widget: string }
               - { label: "Edukia", name: content, widget: text }
+              - label: "Kontrol-puntua"
+                name: checkpoint
+                widget: list
+                required: false
+                field: { label: "Elementua", name: item, widget: string }
+              - label: "Erronkak"
+                name: challenges
+                widget: list
+                required: false
+                fields:
+                  - { label: "Izarrak", name: stars, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Testua", name: text, widget: string }
           - label: "Laburpena"
             name: summary
             widget: object
@@ -454,7 +576,17 @@ collections:
           - { label: "Izenburua", name: title, widget: string }
           - { label: "Deskribapena", name: description, widget: string }
           - { label: "Ikerketa-galdera", name: research_question, widget: text }
-          - { label: "Helburuak", name: objectives, widget: list, field: { label: "Helburua", name: item, widget: string } }
+          - label: "Helburuak"
+            name: objectives
+            widget: list
+            field: { label: "Helburua", name: item, widget: string }
+          - label: "Materiala"
+            name: material
+            widget: list
+            fields:
+              - { label: "Ikonoa (emoji)", name: icon, widget: string }
+              - { label: "Izena", name: name, widget: string }
+              - { label: "Kantitatea", name: qty, widget: string }
           - label: "Faseak"
             name: phases
             widget: list
@@ -464,6 +596,19 @@ collections:
               - { label: "Izenburua", name: title, widget: string }
               - { label: "Saioa", name: session, widget: string }
               - { label: "Edukia", name: content, widget: text }
+              - label: "Kontrol-puntua"
+                name: checkpoint
+                widget: list
+                required: false
+                field: { label: "Elementua", name: item, widget: string }
+              - label: "Erronkak"
+                name: challenges
+                widget: list
+                required: false
+                fields:
+                  - { label: "Izarrak", name: stars, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Testua", name: text, widget: string }
           - label: "Laburpena"
             name: summary
             widget: object
@@ -496,7 +641,39 @@ collections:
           - { label: "Izenburua", name: title, widget: string }
           - { label: "Deskribapena", name: description, widget: string }
           - { label: "Ikerketa-galdera", name: research_question, widget: text }
-          - { label: "Helburuak", name: objectives, widget: list, field: { label: "Helburua", name: item, widget: string } }
+          - label: "Helburuak"
+            name: objectives
+            widget: list
+            field: { label: "Helburua", name: item, widget: string }
+          - label: "Materiala"
+            name: material
+            widget: list
+            fields:
+              - { label: "Ikonoa (emoji)", name: icon, widget: string }
+              - { label: "Izena", name: name, widget: string }
+              - { label: "Kantitatea", name: qty, widget: string }
+          - label: "Faseak"
+            name: phases
+            widget: list
+            label_singular: "Fasea"
+            fields:
+              - { label: "Zenbakia", name: num, widget: string }
+              - { label: "Izenburua", name: title, widget: string }
+              - { label: "Saioa", name: session, widget: string }
+              - { label: "Edukia", name: content, widget: text }
+              - label: "Kontrol-puntua"
+                name: checkpoint
+                widget: list
+                required: false
+                field: { label: "Elementua", name: item, widget: string }
+              - label: "Erronkak"
+                name: challenges
+                widget: list
+                required: false
+                fields:
+                  - { label: "Izarrak", name: stars, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Testua", name: text, widget: string }
           - label: "Proba-taulako elementuak"
             name: proof_items
             widget: list
