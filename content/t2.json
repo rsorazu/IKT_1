@@ -174,7 +174,7 @@
       "feedback": "Zuzena! Distantzia-sentsorea ultrasonikoa da: soinu-uhinak igortzen ditu, oztopo batean errebotatu, eta itzuli diren arteko denbora neurtzen du."
     },
     {
-      "question": "Auto moderno batean, balazkak zein osagaiek dira?",
+      "question": "Auto moderno batean, balaztak zein osagaiek dira?",
       "options": [
         "Sentsoreak — abiadura hautematen dute",
         "Eragileak — aginduei erantzunez mugimendua geldiarazten dute",
@@ -182,7 +182,7 @@
         "Sentsoreak eta eragileak biak"
       ],
       "correct": 1,
-      "feedback": "Zuzena! Balazkak eragileak dira — sistemaren aginduak ingurunean eragiten dituzte."
+      "feedback": "Zuzena! Balaztak eragileak dira — sistemaren aginduak ingurunean eragiten dituzte."
     }
   ],
   "actuator_description": "Sistemaren aginduak munduan eragiten ditu. Sistema 'egiten' uzten du gauzak.",
