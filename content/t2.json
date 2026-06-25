@@ -75,11 +75,11 @@
   ],
   "actuator_photo": {
     "description": "SPIKE Prime-ko motorrak eta hubeko LED argia piztuta",
-    "image": ""
+    "image": "images/sensores.webp"
   },
   "sensor_photo": {
     "description": "images/sensores.webp",
-    "image": ""
+    "image": "images/sensores.webp"
   },
   "sensor_examples": [
     "Termometro bat → tenperatura neurtu",
