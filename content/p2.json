@@ -7,8 +7,8 @@
   "accent": "#7A4FC9",
   "context_heading": "Porturako garraio autonomoa",
   "context_paragraphs": [
-    "Portu moderno askotan gizakiek ez dituzte kamioiak gidatzen — robotek egiten dute. Ibilgailu autonomo hauek ruta programatuak jarraitzen dituzte, oztopoak saihesten dituzte eta helmugara iristen direnean automatikoki gelditzen dira.",
-    "Proiektu honetan portuko kamioiaren rola hartuko du zure robotak. Haiek erabakiko dute zein ruta egin, oztopoak saihestuko dituzte eta grua dagoen zona detektatuko dute lurreko kolore-sentsorearekin. Kamioi autonomia etorkizunean P3ko garabiarekin elkarlanean arituko da."
+    "Portu moderno askotan gizakiek ez dituzte kamioiak gidatzen — robotek egiten dute. Ibilgailu autonomo hauek bide programatuak jarraitzen dituzte, oztopoak saihesten dituzte eta helmugara iristen direnean automatikoki gelditzen dira.",
+    "Proiektu honetan portuko kamioiaren rola hartuko du zure robotak. Haiek erabakiko dute zein bide egin, oztopoak saihestuko dituzte eta garabia dagoen zona detektatuko dute lurreko kolore-sentsorearekin. Kamioi autonomoa etorkizunean P3ko garabiarekin elkarlanean arituko da."
   ],
   "research_question": "Nola gidatzen du kamioi batek modu autonomoan, oztopoak saihestuz eta helmuga zehatza detektatuz?",
   "objectives": [
