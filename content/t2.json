@@ -186,7 +186,7 @@
     }
   ],
   "actuator_description": "Sistemaren aginduak munduan eragiten ditu. Sistema 'egiten' uzten du gauzak.",
-  "sensor_description": "images/sensores.webp",
+  "sensor_description": "Ingurunetik informazioa jasotzen du eta sistemari bidaltzen dio. Sistema 'ikusten' edo 'sentitzen' uzten du.",
   "title": "Sentsoreak eta Eragileak",
   "id": "t2",
   "actuator_heading": "Eragilea (Irteera)",
