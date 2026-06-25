@@ -88,7 +88,7 @@
     "Ukipen-pantaila → sakatzea hauteman"
   ],
   "spike_photo_top": {
-    "description": "SPIKE Prime kit osoa mahai gainean hedatuta — hub, motorrak, sentsoreak eta kableak ikusgai",
+    "description": "images/kit1.webp",
     "image": ""
   },
   "spike_components": [
@@ -136,8 +136,8 @@
     "Pantaila → testua erakutsi"
   ],
   "spike_photo_bottom": {
-    "description": "Hub-a gertu — pantaila piztuta, ataketako konexioak ikusgai (A, B, C, D, E, F letrak)",
-    "image": ""
+    "description": "",
+    "image": ""images/kit2.webp""
   },
   "quiz": [
     {
