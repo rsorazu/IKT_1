@@ -1,52 +1,137 @@
 {
   "id": "p3",
-  "title": "Alarma Sistema",
+  "title": "Portuko Garabi Automatikoa",
   "eyebrow": "P3 · Proiektua",
-  "description": "Gertaerak, sentsore anitzak eta sistemaren egoerak",
-  "chips": ["Gertaerak", "Egoera-makina", "Sentsore anitzak", "6–7 saio"],
+  "description": "Karga automatikoki jasotzen eta mugitzen duen garabi adimenduna",
+  "chips": ["Gertaerak", "Egoera-makina", "Motor kontrola", "6–7 saio"],
   "accent": "#D94060",
-  "research_question": "Nola kudeatzen ditu sistema batek aldi berean sarrera anitzak eta bere portaera aldatzen du egoeraren arabera?",
+  "context_heading": "Garabi automatiko bat eraiki",
+  "context_paragraphs": [
+    "Porto handietan garabiek etengabe lan egiten dute — ontzietatik edukiontziak jasotzen, kamioietara eramaten, eta berriro posizio estandarrean kokatzen. Guztia modu automatikoan, gizakiaren esku-hartze gutxirekin.",
+    "Proiektu honetan portuko garabi automatiko bat programatuko duzu. Garabiak P2ko kamioiaren seinalea ikusiko du (LED berdea), posizio estandarretik abiatuko da, kargara hurbiltzeko, ganxoa jaitsiko du, karga jasotzeko, eta beste zona batera eramateko. Sistema osoak egoera-makina bat izango du."
+  ],
+  "research_question": "Nola kudeatzen du sistema batek urrats sekuentzial konplexuak egoera-makina baten bidez?",
   "objectives": [
-    "Egoera-aldagaia erabiliz sistema baten portaera kontrolatzea",
-    "Gertaerak ('noiz...' blokeak) programa nagusiarekin paraleloan erabiltzea",
-    "Hiru sentsore aldi berean irakurri eta konbinatzea",
-    "Konkurrentziaren arazoa konpontzea (sirena + botoia paraleloan)"
+    "Egoera-makina bat diseinatu eta inplementatzea (itxaronean, jaisten, jasotzen, igotzen, mugitzen, uzten)",
+    "Motor bat posizio zehatzetan kontrolatzea (gradutan)",
+    "Kamioiaren seinale bat (LED berdea) evento gisa erabiltzea sisteman",
+    "Sekuentzia konplexu bat azpiprogrametan antolatzea",
+    "Sistema bat posizio estandarretik abiatzen eta hara itzultzen programatzea"
   ],
   "material": [
     { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
-    { "icon": "📡", "name": "Distantzia-sentsorea (mugimendu-detekzio)", "qty": "×1 — A ataka" },
-    { "icon": "🎨", "name": "Kolore-sentsorea (argi-detekzioa)", "qty": "×1 — B ataka" },
-    { "icon": "👆", "name": "Indar-sentsorea (kontrol-botoia)", "qty": "×1 — C ataka" }
+    { "icon": "⚙️", "name": "Motor handia (garabi horizontala)", "qty": "×1 — A ataka" },
+    { "icon": "⚙️", "name": "Motor ertaina (ganxoa gora/behera)", "qty": "×1 — B ataka" },
+    { "icon": "📡", "name": "Distantzia-sentsorea (kamioia detektatu)", "qty": "×1 — C ataka" },
+    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
+    { "icon": "🪝", "name": "Ganxoa LEGO piezez eraikita", "qty": "Motor B-ri lotuta" }
   ],
-  "states": [
-    { "name": "DESARMATUA", "num": "0", "color": "#3A8C3A", "desc": "LED berdea · Sentsoreak alde batera" },
-    { "name": "ARMATUA",    "num": "1", "color": "#2E7DD1", "desc": "LED urdina · Sentsoreak aktibo" },
-    { "name": "ALARMAN",    "num": "2", "color": "#D94060", "desc": "LED gorria · Sirena aktibo" }
-  ],
+  "material_tip": {
+    "icon": "💡",
+    "title": "Ganxoaren eraikuntza",
+    "text": "Ganxoa LEGO pieza batekin eraiki motor B-ri lotuta. Karga (edukiontzi txiki bat LEGO piezez egina) ganxoak hartu dezakeen zulo bat izan behar du. Motor B-k 90° biratuz ganxoa jaisten da, eta -90° biratuz igotzen da. Kalibratu graduak maquetarekin."
+  },
   "phases": [
-    { "num": "1", "title": "Sentsoreen diagnostikoa", "session": "1. saioa", "content": "Programa nagusia idatzi aurretik, diagnostiko-programa bat sortu hiru sentsoreen balioak pantailan erakusten dituena. Atariak zehaztu.", "checkpoint": ["Hiru sentsoreak ondo irakurtzen dute", "Atariak zehaztuta daude (adib: distantzia < 30 cm)", "Diseinu-taula paperean osatuta"] },
-    { "num": "2", "title": "Egoera-aldagaia + botoiaren kontrola", "session": "2. saioa", "content": "egoera aldagaia sortu (0=desarmatua, 1=armatua, 2=alarman). Botoia sakatzen denean egoera aldatu. LED eta pantaila eguneratu.", "checkpoint": ["Botoia DESARMATUA ↔ ARMATUA artean alda daiteke", "LED eta pantaila egoera islatzen dute beti"] },
-    { "num": "3", "title": "Sentsoreekin alarma aktibatu", "session": "3. saioa", "content": "Egoera 1 (ARMATUA) denean, sentsoreak mugimendua edo argi intentsua hautematen badute, egoera 2 (ALARMAN)ra pasa eta sirena piztu.", "checkpoint": ["Alarma soilik egoera 1ean aktibatzen da", "Bi sentsoreak independenteki funtzionatzen dute", "Botoiak alarma desaktiatu dezake"] },
-    { "num": "★", "title": "Erronka zabalgarria", "session": "4–5. saioa", "challenges": [
-      { "stars": "★", "title": "Atzerako kontaketa", "text": "10 segundoko atzerako kontaketa armatu aurretik" },
-      { "stars": "★", "title": "Desaktibazio-kodea", "text": "Botoi-sekuentzia (ezk + esk + ezk)" },
-      { "stars": "★★", "title": "Bi hubak", "text": "Alarma-zentral + urruneko kontrol-panela" }
-    ]}
+    {
+      "num": "1",
+      "title": "Garabiaren eraikuntza",
+      "session": "1. saioa",
+      "content": "Garabi egitura eraiki: zutabe bertikala (hubarekin), beso horizontala (motor A mugitzen duena), eta ganxoa (motor B igotzen eta jaisten duena). Garrantzitsua: posizio estandarra definitu — hori izango da abiagunea eta helmuga beti.",
+      "checkpoint": [
+        "Motor A-k besoa horizontalki mugitzen du",
+        "Motor B-k ganxoa bertikalki igotzen eta jaisten du",
+        "Posizio estandarra definituta dago eta bietako motorrak bertan kokatzen dira"
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Diagnostiko-programa eta kalibrazioa",
+      "session": "1. saioa — bigarren zatia",
+      "content": "Programatu aurretik, diagnostiko-programa bat sortu: motor A eta B banaka mugitu graduka, posizio zehatzak idatzi. Zenbat gradu behar ditu motor A-k karga-gunera iristeko? Eta motor B-k ganxoa jaisteko? Idatzi balio hauek.",
+      "checkpoint": [
+        "Motor A-ren gradua jakinda (posizio estandar → karga-gune)",
+        "Motor B-ren gradua jakinda (ganxoa jaitsi → karga hartu)",
+        "Distantzia-sentsoreak kamioia detektatzen du (zein cm-tan?)"
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Egoera-makina diseinatu (paperean)",
+      "session": "2. saioa",
+      "content": "Programatu aurretik, paperean diseinatu egoera-makina. Garabiak 6 egoera ditu:\n0 - ITXARONEAN (posizio estandarrean, kamioiaren zain)\n1 - HURBILTZEN (motor A mugitzen karga-gunera)\n2 - JAISTEN (motor B ganxoa jaisten)\n3 - JASOTZEN (ganxoa kargan, motor B igotzen)\n4 - MUGITZEN (motor A karga helmugara eramaten)\n5 - UZTEN (motor B ganxoa jaisten, karga utzi, motor B igotzera)\nOndoren egoera 0ra itzultzen da.",
+      "checkpoint": [
+        "Egoera-taula paperean osatuta",
+        "Bakoitzean zer motor mugitzen den idatzita",
+        "Irakasleak diseinua onartuta"
+      ],
+      "reflection": [
+        "Zer gertatu daiteke ganxoa jaistean karga ez badago ondo kokatuta?",
+        "Nola saihestuko zenuke garabiak posizio okerrean gelditzea argindar etete bat egonez gero?"
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Programazioa — sekuentzia osoa",
+      "session": "3–4. saioa",
+      "content": "Egoera-makina programatu. Kamioiaren seinale bat jaso (distantzia-sentsoreak < 15 cm detektatzen du) → egoera 0tik 1era pasa → sekuentzia osoa exekutatu egoera batetik bestera → egoera 0ra itzuli posizio estandarrera.",
+      "checkpoint": [
+        "Kamioiaren detekzioak sekuentzia abiarazten du",
+        "6 egoera guztiak ondo exekutatzen dira ordena zuzenean",
+        "Garabiak posizio estandarrera itzultzen da bukaeran"
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Integrazioa P2ko kamioiarekin",
+      "session": "5. saioa",
+      "content": "P2ko robota eta P3ko garabia elkarrekin probatu. Kamioiak grua-zonara iristean LED berdea pizten du. Garabiak distantzia-sentsoreak kamioia detektatzen du eta sekuentzia abiarazten du. Bien koordinazioa egiaztatu.",
+      "checkpoint": [
+        "Kamioiak grua-zonan gelditzen da LEDa pizten duela",
+        "Garabiak kamioia automatikoki detektatzen du",
+        "Garabi-sekuentziak karga ondo jasotzen eta eramaten du"
+      ]
+    },
+    {
+      "num": "★",
+      "title": "Erronka zabalgarria",
+      "session": "6–7. saioa",
+      "challenges": [
+        { "stars": "★", "title": "Kontaketa", "text": "Zenbatu zenbat karga jaso dituen. Pantailan erakutsi." },
+        { "stars": "★", "title": "Mantentze modua", "text": "Botoia sakatzean garabia posizio estandarrean gelditu eta 'MANT' erakutsi" },
+        { "stars": "★★", "title": "Erroreen kudeaketa", "text": "Karga ez badago posizioaren ondoren 3 segundu, 'ERROREA' erakutsi eta posizio estandarrera itzuli" }
+      ]
+    }
   ],
   "quiz": [
-    { "question": "Alarma sistema batean, desaktibazio-botoia ez du erantzuten sirena jotzen ari den bitartean. Zein da zioen arrazoirik ohikoena?", "options": ["Botoia gaizki konektatuta dago", "Sirenak barne-begizte bat du eta botoiaren gertaera blokeatzen du", "Egoera-aldagaia berrabiarazi da", "Mugimendua-sentsoreak interferentzia egiten du"], "correct": 1, "feedback": "Zuzena! Sirenak 'betirako errepikatu' barnekoa badu, hari nagusia blokeatu eta botoiaren gertaera ezin da exekutatu." },
-    { "question": "Non hasieratu behar da 'egoera = 0' aldagaia alarma-programan?", "options": ["Begizte nagusiaren barruan, hasieran", "Begizte nagusiaren barruan, bukaeran", "Edozein begiztatik kanpo, hasierako sombreraren ondoren", "Botoiaren gertaeran"], "correct": 2, "feedback": "Zuzena! Aldagaia BEHIN hasieratu behar da programa hasten denean. Begiztan jartzen baduzu, 0ra berrabiarazten da iterazio bakoitzean." },
-    { "question": "Zein SPIKE bloke exekutatzen da programa nagusiarekin paraleloan?", "options": ["'Betirako errepikatu' blokea", "'X segundo itxaron' blokea", "'Noiz...' sombreroa duten blokeak (gertaerak)", "'Nire blokeak'-eko blokeak"], "correct": 2, "feedback": "Zuzena! SPIKE-n, 'noiz...' sombrerо bakoitzak exekuzio-hari independente bat sortzen du paraleloan." }
+    {
+      "question": "Garabiak 6 egoera ditu. Kamioiaren seinale bat jasotzen duenean, zein egoeratik abiatzen da?",
+      "options": ["Edozein egoeratik", "Beti egoera 0tik (ITXARONEAN)", "Azken egoeratik", "Egoera 3tik (JASOTZEN)"],
+      "correct": 1,
+      "feedback": "Zuzena! Sistema beti posizio estandarretik (egoera 0) abiatzen da. Horrela ziurtatzen da garabia beti leku berean dagoela seinale bat jaso aurretik."
+    },
+    {
+      "question": "Motor B-k ganxoa jaisten du baina karga ez du hartzen. Zein da arazorik ohikoena?",
+      "options": ["Motorra hautsita dago", "Gradu ez nahikoa — ganxoa ez da kargara iristen", "WHILE begiztа erabili behar da", "Egoera-aldagaia ez da eguneratzen"],
+      "correct": 1,
+      "feedback": "Zuzena! Graduak kalibrazio bidez zehaztu behar dira. Gehitu graduak apurka apurka ganxoa kargatik iristen den arte."
+    },
+    {
+      "question": "Zergatik da garrantzitsua garabiak posizio estandarrera itzultzea sekuentzia bukaeran?",
+      "options": ["Estetikoa delako", "Hurrengo operazioa beti leku berean hasi dadin", "Motorra gehiegi berotzea saihesteko", "Programak hala eskatzen duelako"],
+      "correct": 1,
+      "feedback": "Zuzena! Posizio estandarra abiapuntua da beti. Ez bada itzultzen, hurrengo sekuentzia posizio oker batetik hasiko da eta oztopoak edo akatsak sor daitezke."
+    }
   ],
   "summary": {
     "heading": "P3 — Laburpena",
     "intro": "Proiektu honetan ikasitakoa:",
     "points": [
-      "Egoera-aldagaia sistema osoaren portaera kontrolatzeko erabili duzu",
-      "Gertaerak ('noiz...' blokeak) programa nagusiarekin paraleloan exekutatzen dira",
-      "Hiru sentsore aldi berean irakurri eta konbinatu dituzu",
-      "Konkurrentziaren arazoa konpondu duzu (sirena + botoia paraleloan)"
+      "6 egoerako makina bat diseinatu eta inplementatu duzu",
+      "Bi motor posizio zehatzetan kontrolatu dituzu",
+      "Kamioiaren seinalea evento gisa erabili duzu",
+      "Sekuentzia konplexu bat azpiprogrametan antolatu duzu",
+      "P2ko kamioiarekin integrazioa lortu duzu"
     ],
-    "next": "Hurrengo blokea: P4 — Aparkaleku Adimenduna"
+    "next": "Hurrengo blokea: P4 — Porto Adimenduna"
   }
 }
