@@ -23,21 +23,21 @@
     { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
     { "icon": "⚙️", "name": "Motor handiak (gurpilak)", "qty": "×2 — A eta B atakak" },
     { "icon": "📡", "name": "Distantzia-sentsorea (oztopoak)", "qty": "×1 — C ataka" },
-    { "icon": "🎨", "name": "Kolore-sentsorea (grua-zona detektatu)", "qty": "×1 — D ataka (lurrean begira)" },
-    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
-    { "icon": "🟨", "name": "Kartulina horia (grua-zona markatzeko)", "qty": "1 orri" }
+    { "icon": "🎨", "name": "Kolore-sentsorea (garabi-eremua detektatu)", "qty": "×1 — D ataka (lurrean begira)" },
+    { "icon": "📱", "name": "SPIKE aplikazioa", "qty": "×1 bikoteko" },
+    { "icon": "🟨", "name": "Kartulina horia (garabi-eremua markatzeko)", "qty": "1 orri" }
   ],
   "material_tip": {
     "icon": "💡",
-    "title": "Maqueta prestatzeko aholkua",
-    "text": "Portuko karrilak cinta adhesivoarekin edo kartulina piezen bidez markatu. Grua-zona kartulina hori batekin markatu — kolore-sentsoreak lurrean hori hautematean robota gelditu egingo da. Oztopoak (beste LEGO pieza batzuk) karrilean barreiatu."
+    "title": "Maketa prestatzeko aholkua",
+    "text": "Portuko bidea zinta itsasgarria edo kartulina piezen bidez markatu. Garabi-eremua kartulina hori batekin markatu — kolore-sentsoreak lurrean hori hautematean robota gelditu egingo da. Oztopoak bide inguruetan kokatu."
   },
   "phases": [
     {
       "num": "1",
       "title": "Txasisa eraiki eta kalibratu",
       "session": "1. saioa",
-      "content": "Trakzio diferentzialeko robota eraiki: bi motor gurpilak, distantzia-sentsorea aurrean eta kolore-sentsorea lurrean begira. Diagnostiko-programa bat sortu bi sentsoreen balioak pantailan erakusteko — kalibratzeko ezinbestekoa.",
+      "content": "Trakzio desberdinak dituen kamioia eraiki: bi motor - gurpilak, distantzia-sentsorea aurrean eta kolore-sentsorea lurrari begira. Diagnosi-programa bat sortu bi sentsoreen balioak pantailan erakusteko — kalibratzeko ezinbestekoa.",
       "checkpoint": [
         "Bi motorrak ondo konektatuta eta norabide onean",
         "Distantzia-sentsoreak cm-tan irakurtzen du",
