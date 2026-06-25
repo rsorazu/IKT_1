@@ -1,46 +1,127 @@
 {
   "id": "p2",
-  "title": "Esploratzaile Robota",
+  "title": "Kamioien Robota",
   "eyebrow": "P2 · Proiektua",
-  "description": "Nabigazioa modu autonomoan begiztekin eta distantzia-sentsorea",
-  "chips": ["FOR begiztа", "WHILE begiztа", "Distantzia-sentsorea", "5–6 saio"],
+  "description": "Karga autonomoki garraiatzen duen ibilgailua portuan",
+  "chips": ["FOR begiztа", "WHILE begiztа", "Distantzia-sentsorea", "Kolore-sentsorea", "5–6 saio"],
   "accent": "#7A4FC9",
-  "research_question": "Nola mugitzen da robota modu autonomoan eta nola erreakzionatzen du ingurunera?",
+  "context_heading": "Porturako garraio autonomoa",
+  "context_paragraphs": [
+    "Portu moderno askotan gizakiek ez dituzte kamioiak gidatzen — robotek egiten dute. Ibilgailu autonomo hauek ruta programatuak jarraitzen dituzte, oztopoak saihesten dituzte eta helmugara iristen direnean automatikoki gelditzen dira.",
+    "Proiektu honetan portuko kamioiaren rola hartuko du zure robotak. Haiek erabakiko dute zein ruta egin, oztopoak saihestuko dituzte eta grua dagoen zona detektatuko dute lurreko kolore-sentsorearekin. Kamioi autonomia etorkizunean P3ko garabiarekin elkarlanean arituko da."
+  ],
+  "research_question": "Nola gidatzen du kamioi batek modu autonomoan, oztopoak saihestuz eta helmuga zehatza detektatuz?",
   "objectives": [
-    "FOR begiztak erabiltzea ekintzak behin eta berriz errepikatzeko",
-    "WHILE begiztak erabiltzea baldintza bat bete arte errepikatzeko",
-    "Distantzia irakurtzea ultrasonikoaren sentsorea erabiliz",
-    "Begiztak eta baldintzak programa konplexu batean konbinatzea"
+    "FOR begiztа erabili ruta programatu bat egiteko",
+    "WHILE begiztа erabili oztopoak saihesteko",
+    "Distantzia-sentsorea irakurri eta oztopoak hautemateko erabili",
+    "Kolore-sentsorea erabili garabi-eremura iritsi dela detektatzeko",
+    "FOR eta WHILE begiztak programa konplexu batean konbinatu",
+    "Azpiprogramak erabiliz kodea antolatu"
   ],
   "material": [
     { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
     { "icon": "⚙️", "name": "Motor handiak (gurpilak)", "qty": "×2 — A eta B atakak" },
-    { "icon": "📡", "name": "Distantzia-sentsorea", "qty": "×1 — C ataka" },
-    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" }
+    { "icon": "📡", "name": "Distantzia-sentsorea (oztopoak)", "qty": "×1 — C ataka" },
+    { "icon": "🎨", "name": "Kolore-sentsorea (grua-zona detektatu)", "qty": "×1 — D ataka (lurrean begira)" },
+    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
+    { "icon": "🟨", "name": "Kartulina horia (grua-zona markatzeko)", "qty": "1 orri" }
   ],
+  "material_tip": {
+    "icon": "💡",
+    "title": "Maqueta prestatzeko aholkua",
+    "text": "Portuko karrilak cinta adhesivoarekin edo kartulina piezen bidez markatu. Grua-zona kartulina hori batekin markatu — kolore-sentsoreak lurrean hori hautematean robota gelditu egingo da. Oztopoak (beste LEGO pieza batzuk) karrilean barreiatu."
+  },
   "phases": [
-    { "num": "1", "title": "Txasisa eraiki", "session": "1. saioa", "content": "Trakzio diferentzialeko robota eraiki: bi motor independente, bat gurpil bakoitzeko. A motorra → ezkerreko gurpila. B motorra → eskuineko gurpila. Sentsorea → aurrean.", "checkpoint": ["Bi motorrak ondo konektatuta", "Robota zuzen doa bi motorrak abiaduran egonda", "Sentsoreak distantzia irakurtzen du"] },
-    { "num": "2", "title": "Karratu ibilbidea FOR-ekin", "session": "2. saioa", "content": "Robota programatu FOR begizt bat erabiliz karratu ibilbidea egiteko: 4 aldiz aurrera joan + 90° eskuinera biratu.", "challenge_tip": "Gradu zehatza kalibrazioaren araberakoa da. Doitu 80° eta 120° artean.", "checkpoint": ["Robota karratuaren forma egiten du", "FOR begiztа erabiltzen da (ez 4 bloke berdin)", "Giro-graduak kalibratu dira"] },
-    { "num": "3", "title": "Oztopoak saihestu WHILE-rekin", "session": "3. saioa", "content": "Robota aurrera doa oztopo bat hauteman arte (distantzia < 20 cm), gero gelditu eta biratu.", "checkpoint": ["Robotak oztopo bat hautematean gelditzen da", "WHILE begiztа erabiltzen da", "Biratzen du eta aurrera jarraitzen du"] },
-    { "num": "★", "title": "Erronka zabalgarria", "session": "4–5. saioa", "challenges": [
-      { "stars": "★", "title": "Erregistroa", "text": "Hautemandako gutxieneko distantzia gorde" },
-      { "stars": "★", "title": "Lerro-jarraitzailea", "text": "Kolore-sentsorea lurrean" },
-      { "stars": "★★", "title": "Esplorazio ausazkoa", "text": "3s biratzen badago, norabidea aldatu" }
-    ]}
+    {
+      "num": "1",
+      "title": "Txasisa eraiki eta kalibratu",
+      "session": "1. saioa",
+      "content": "Trakzio diferentzialeko robota eraiki: bi motor gurpilak, distantzia-sentsorea aurrean eta kolore-sentsorea lurrean begira. Diagnostiko-programa bat sortu bi sentsoreen balioak pantailan erakusteko — kalibratzeko ezinbestekoa.",
+      "checkpoint": [
+        "Bi motorrak ondo konektatuta eta norabide onean",
+        "Distantzia-sentsoreak cm-tan irakurtzen du",
+        "Kolore-sentsoreak lurreko koloreak bereizten ditu",
+        "Robota zuzen doa bi motorrak abiaduran egonda"
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Ruta programatu — FOR begiztarekin",
+      "session": "2. saioa",
+      "content": "Taldeak bere portuko ruta diseinatu eta programatu behar du FOR begizt bat erabiliz. Ruta askea da baina gutxienez 3 bira izan behar ditu (karratu, L forma, U forma...). Giroaren graduak kalibrazio bidez zehaztu behar dira.",
+      "checkpoint": [
+        "Robotak diseinatutako ruta osatzen du",
+        "FOR begiztа erabiltzen da (ez bloke berdinak kopiatuta)",
+        "Girozko graduak kalibratuta daude"
+      ],
+      "reflection": [
+        "Zenbat gradu behar ditu zure robotak 90° biratzeko? Zergatik ez da beti berdina?",
+        "Zer gertatuko litzateke ruta 10 aldiz errepikatu beharko bazenu — aldatuko zenuke zerbait programan?"
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Oztopoak saihestu — WHILE begiztarekin",
+      "session": "3. saioa",
+      "content": "Oztopo-saihezketa gehitu: robota aurrera doa oztopo bat hauteman arte (distantzia < 20 cm), gelditzen da, eta saihesteko maniobra egiten du. Gero rutara itzultzen da.",
+      "checkpoint": [
+        "Robota oztopo bat hautematean gelditzen da",
+        "WHILE begiztа erabiltzen da oztopo-hautemate begiztan",
+        "Robota saihesteko maniobra egin ondoren rutarekin jarraitzen du"
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Grua-zona detektatu — kolore-sentsorea",
+      "session": "4. saioa",
+      "content": "Azken fasea: robota ruta egiten du oztopoak saihestuz, eta lurrean kartulina horia hautematen duenean (grua-zona) automatikoki gelditzen da eta hubeko LEDa berdez pizten da 'karga prest' adierazteko. P3ko gruak seinale hori erabiliko du.",
+      "checkpoint": [
+        "Robota grua-zonako kartulinan gelditzen da",
+        "LEDa berdez pizten da helmugara iristean",
+        "Sistema osoa: ruta + oztopoak + helmuga, ondo funtzionatzen du"
+      ]
+    },
+    {
+      "num": "★",
+      "title": "Erronka zabalgarria",
+      "session": "5–6. saioa",
+      "challenges": [
+        { "stars": "★", "title": "Oztopoaren erregistroa", "text": "Zenbatu zenbat oztopo aurkitu dituen rutan zehar eta erakutsi amaieran" },
+        { "stars": "★", "title": "Abiadura aldakorra", "text": "Zuzenean ibiltzean azkar, birak egitean motel — portuko errealitatetik gertuago" },
+        { "stars": "★★", "title": "Bi helmuga", "text": "Lurreko bi kolore desberdin (horia eta gorria) bi zona desberdinetara eramaten du robota" }
+      ]
+    }
   ],
   "quiz": [
-    { "question": "Robotak karratu bat egin behar du. Zein begiztа erabiltzen duzu?", "options": ["WHILE — distantzia arte", "FOR — 4 aldiz errepikatu", "Betirako errepikatu baldintza batekin", "Ez da begiztarik behar"], "correct": 1, "feedback": "Zuzena! Zehazki 4 aldiz errepikatu behar denean, FOR da aukera egokia." },
-    { "question": "Robotak aurrera joan behar du oztopo bat hauteman arte. Zein begiztа?", "options": ["FOR — 100 aldiz errepikatu", "WHILE — distantzia > 20 cm den bitartean", "Betirako errepikatu eta gero gelditu", "Baldintza soil bat"], "correct": 1, "feedback": "Zuzena! WHILE. Zenbat aldiz ez dakigu — baldintza dakigu (oztopo bat topatu arte)." },
-    { "question": "FOR begizta barruko blokeak begiztatik kanpo badaude, zer gertatzen da?", "options": ["Behin bakarrik exekutatzen dira, ez 4 aldiz", "4 aldiz exekutatzen dira berdin", "Errorea sortzen du", "Azkarrago exekutatzen da"], "correct": 0, "feedback": "Zuzena! Blokeak begiztatik kanpo badaude, behin bakarrik exekutatzen dira. Ziurtatu blokeak begiztan txertatuta daudela." }
+    {
+      "question": "Robotak portuko ruta egin behar du (4 alde). Zein begiztа erabiltzen duzu?",
+      "options": ["WHILE — oztopo bat topatu arte", "FOR — 4 aldiz errepikatu", "Betirako errepikatu baldintza batekin", "Ez da begiztarik behar — 4 bloke idazten dira"],
+      "correct": 1,
+      "feedback": "Zuzena! Ruta finkoa denean (4 alde) eta kopurua aldez aurretik ezagutzen dugunean, FOR da aukera egokia."
+    },
+    {
+      "question": "Robota oztopo bat topatu eta gelditu da baina ez da saihesten. Zein da arazorik ohikoena?",
+      "options": ["Distantzia-sentsorea hautsita dago", "WHILE begiztak motorra gelditu du baina saihesteko subprogramaren deia falta da", "FOR begiztа erabili behar da WHILE beharrean", "Abiadura handiegia da"],
+      "correct": 1,
+      "feedback": "Zuzena! WHILE begiztak motorra gelditzen du, baina gero saihesteko azpiprogramari deitu behar zaio. Egiaztatu 'esquivar()' azpiprogramaren deia WHILE begiztatik kanpo dagoela."
+    },
+    {
+      "question": "Kolore-sentsorea lurrean begira dago eta grua-zonako kartulina horia hautematen du. Zer egin behar du programak?",
+      "options": ["Rutarekin jarraitu", "Motorrak gelditu eta LEDa berdez piztu", "Oztopo bat saihestu", "Berrabiarazi"],
+      "correct": 1,
+      "feedback": "Zuzena! Kolore horia = helmuga = gelditu eta seinale berdea piztu. P3ko gruak seinale hori erabiliko du karga jasotzeko."
+    }
   ],
   "summary": {
     "heading": "P2 — Laburpena",
     "intro": "Proiektu honetan ikasitakoa:",
     "points": [
-      "FOR begiztа: errepikapen kopurua aldez aurretik ezagutzen denean",
-      "WHILE begiztа: baldintza bat bete arte errepikatzeko",
-      "Distantzia-sentsorea irakurri eta programa-erabakietan erabili",
-      "FOR eta WHILE konbinatu programa konplexu batean"
+      "FOR begiztа ruta programatu bat egiteko erabili duzu",
+      "WHILE begiztа oztopoak saihesteko erabili duzu",
+      "Bi sentsore aldi berean erabili dituzu (distantzia + kolorea)",
+      "Azpiprogramak erabiliz kodea antolatu duzu",
+      "Porto adimendunaren bigarren sistema eraiki duzu — P3ko gruarekin lan egingo duena"
     ],
     "next": "Hurrengo blokea: T3c — Gertaerak eta Egoerak"
   }
