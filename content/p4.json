@@ -1,60 +1,146 @@
 {
   "id": "p4",
-  "title": "Aparkaleku Adimenduna",
+  "title": "Porto Adimenduna — Garabi Klasifikatzailea",
   "eyebrow": "Azken Proiektua",
-  "description": "Sistema automatikoaren sarbide-kontrola eta leku kudeaketa",
-  "chips": ["Integrazio osoa", "Mugak dituzten zenbatzaileak", "Azpiprogramak", "6–7 saio"],
+  "description": "Kargak kolorearen arabera zona desberdinetara klasifikatzen dituen garabi adimenduna",
+  "chips": ["Integrazio osoa", "Kolore-klasifikazioa", "Egoera-makina aurreratua", "6–7 saio"],
   "accent": "#3A8C3A",
-  "research_question": "Nola kudea dezake sistema automatiko batek baliabide mugatua (aparkaleku-lekuak) gizakiaren esku-hartzerik gabe?",
+  "context_heading": "Porto osoaren sistema adimenduna",
+  "context_paragraphs": [
+    "Porto modernoen erronka nagusietako bat edukiontzien kudeaketa eraginkorra da. Edukiontzi bakoitzak helmuga desberdin bat du: batzuk biltegiratze-gunera doaz, beste batzuk zuzenean kamioietara, eta beste batzuk berariazko zonetara. Sistema adimendun batek automatikoki sailkatzen ditu.",
+    "Proiektu honetan P3ko garabia bilakatuko da garabi klasifikatzaile bihurtuko duzu. Berrikuntza nagusia: karga jaso aurretik, kolore-sentsoreak edukiontziaren kolorea irakurriko du, eta kolorearen arabera erabakiko du zein zonara eraman. Ikasturtean zehar ikasitako guztia sistema bakarrean bilduko da."
+  ],
+  "research_question": "Nola integra daitezke ikasitako kontzeptu guztiak sistema erreal eta konplexu batean?",
   "objectives": [
-    "Baldintzak, begiztak, gertaerak eta aldagaiak sistema bakarrean integratzea",
-    "Mugak dituen zenbatzailea inplementatzea (0 eta 5 artean beti)",
-    "Azpiprogramak erabiliz kode konplexua antolatzea",
-    "Proba sistematikoak diseinatu eta exekutatzea"
+    "P3ko garabi-sistema koloreen klasifikazioarekin hobetzea",
+    "Kolore-sentsorea erabakiak hartzeko erabiltzea (zein zonara eraman)",
+    "Egoera-makina zabaltzea helmuga anitzak kudeatzeko",
+    "Sistema osoa (semaforo + kamioi + garabi) koordinatzea",
+    "Proba sistematikoak diseinatu eta exekutatzea",
+    "Ikasitako kontzeptu guztiak (baldintzak, begiztak, gertaerak, egoerak) sistema bakarrean integratzea"
   ],
   "material": [
     { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
-    { "icon": "📡", "name": "Distantzia-sentsorea — sarrera", "qty": "×1 — A ataka" },
-    { "icon": "📡", "name": "Distantzia-sentsorea — irteera", "qty": "×1 — B ataka" },
-    { "icon": "⚙️", "name": "Motor ertaina — sarrerako barrera", "qty": "×1 — C ataka" },
-    { "icon": "⚙️", "name": "Motor ertaina — irteerako barrera (aukerazkoa)", "qty": "×1 — D ataka" }
+    { "icon": "⚙️", "name": "Motor handia (garabi horizontala)", "qty": "×1 — A ataka" },
+    { "icon": "⚙️", "name": "Motor ertaina (ganxoa gora/behera)", "qty": "×1 — B ataka" },
+    { "icon": "📡", "name": "Distantzia-sentsorea (kamioia detektatu)", "qty": "×1 — C ataka" },
+    { "icon": "🎨", "name": "Kolore-sentsorea (edukiontziaren kolorea)", "qty": "×1 — D ataka" },
+    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
+    { "icon": "📦", "name": "Edukiontzi txikiak kolore desberdinekin (gorria, urdina, berdea)", "qty": "6 edukiontzi" }
   ],
   "phases": [
-    { "num": "1", "title": "Eraikuntza eta diagnostikoa", "session": "1. saioa", "content": "Maketa eraiki eta diagnostiko-programa batekin sentsoreak egiaztatu. Atariak zehaztu. Diseinu-taula bete (aldagaiak, azpiprogramak).", "checkpoint": ["Bi sentsoreak ondo detektatzen dute", "Barrera igotzen eta jaisten da", "Diseinu-taula irakasleak onartuta"] },
-    { "num": "2", "title": "Sarrerako logika + zenbatzailea", "session": "2–3. saioa", "content": "leku_libre = 5 hasieratu. Sarreran: autoa detektatu → leku_libre > 0 bada → barrera ireki → leku_libre - 1 → display eguneratu. Leku_libre = 0 bada → BETEA erakutsi.", "checkpoint": ["Sarrerak ondo funtzionatzen du", "Zenbatzailea ez da inoiz 0 azpitik jaisten", "LED kolore egokia erakusten du"] },
-    { "num": "3", "title": "Irteera + mantentze modua", "session": "4. saioa", "content": "Irteera-logika gehitu (leku_libre + 1, muga: ez 5 gora). Mantentze modua botoia sakatuta (barreras irekita, MANT pantailan).", "checkpoint": ["Sarrera eta irteera modu independentean funtzionatzen dute", "Zenbatzailea ez da inoiz 5 gora igotzen", "Mantentze modua ondo funtzionatzen du"] },
-    { "num": "★", "title": "Erronka zabalgarria", "session": "5–6. saioa", "challenges": [
-      { "stars": "★", "title": "Tarifa", "text": "Auto bakoitzeko sarrera-zenbatzailea" },
-      { "stars": "★", "title": "Erreserba", "text": "Leku bat beti erreserbatuta" },
-      { "stars": "★★", "title": "Bi eremu", "text": "A eremua (3 leku) eta B eremua (2 leku)" }
-    ]}
+    {
+      "num": "1",
+      "title": "Kolore-sentsorea gehitu eta kalibratu",
+      "session": "1. saioa",
+      "content": "P3ko garabi-sistema oinarri gisa hartuz, kolore-sentsorea gehitu ganxoaren ondoan — karga jaso aurretik edukiontziaren kolorea irakurtzen duena. Diagnostiko-programa bat sortu kolore bakoitzaren balioak zehazteko.",
+      "checkpoint": [
+        "Kolore-sentsorea ondo kokatuta dago kargaren ondoan",
+        "Hiru koloreak (gorria, urdina, berdea) ondo bereizten ditu",
+        "P3ko sistema oinarrizko funtzionamendua mantentzen du"
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Hiru zona definitu eta egoera-makina zabaldu",
+      "session": "1–2. saioa",
+      "content": "Maquetan hiru helmuga-zona definitu kolorearen arabera:\n- GORRIA → A zona (ezkerrean)\n- URDINA → B zona (erdian)\n- BERDEA → C zona (eskuinean)\n\nEgoera-makina zabaldu helmuga aldagaia gehituz:\n0 - ITXARONEAN\n1 - KOLOREA IRAKURTZEN\n2 - HURBILTZEN\n3 - JAISTEN\n4 - JASOTZEN\n5 - HELMUGARA MUGITZEN (kolorea arabera)\n6 - UZTEN\n7 - ITZULTZEN posizio estandarrera",
+      "checkpoint": [
+        "Hiru zonak maquetan ondo markatuta",
+        "Egoera-makina berria paperean osatuta",
+        "Irakasleak diseinua onartuta"
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Kolore-klasifikazioa programatu",
+      "session": "2–3. saioa",
+      "content": "Egoera 1 (KOLOREA IRAKURTZEN) programatu: kolore-sentsoreak edukiontziaren kolorea irakurri eta 'helmuga' aldagaian gorde. Egoera 5 (HELMUGARA MUGITZEN) programatu: helmuga aldagaiaren arabera motor A-k angelu desberdinera biratzen du.",
+      "checkpoint": [
+        "Kolore gorria → A zonara doa",
+        "Kolore urdina → B zonara doa",
+        "Kolore berdea → C zonara doa",
+        "Kolore ezezaguna → ERROREA erakutsi eta posizio estandarrera itzuli"
+      ],
+      "reflection": [
+        "Zer gertatzen da kolorea ondo irakurri ezin bada (argi gutxi, kolorea lausoa)?",
+        "Nola hobetuko zenuke sistema edukiontzi gehiago eta zona gehiago kudeatzeko?"
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Integrazio osoa — porto sistema",
+      "session": "4–5. saioa",
+      "content": "Sistema osoa elkarrekin probatu:\n1. P1eko semaforoak baimena ematen dio kamioiari\n2. P2ko kamioiak grua-zonara iristen da eta LEDa pizten du\n3. P4ko garabiak kamioia detektatzen du, kolorea irakurtzen du eta helmuga egokira eramaten du\n\nProba egin kolore desberdineko hiru edukiontzi jarraian.",
+      "checkpoint": [
+        "Hiru sistema ondo koordinatuta daude",
+        "Kolore bakoitzeko edukiontzia zona egokira doa",
+        "Sistema osoa berriro hasieran kokatu daiteke"
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Proba sistematikoak",
+      "session": "5–6. saioa",
+      "content": "Aurkezpena egin aurretik, proba-taula osatu. Sistema erreal baten bezala probatu: kasu normalak, mugako kasoak eta kasu bereziak.",
+      "checkpoint": [
+        "10 proba guztiak dokumentatuta",
+        "Sistema errobostekin funtzionatzen du (hiru kolore, errepikatu)",
+        "Erroreen kudeaketa ondo funtzionatzen du"
+      ]
+    },
+    {
+      "num": "★",
+      "title": "Erronka zabalgarria",
+      "session": "6–7. saioa",
+      "challenges": [
+        { "stars": "★", "title": "Estatistikak", "text": "Kolore bakoitzeko zenbat edukiontzi prozesatu diren zenbatu eta pantailan erakutsi" },
+        { "stars": "★", "title": "Lehentasun-sistema", "text": "Kolore gorriko edukiontziek lehentasuna dute — beste bat prozesatzen ari bada, ondo gorde eta gorria lehenago eraman" },
+        { "stars": "★★", "title": "Lau kolore", "text": "Lau zona gehitu — laugarren kolorea (horia) laugarren zonara doa. Egoera-makina moldatu." }
+      ]
+    }
   ],
   "proof_items": [
-    { "num": "P1", "desc": "Sarrera normala", "expected": "Atea irekitzen da, zenbatzaileak 4ra jaisten da, LED berdea" },
-    { "num": "P2", "desc": "Bosgarren sarrera", "expected": "Atea irekitzen da, zenbatzailea = 0, LED gorria" },
-    { "num": "P3", "desc": "Aparkalekua beteta", "expected": "Atea EZ da irekitzen, 'BETEA' erakusten du, pitua" },
-    { "num": "P4", "desc": "Irteera normala", "expected": "Atea irekitzen da, zenbatzaileak 1era igotzen da" },
-    { "num": "P5", "desc": "Irteera aparkalekua hutsik", "expected": "Atea EZ da irekitzen, ezer ez da aldatzen" },
-    { "num": "P6", "desc": "Sekuentzia osoa: 3 sarrera, 2 irteera, 4 sarrera", "expected": "Zenbatzailea: 5→2→3→0 — Urrats bakoitzean zuzena" },
-    { "num": "P7", "desc": "Mantentze modua: aktibatu", "expected": "Pantailak 'MANT' erakusten du, ateak irekita" },
-    { "num": "P8", "desc": "Mantentze modua: desaktibatu", "expected": "Aurreko egoerara itzultzen da zenbatzaile berarekin" },
-    { "num": "P9", "desc": "Bikoiztu detekzioa", "expected": "Autoa oso astiro pasatu: sarrera bakarra zenbatuta" },
-    { "num": "P10", "desc": "Berrabiaraztea", "expected": "Sistema 5 leku librerekin abiatzen da" }
+    { "num": "P1", "desc": "Edukiontzi gorria", "expected": "Garabiak A zonara eramaten du" },
+    { "num": "P2", "desc": "Edukiontzi urdina", "expected": "Garabiak B zonara eramaten du" },
+    { "num": "P3", "desc": "Edukiontzi berdea", "expected": "Garabiak C zonara eramaten du" },
+    { "num": "P4", "desc": "Hiru edukiontzi jarraian (G+U+B)", "expected": "Bakoitza zona egokira doa, ordena zuzenean" },
+    { "num": "P5", "desc": "Kolore ezezaguna", "expected": "ERROREA erakusten du eta posizio estandarrera itzultzen da" },
+    { "num": "P6", "desc": "Kamioia gabe (distantzia sentsorea hutsa)", "expected": "Garabia ITXARONEAN geratzen da, ez da mugitzen" },
+    { "num": "P7", "desc": "Sistema berrabiarazi ondoren", "expected": "Garabia posizio estandarrean kokatzen da eta prest dago" },
+    { "num": "P8", "desc": "Porto sistema osoa (P1+P2+P4)", "expected": "Semaforoa → kamioia → garabia, koordinatuta funtzionatzen dute" },
+    { "num": "P9", "desc": "Edukiontzi gorria x3 jarraian", "expected": "Hiruak A zonara doaz, sistemak ez du nahastu" },
+    { "num": "P10", "desc": "Abiadura-proba: hiru kolore azkar", "expected": "Sistemak ez du kolorea nahasten abiaduran ere" }
   ],
   "quiz": [
-    { "question": "Aparkalekua beteta dagoenean eta auto bat sartu nahi denean zenbatzaileak -1era iristen da. Zein da arazoa?", "options": ["Atea oso azkar irekitzen da", "'leku_libre > 0 bada' baldintza falta da atea ireki aurretik", "Aldagaia ez da ondo hasieratu", "Sentsoreak ez du autoa hautematen"], "correct": 1, "feedback": "Zuzena! 'leku_libre > 0 bada' baldintza zenbatzaileak inoiz 0 azpitik ez duela jaitsi bermatzen duen beheko muga da." },
-    { "question": "Auto bat jarraian bi aldiz hautematen da sarrerako sentsorean. Nola konpontzen da?", "options": ["Sentsorea aldatu", "Ateko azpiprogramaren bukaeran itxaronaldi bat gehitu (1-2 s)", "LEKU_TOTAL bikoiztu", "WHILE bat erabili if baten ordez"], "correct": 1, "feedback": "Zuzena! Teknika honi debounce deitzen zaio. Atea jaitsi ondoren, itxaron 1-2 s. Denbora horretan autoa pasa da." },
-    { "question": "'bistaratzea_eguneratu()' azpiprograman, zein ordentan jarri behar dira LEDaren baldintzak?", "options": ["Berdea → Horia → Gorria", "Gorria (= 0) → Horia (≤ 2) → Berdea (gainerakoak)", "Ordena ez da garrantzitsua", "Horia → Gorria → Berdea"], "correct": 1, "feedback": "Zuzena! Ordena garrantzitsua da bada/bestela bada-rekin. Jarri lehenengo kasu murriztaileena (Gorria = 0)." }
+    {
+      "question": "Garabiak edukiontziaren kolorea irakurri du: GORRIA. Zer egin behar du ondoren?",
+      "options": ["Beti B zonara eraman (erdikoa)", "helmuga aldagaian GORRIA gorde eta A zonara eraman", "Berrabiarazi", "Kamioia zain egon"],
+      "correct": 1,
+      "feedback": "Zuzena! Kolorea 'helmuga' aldagaian gordetzen da eta gero aldagai horren arabera mugitzen da motor A. Aldagaiak erabakiaren 'memoria' da."
+    },
+    {
+      "question": "Zein kontzeptu berritu da P3tik P4ra?",
+      "options": ["Begiztak", "Kolore-sentsorearekin hartutako erabakia helmuga-aldagaian gordeta", "Motorren kontrola", "Posizio estandarra"],
+      "correct": 1,
+      "feedback": "Zuzena! P4ko berrikuntza nagusia da: kolorea irakurri → aldagaian gorde → erabakia hartu. P3n helmuga beti berdina zen; P4n kolorearen araberakoa da."
+    },
+    {
+      "question": "Kolore ezezaguna detektatzen du sistemak. Zein da jokabide egokiena?",
+      "options": ["A zonara eraman beti (lehenetsia)", "Errorea erakutsi eta posizio estandarrera itzuli", "Itxaronean geratu betirako", "Programa berrabiarazi"],
+      "correct": 1,
+      "feedback": "Zuzena! Sistema erreal batek beti kudeatu behar ditu ustekabeko kasuak. Errorea erakutsi, operadorea jakinarazi eta egoera seguruera itzuli — posizio estandarrera."
+    }
   ],
   "summary": {
-    "heading": "P4 — Zorionak! Hau da azken proiektua",
-    "intro": "Kurtso osoan ikasitakoa:",
+    "heading": "P4 — Porto Adimenduna osatu duzu! 🎉",
+    "intro": "Ikasturtean zehar ikasitako guztia sistema bakarrean bildu duzu:",
     "points": [
-      "Baldintzak (P1) → Begiztak (P2) → Gertaerak eta Egoerak (P3) → Integrazio osoa (P4)",
-      "Mugak dituen zenbatzaile bat inplementatu duzu",
-      "Azpiprogramak erabiliz kode konplexua antolatu duzu",
-      "Proba sistematikoak diseinatu eta exekutatu dituzu"
+      "Baldintzak (P1) → Semaforoa: kolorea → erabakia",
+      "Begiztak (P2) → Kamioiaren ruta: FOR + WHILE + bi sentsore",
+      "Gertaerak eta egoerak (P3) → Garabi basicoa: sekuentzia + egoera-makina",
+      "Integrazio osoa (P4) → Garabi klasifikatzailea: kolore → helmuga → zona"
     ],
-    "next": "Ikasturtea bukatu da — SPIKE Prime ikas dezakezu orain Python-ekin ere!"
+    "next": "Zorionak! SPIKE Prime-rekin programazioa ikasi duzu. Hurrengo urratsa: Python-ekin programazio testualera salto egin!"
   }
 }
