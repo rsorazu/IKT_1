@@ -29,7 +29,7 @@ function el(tag, cls, html) {
 }
 function photoPlaceholder(photo) {
   if (!photo) return '';
-  const src = photo.image || '';
+  const src = photo.image || (photo.description && photo.description.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i) ? photo.description : '');
   if (src && src.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i)) {
     return `<img src="${src}" alt="${photo.description||''}"
       style="width:100%;border-radius:10px;margin:16px 0;display:block;border:0.5px solid var(--border)">`;
