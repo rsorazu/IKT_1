@@ -1552,3 +1552,21 @@ code {
   .glossary-search-wrap { padding: 20px 20px 0; }
   .states-diagram { flex-direction: column; }
 }
+.nav-item-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 20px;
+}
+.nav-external-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-external-link .nav-title {
+  color: var(--spike-blue);
+}
+.nav-external-link:hover .nav-title {
+  text-decoration: underline;
+}
