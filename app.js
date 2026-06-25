@@ -248,7 +248,7 @@ function renderT1() {
       <h2>${d.tabs[0].heading}</h2>
       ${(d.tabs[0].paragraphs||[]).map(p=>`<p>${p}</p>`).join('')}
       <div class="theory-cards">${pillarsHTML}</div>
-      ${photoPlaceholder(d.tabs[0].photo)}
+      ${photoPlaceholder(d['tabs[0].photo'])}
     </div>
     <div class="tab-content" data-content="algo">
       <h2>${d.tabs[1].heading}</h2>
@@ -258,7 +258,7 @@ function renderT1() {
       <p>${d.tabs[1].example_intro||''}</p>
       <div class="algo-steps" id="t1-algo-display"></div>
       ${infoBoxHTML(d.tabs[1].info_box)}
-      ${photoPlaceholder(d.tabs[1].photo)}
+      ${photoPlaceholder(d['tabs[1].photo'])}
       <p>${d.tabs[1].closing||''}</p>
     </div>
     <div class="tab-content" data-content="deskomposa">
@@ -273,7 +273,7 @@ function renderT1() {
         </div>
       </div>
       ${infoBoxHTML(d.tabs[2].info_box)}
-      ${photoPlaceholder(d.tabs[2].photo)}
+      ${photoPlaceholder(d['tabs[2].photo'])}
     </div>
     <div class="tab-content" data-content="exercicis">
       <h2>Ariketak</h2>
