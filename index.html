@@ -99,20 +99,8 @@
     }
   </style>
 </head>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 <body>
-<div data-netlify-identity-menu></div>
+
 <div class="loading-screen" id="loadingScreen">
   <div class="loading-brick"></div>
   <div class="loading-text">Edukia kargatzen...</div>
@@ -130,7 +118,7 @@
     <button class="sidebar-close" id="sidebarClose" aria-label="Menua itxi">✕</button>
   </div>
   <div class="sidebar-section">
-    <span class="sidebar-label" id="navSubtitle">2026–27 ikasturtea</span>
+    <span class="sidebar-label" id="navSubtitle">2024–25 ikasturtea</span>
   </div>
   <ul class="nav-list" id="navList">
     <li class="nav-item active" data-unit="intro">
@@ -140,14 +128,6 @@
         <span class="nav-title">Ongi etorri</span>
       </div>
     </li>
-  <li class="nav-item" onclick="window.open('https://spike.legoeducation.com','_blank')">
-  <div class="nav-circuit-dot" style="--dot-color:#4C97FF"></div>
-  <div class="nav-content">
-    <span class="nav-tag">App</span>
-    <span class="nav-title" style="color:var(--spike-blue)">SPIKE aplikazioa ↗</span>
-    <span class="nav-sub">Ireki LEGO SPIKE web app</span>
-  </div>
-</li>
     <li class="nav-divider"></li>
     <li class="nav-group-label">— Teoria</li>
     <li class="nav-item" data-unit="t1">
@@ -174,30 +154,22 @@
         <span class="nav-sub">if/else · Aldagaiak</span>
       </div>
     </li>
-     <li class="nav-item" data-unit="t3b">
-      <div class="nav-circuit-dot" style="--dot-color:#8B7355"></div>
-      <div class="nav-content">
-        <span class="nav-tag">T3b</span>
-        <span class="nav-title">Begiztak</span>
-        <span class="nav-sub">FOR · WHILE</span>
-      </div>
-    </li>
-    <li class="nav-item" data-unit="t3c">
-      <div class="nav-circuit-dot" style="--dot-color:#8B7355"></div>
-      <div class="nav-content">
-        <span class="nav-tag">T3c</span>
-        <span class="nav-title">Gertaerak eta Egoerak</span>
-        <span class="nav-sub">Gertaerak · Egoerak</span>
-      </div>
-    </li>
     <li class="nav-divider"></li>
     <li class="nav-group-label">— Proiektuak</li>
     <li class="nav-item" data-unit="p1">
       <div class="nav-circuit-dot" style="--dot-color:#2E7DD1"></div>
       <div class="nav-content">
         <span class="nav-tag">P1</span>
-        <span class="nav-title">Semaforoa portuan</span>
+        <span class="nav-title">Semaforoa</span>
         <span class="nav-sub">Baldintzak · Kolore-sentsorea</span>
+      </div>
+    </li>
+    <li class="nav-item" data-unit="t3b">
+      <div class="nav-circuit-dot" style="--dot-color:#8B7355"></div>
+      <div class="nav-content">
+        <span class="nav-tag">T3b</span>
+        <span class="nav-title">Begiztak</span>
+        <span class="nav-sub">FOR · WHILE</span>
       </div>
     </li>
     <li class="nav-item" data-unit="p2">
@@ -206,6 +178,14 @@
         <span class="nav-tag">P2</span>
         <span class="nav-title">Esploratzaile Robota</span>
         <span class="nav-sub">FOR · WHILE begiztak</span>
+      </div>
+    </li>
+    <li class="nav-item" data-unit="t3c">
+      <div class="nav-circuit-dot" style="--dot-color:#8B7355"></div>
+      <div class="nav-content">
+        <span class="nav-tag">T3c</span>
+        <span class="nav-title">Gertaerak eta Egoerak</span>
+        <span class="nav-sub">Gertaerak · Egoerak</span>
       </div>
     </li>
     <li class="nav-item" data-unit="p3">
@@ -249,29 +229,77 @@
 
   <!-- Intro unit is static -->
   <section class="unit active" id="unit-intro">
-    <div class="unit-hero intro-hero">
-      <div class="hero-eyebrow" id="heroEyebrow">1. Batxilergoa · IKT</div>
-      <h1 class="hero-title" id="heroTitle">Programatzen ikasi<br><em>LEGO SPIKE Prime-rekin</em></h1>
-      <p class="hero-sub" id="heroSub">Lau proiektu progresibo. Oinarrizko instrukzioetatik sistema autonomo osoak arte.</p>
-      <div class="hero-blocks-preview">
-        <div class="mini-block" style="--c:#E8940A">4 aldiz errepikatu</div>
-        <div class="mini-block" style="--c:#2E7DD1">A motorra mugitu</div>
-        <div class="mini-block" style="--c:#E8940A">distantzia &lt; 20 bada</div>
-        <div class="mini-block" style="--c:#7A4FC9">alarma() definitu</div>
-        <div class="mini-block" style="--c:#3A8C3A">leku_libre - 1</div>
+
+    <!-- ANNOUNCEMENT -->
+    <div class="announcement-bar" id="announcementCard" style="display:none;text-align:left;padding:14px 24px;margin:0"></div>
+
+    <!-- 1. HERO -->
+    <div class="intro-hero-new">
+      <div class="intro-hero-text">
+        <div class="hero-eyebrow">1. Batxilergoa · IKT Programazioa</div>
+        <h1 class="intro-main-title">Portu Adimenduna</h1>
+        <p class="intro-main-sub" id="heroSub">Porto industrial adimendun bat eraikiko dugu ikasturtean zehar, programazioaren oinarriak ikasiz.</p>
       </div>
-    </div>
-    <div class="content-grid">
-      <div class="card-row" id="introCards"></div>
-      <div class="info-box" style="--box-color:#2E7DD1">
-        <div class="info-box-icon">📦</div>
-        <div>
-          <strong>Beharrezko materiala</strong>
-          <p id="materialText">LEGO SPIKE Prime Hub · Distantzia, kolore eta indar-sentsoreak · Motorrak · SPIKE aplikazioa</p>
+      <div class="intro-hero-img">
+        <div class="intro-img-placeholder" id="introImgPlaceholder">
+          <div class="photo-ph-icon" style="font-size:3rem">📷</div>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin:8px 0 0;font-style:italic">Portuaren argazkia</p>
         </div>
       </div>
-      <div class="announcement-bar" id="announcementCard" style="border-radius:var(--radius);display:none;text-align:left;padding:14px 20px"></div>
     </div>
+
+    <!-- 2. METODOLOGIA -->
+    <div class="intro-section">
+      <h2 class="intro-section-title">Metodologia</h2>
+      <p class="intro-section-desc">Ikasturtea horrela antolatuta dago:</p>
+      <div class="metodo-steps">
+        <div class="metodo-step">
+          <div class="metodo-icon">📚</div>
+          <div class="metodo-text">Teoria ikasi</div>
+        </div>
+        <div class="metodo-arrow">→</div>
+        <div class="metodo-step">
+          <div class="metodo-icon">🔧</div>
+          <div class="metodo-text">Proiektuan aplikatu</div>
+        </div>
+        <div class="metodo-arrow">→</div>
+        <div class="metodo-step">
+          <div class="metodo-icon">🏗️</div>
+          <div class="metodo-text">Portu adimenduna osatu</div>
+        </div>
+      </div>
+      <p class="intro-metodo-note">Teoria eta praktika txandaka doaz — kontzeptu bat ikasi eta berehala proiektu batean aplikatu.</p>
+    </div>
+
+    <!-- 3. MATERIALA -->
+    <div class="intro-section intro-section-alt">
+      <h2 class="intro-section-title">Beharrezko materiala</h2>
+      <div class="material-cards">
+        <div class="material-card-new">
+          <div class="material-card-icon">🧱</div>
+          <div class="material-card-body">
+            <strong>LEGO SPIKE Prime</strong>
+            <p>Hub, motorrak eta sentsoreak. Proiektu guztiak kit honekin egingo dira.</p>
+          </div>
+        </div>
+        <div class="material-card-new">
+          <div class="material-card-icon">💻</div>
+          <div class="material-card-body">
+            <strong>SPIKE Aplikazioa</strong>
+            <p>Programazioa bloke bidez egiteko LEGO-ren web aplikazioa.</p>
+            <a href="https://spike.legoeducation.com" target="_blank" class="material-link">spike.legoeducation.com ↗</a>
+          </div>
+        </div>
+        <div class="material-card-new">
+          <div class="material-card-icon">📋</div>
+          <div class="material-card-body">
+            <strong>Microsoft Teams</strong>
+            <p>Proiektuen txostenak eta lanak Teams bidez entregatuko dira.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- Dynamic units rendered by JS -->
