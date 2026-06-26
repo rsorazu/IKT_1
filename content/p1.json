@@ -3,7 +3,12 @@
   "title": "Semaforoa Portuan",
   "eyebrow": "P1 · Proiektua",
   "description": "Porturako sarbidea kontrolatzen duen semaforoa",
-  "chips": ["if / else", "Kolore-sentsorea", "Aldagaiak", "4–5 saio"],
+  "chips": [
+    "if / else",
+    "Kolore-sentsorea",
+    "Aldagaiak",
+    "4–5 saio"
+  ],
   "accent": "#2E7DD1",
   "context_heading": "Porturako sarbidea kontrolatu",
   "context_paragraphs": [
@@ -19,11 +24,31 @@
     "Programa bat betirako errepikatu begiztan exekutatzea"
   ],
   "material": [
-    { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
-    { "icon": "🎨", "name": "Kolore-sentsorea", "qty": "×1 — A ataka" },
-    { "icon": "⚙️", "name": "Motor ertaina (hesia)", "qty": "×1 — B ataka" },
-    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
-    { "icon": "🟥", "name": "Kolore-txartelak (gorria, berdea, horia)", "qty": "3 txartel" }
+    {
+      "icon": "🧱",
+      "name": "LEGO SPIKE Prime Hub",
+      "qty": "×1"
+    },
+    {
+      "icon": "🎨",
+      "name": "Kolore-sentsorea",
+      "qty": "×1 — A ataka"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Motor ertaina (hesia)",
+      "qty": "×1 — B ataka"
+    },
+    {
+      "icon": "📱",
+      "name": "SPIKE aplikaziodun gailua",
+      "qty": "×1 bikoteko"
+    },
+    {
+      "icon": "🟥",
+      "name": "Kolore-txartelak (gorria, berdea, horia)",
+      "qty": "3 txartel"
+    }
   ],
   "material_tip": {
     "icon": "💡",
@@ -73,28 +98,55 @@
       "title": "Erronka zabalgarria",
       "session": "4–5. saioa",
       "challenges": [
-        { "stars": "★", "title": "Gau modua", "text": "5 segundutan detekziorik ez → horia keinukatzen (porto hutsa)" },
-        { "stars": "★", "title": "Larrialdiak", "text": "Hubeko botoia → dena gorria + alarma soinua (larrialdi protokoloa)" },
-        { "stars": "★★", "title": "Bi karril", "text": "Sarrerako eta irteerako karrilak independenteki kontrolatu bi sentsore erabiliz" }
+        {
+          "stars": "★",
+          "title": "Gau modua",
+          "text": "5 segundutan detekziorik ez → horia keinukatzen (porto hutsa)"
+        },
+        {
+          "stars": "★",
+          "title": "Larrialdiak",
+          "text": "Hubeko botoia → dena gorria + alarma soinua (larrialdi protokoloa)"
+        },
+        {
+          "stars": "★★",
+          "title": "Bi karril",
+          "text": "Sarrerako eta irteerako karrilak independenteki kontrolatu bi sentsore erabiliz"
+        }
       ]
     }
   ],
   "quiz": [
     {
       "question": "Hiru 'bada' bloke independente dituzu bata bestearen atzetik. Zer arazo sor dezake?",
-      "options": ["Arazorik ez, bada/bestela bada-ren baliokidea da", "Programak 3 baldintzak beti ebaluatzen ditu, lehena egia bada ere", "Programa lehenengo baldintza egiazkoa denean gelditzen da", "SPIKE-n 'bada' bloke independenteak ez dira funtzionatzen"],
+      "options": [
+        "Arazorik ez, bada/bestela bada-ren baliokidea da",
+        "Programak 3 baldintzak beti ebaluatzen ditu, lehena egia bada ere",
+        "Programa lehenengo baldintza egiazkoa denean gelditzen da",
+        "SPIKE-n 'bada' bloke independenteak ez dira funtzionatzen"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Bada/bestela bada katearekin, lehenengo baldintza egiazkoa denean gainerakoak saltatzen dira. Hori da eraginkorrago eta akats gutxiago sortzen dituena."
     },
     {
       "question": "Non jarri behar duzu 'sarrerak 0ra ezarri' blokea aldagaia ondo funtzionatzeko?",
-      "options": ["Betirako errepikatu begiztan, hasieran", "Betirako errepikatu begiztan, bukaeran", "Begiztatik kanpo, hasierako sombreraren ondoren", "Berdin du, emaitza berdina da"],
+      "options": [
+        "Betirako errepikatu begiztan, hasieran",
+        "Betirako errepikatu begiztan, bukaeran",
+        "Begiztatik kanpo, hasierako sombreraren ondoren",
+        "Berdin du, emaitza berdina da"
+      ],
       "correct": 2,
       "feedback": "Zuzena! Hasieraketa beti begiztatik KANPO joan behar da. Barruan jartzen baduzu, aldagaia 0ra berrabiarazten da iterazio bakoitzean eta inoiz ezin izango du balioak metatu."
     },
     {
       "question": "Portuko semaforoak BERDEA txartela detektatu du baina hesia ez da irekitzen. Zein da zioen arrazoirik ohikoena?",
-      "options": ["Motorra hautsita dago", "Motorra eta sentsorea ataka berean konektatuta daude", "Baldintzan kolorearen izena ez dator bat sentsorearen balioaren zehaztasunarekin", "Begiztа oso azkar doa"],
+      "options": [
+        "Motorra hautsita dago",
+        "Motorra eta sentsorea ataka berean konektatuta daude",
+        "Baldintzan kolorearen izena ez dator bat sentsorearen balioaren zehaztasunarekin",
+        "Begiztа oso azkar doa"
+      ],
       "correct": 2,
       "feedback": "Zuzena! Ireki aplikazioko sentsore-monitorearen eta egiaztatu zein kolore-izen zehatz irakurtzen duen. Baldintzan jarritako izenarekin bat etorri behar du zehaztasunez."
     }
@@ -110,5 +162,49 @@
       "Porto adimendunaren lehen sistema eraiki duzu"
     ],
     "next": "Hurrengo blokea: T3b — Begiztak"
+  },
+  "delivery": {
+    "heading": "Zer entregatu behar da?",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da, irakasleak irekiko duen tarea bidez. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafoa bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Taula honek zutabe hauek izan behar ditu: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
   }
 }
