@@ -1758,7 +1758,7 @@ code {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 20px 28px;
-  min-width: 140px;
+  min-width: 180px;
   text-align: center;
 }
 .metodo-icon { font-size: 1.8rem; }
@@ -1782,7 +1782,7 @@ code {
 /* Material cards */
 .material-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
 }
 .material-card-new {
