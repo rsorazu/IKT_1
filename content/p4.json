@@ -3,7 +3,12 @@
   "title": "Porto Adimenduna — Garabi Klasifikatzailea",
   "eyebrow": "Azken Proiektua",
   "description": "Kargak kolorearen arabera zona desberdinetara klasifikatzen dituen garabi adimenduna",
-  "chips": ["Integrazio osoa", "Kolore-klasifikazioa", "Egoera-makina aurreratua", "6–7 saio"],
+  "chips": [
+    "Integrazio osoa",
+    "Kolore-klasifikazioa",
+    "Egoera-makina aurreratua",
+    "6–7 saio"
+  ],
   "accent": "#3A8C3A",
   "context_heading": "Porto osoaren sistema adimenduna",
   "context_paragraphs": [
@@ -20,13 +25,41 @@
     "Ikasitako kontzeptu guztiak (baldintzak, begiztak, gertaerak, egoerak) sistema bakarrean integratzea"
   ],
   "material": [
-    { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
-    { "icon": "⚙️", "name": "Motor handia (garabi horizontala)", "qty": "×1 — A ataka" },
-    { "icon": "⚙️", "name": "Motor ertaina (ganxoa gora/behera)", "qty": "×1 — B ataka" },
-    { "icon": "📡", "name": "Distantzia-sentsorea (kamioia detektatu)", "qty": "×1 — C ataka" },
-    { "icon": "🎨", "name": "Kolore-sentsorea (edukiontziaren kolorea)", "qty": "×1 — D ataka" },
-    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
-    { "icon": "📦", "name": "Edukiontzi txikiak kolore desberdinekin (gorria, urdina, berdea)", "qty": "6 edukiontzi" }
+    {
+      "icon": "🧱",
+      "name": "LEGO SPIKE Prime Hub",
+      "qty": "×1"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Motor handia (garabi horizontala)",
+      "qty": "×1 — A ataka"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Motor ertaina (ganxoa gora/behera)",
+      "qty": "×1 — B ataka"
+    },
+    {
+      "icon": "📡",
+      "name": "Distantzia-sentsorea (kamioia detektatu)",
+      "qty": "×1 — C ataka"
+    },
+    {
+      "icon": "🎨",
+      "name": "Kolore-sentsorea (edukiontziaren kolorea)",
+      "qty": "×1 — D ataka"
+    },
+    {
+      "icon": "📱",
+      "name": "SPIKE aplikaziodun gailua",
+      "qty": "×1 bikoteko"
+    },
+    {
+      "icon": "📦",
+      "name": "Edukiontzi txikiak kolore desberdinekin (gorria, urdina, berdea)",
+      "qty": "6 edukiontzi"
+    }
   ],
   "phases": [
     {
@@ -94,40 +127,107 @@
       "title": "Erronka zabalgarria",
       "session": "6–7. saioa",
       "challenges": [
-        { "stars": "★", "title": "Estatistikak", "text": "Kolore bakoitzeko zenbat edukiontzi prozesatu diren zenbatu eta pantailan erakutsi" },
-        { "stars": "★", "title": "Lehentasun-sistema", "text": "Kolore gorriko edukiontziek lehentasuna dute — beste bat prozesatzen ari bada, ondo gorde eta gorria lehenago eraman" },
-        { "stars": "★★", "title": "Lau kolore", "text": "Lau zona gehitu — laugarren kolorea (horia) laugarren zonara doa. Egoera-makina moldatu." }
+        {
+          "stars": "★",
+          "title": "Estatistikak",
+          "text": "Kolore bakoitzeko zenbat edukiontzi prozesatu diren zenbatu eta pantailan erakutsi"
+        },
+        {
+          "stars": "★",
+          "title": "Lehentasun-sistema",
+          "text": "Kolore gorriko edukiontziek lehentasuna dute — beste bat prozesatzen ari bada, ondo gorde eta gorria lehenago eraman"
+        },
+        {
+          "stars": "★★",
+          "title": "Lau kolore",
+          "text": "Lau zona gehitu — laugarren kolorea (horia) laugarren zonara doa. Egoera-makina moldatu."
+        }
       ]
     }
   ],
   "proof_items": [
-    { "num": "P1", "desc": "Edukiontzi gorria", "expected": "Garabiak A zonara eramaten du" },
-    { "num": "P2", "desc": "Edukiontzi urdina", "expected": "Garabiak B zonara eramaten du" },
-    { "num": "P3", "desc": "Edukiontzi berdea", "expected": "Garabiak C zonara eramaten du" },
-    { "num": "P4", "desc": "Hiru edukiontzi jarraian (G+U+B)", "expected": "Bakoitza zona egokira doa, ordena zuzenean" },
-    { "num": "P5", "desc": "Kolore ezezaguna", "expected": "ERROREA erakusten du eta posizio estandarrera itzultzen da" },
-    { "num": "P6", "desc": "Kamioia gabe (distantzia sentsorea hutsa)", "expected": "Garabia ITXARONEAN geratzen da, ez da mugitzen" },
-    { "num": "P7", "desc": "Sistema berrabiarazi ondoren", "expected": "Garabia posizio estandarrean kokatzen da eta prest dago" },
-    { "num": "P8", "desc": "Porto sistema osoa (P1+P2+P4)", "expected": "Semaforoa → kamioia → garabia, koordinatuta funtzionatzen dute" },
-    { "num": "P9", "desc": "Edukiontzi gorria x3 jarraian", "expected": "Hiruak A zonara doaz, sistemak ez du nahastu" },
-    { "num": "P10", "desc": "Abiadura-proba: hiru kolore azkar", "expected": "Sistemak ez du kolorea nahasten abiaduran ere" }
+    {
+      "num": "P1",
+      "desc": "Edukiontzi gorria",
+      "expected": "Garabiak A zonara eramaten du"
+    },
+    {
+      "num": "P2",
+      "desc": "Edukiontzi urdina",
+      "expected": "Garabiak B zonara eramaten du"
+    },
+    {
+      "num": "P3",
+      "desc": "Edukiontzi berdea",
+      "expected": "Garabiak C zonara eramaten du"
+    },
+    {
+      "num": "P4",
+      "desc": "Hiru edukiontzi jarraian (G+U+B)",
+      "expected": "Bakoitza zona egokira doa, ordena zuzenean"
+    },
+    {
+      "num": "P5",
+      "desc": "Kolore ezezaguna",
+      "expected": "ERROREA erakusten du eta posizio estandarrera itzultzen da"
+    },
+    {
+      "num": "P6",
+      "desc": "Kamioia gabe (distantzia sentsorea hutsa)",
+      "expected": "Garabia ITXARONEAN geratzen da, ez da mugitzen"
+    },
+    {
+      "num": "P7",
+      "desc": "Sistema berrabiarazi ondoren",
+      "expected": "Garabia posizio estandarrean kokatzen da eta prest dago"
+    },
+    {
+      "num": "P8",
+      "desc": "Porto sistema osoa (P1+P2+P4)",
+      "expected": "Semaforoa → kamioia → garabia, koordinatuta funtzionatzen dute"
+    },
+    {
+      "num": "P9",
+      "desc": "Edukiontzi gorria x3 jarraian",
+      "expected": "Hiruak A zonara doaz, sistemak ez du nahastu"
+    },
+    {
+      "num": "P10",
+      "desc": "Abiadura-proba: hiru kolore azkar",
+      "expected": "Sistemak ez du kolorea nahasten abiaduran ere"
+    }
   ],
   "quiz": [
     {
       "question": "Garabiak edukiontziaren kolorea irakurri du: GORRIA. Zer egin behar du ondoren?",
-      "options": ["Beti B zonara eraman (erdikoa)", "helmuga aldagaian GORRIA gorde eta A zonara eraman", "Berrabiarazi", "Kamioia zain egon"],
+      "options": [
+        "Beti B zonara eraman (erdikoa)",
+        "helmuga aldagaian GORRIA gorde eta A zonara eraman",
+        "Berrabiarazi",
+        "Kamioia zain egon"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Kolorea 'helmuga' aldagaian gordetzen da eta gero aldagai horren arabera mugitzen da motor A. Aldagaiak erabakiaren 'memoria' da."
     },
     {
       "question": "Zein kontzeptu berritu da P3tik P4ra?",
-      "options": ["Begiztak", "Kolore-sentsorearekin hartutako erabakia helmuga-aldagaian gordeta", "Motorren kontrola", "Posizio estandarra"],
+      "options": [
+        "Begiztak",
+        "Kolore-sentsorearekin hartutako erabakia helmuga-aldagaian gordeta",
+        "Motorren kontrola",
+        "Posizio estandarra"
+      ],
       "correct": 1,
       "feedback": "Zuzena! P4ko berrikuntza nagusia da: kolorea irakurri → aldagaian gorde → erabakia hartu. P3n helmuga beti berdina zen; P4n kolorearen araberakoa da."
     },
     {
       "question": "Kolore ezezaguna detektatzen du sistemak. Zein da jokabide egokiena?",
-      "options": ["A zonara eraman beti (lehenetsia)", "Errorea erakutsi eta posizio estandarrera itzuli", "Itxaronean geratu betirako", "Programa berrabiarazi"],
+      "options": [
+        "A zonara eraman beti (lehenetsia)",
+        "Errorea erakutsi eta posizio estandarrera itzuli",
+        "Itxaronean geratu betirako",
+        "Programa berrabiarazi"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Sistema erreal batek beti kudeatu behar ditu ustekabeko kasuak. Errorea erakutsi, operadorea jakinarazi eta egoera seguruera itzuli — posizio estandarrera."
     }
@@ -142,5 +242,49 @@
       "Integrazio osoa (P4) → Garabi klasifikatzailea: kolore → helmuga → zona"
     ],
     "next": "Zorionak! SPIKE Prime-rekin programazioa ikasi duzu. Hurrengo urratsa: Python-ekin programazio testualera salto egin!"
+  },
+  "delivery": {
+    "heading": "Zer entregatu behar da?",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da, irakasleak irekiko duen tarea bidez. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafoa bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Taula honek zutabe hauek izan behar ditu: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
   }
 }
