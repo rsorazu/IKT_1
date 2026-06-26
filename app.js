@@ -414,10 +414,7 @@ function renderProjectUnit(id) {
     </div>` : '';
 
   section.innerHTML = `
-    <div class="unit-header" style="--accent:${d.accent||'#2E7DD1'};position:relative">
-  <a href="https://spike.legoeducation.com" target="_blank" class="spike-shortcut">
-   <img src="images/spike-icon.png" style="width:22px;height:22px;border-radius:5px"> SPIKE App ↗
-  </a>
+    <div class="unit-header" style="--accent:${d.accent||'#2E7DD1'}">
       <span class="unit-eyebrow">${d.eyebrow}</span>
       <h1>${d.title}</h1>
       <p class="unit-desc">${d.description}</p>
@@ -801,7 +798,7 @@ function buildSortExercise(containerId, data) {
       <div class="quiz-q">${data.title}</div>
       <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px">Arrastatu urratsak orden egokian jartzeko:</p>
       <div class="algo-steps" id="${containerId}-list"></div>
-      <button class="ex-check-btn" id="${containerId}-btn">Egiaztatu ordena</button>
+      <button class="ex-check-btn" onclick="checkSort('${containerId}',${JSON.stringify(data.correct_order||data.correctOrder||[])})">Egiaztatu ordena</button>
       <div class="ex-result" id="${containerId}-result"></div>
     </div>`;
   const list = document.getElementById(`${containerId}-list`);
@@ -813,6 +810,10 @@ function buildSortExercise(containerId, data) {
     step.innerHTML = `<span class="step-num">${i+1}</span><span>${item.text}</span>`;
     addDragSort(step, list);
     list.appendChild(step);
+  });
+  const btn = document.getElementById(`${containerId}-btn`);
+  if (btn) btn.addEventListener('click', () => {
+    checkSort(containerId, data.correct_order || data.correctOrder || []);
   });
 }
 function addDragSort(el, container) {
@@ -859,9 +860,7 @@ function buildDragClassify(containerId, items, zones) {
       ondragstart="this.classList.add('dragging');event.dataTransfer.setData('text/plain',this.dataset.label+'|||'+'${containerId}')">
       ${item.label}
     </div>`).join('');
-  container.innerHTML =document.getElementById(`${containerId}-btn`).addEventListener('click', () => {
-  checkSort(containerId, data.correct_order || data.correctOrder || []);
-}); 
+  container.innerHTML = `
     <div class="quiz-card">
       <div class="quiz-num">Ariketa — Sailkatu elementuak</div>
       <div class="quiz-q">Arrastatu osagai bakoitza bere kategorian:</div>
