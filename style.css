@@ -1552,21 +1552,78 @@ code {
   .glossary-search-wrap { padding: 20px 20px 0; }
   .states-diagram { flex-direction: column; }
 }
-.nav-item-link {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 10px 20px;
-}
-.nav-external-link {
-  text-decoration: none;
+
+/* ── DELIVERY SECTION ────────────────────────────────────────── */
+.delivery-sections {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
+  margin-bottom: 24px;
 }
-.nav-external-link .nav-title {
+.delivery-section {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.delivery-section:last-child { border-bottom: none; }
+.delivery-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--spike-blue);
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.delivery-body strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.delivery-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+.delivery-format {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.delivery-format strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.delivery-format ul {
+  padding-left: 18px;
+  margin: 0;
+}
+.delivery-format li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+.delivery-deadline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--spike-blue);
-}
-.nav-external-link:hover .nav-title {
-  text-decoration: underline;
+  background: color-mix(in srgb, var(--spike-blue) 8%, #FFFFFF);
+  border: 1px solid color-mix(in srgb, var(--spike-blue) 25%, var(--border));
+  padding: 10px 16px;
+  border-radius: var(--radius);
 }
