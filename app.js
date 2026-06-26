@@ -93,14 +93,12 @@ function renderSite() {
   const s = DATA.site;
   if (!s) return;
   document.title = `${s.title} — ${s.subtitle}`;
-  const et = document.getElementById('heroTitle');
-  if (et) et.innerHTML = s.hero_title.replace('LEGO SPIKE Prime', '<em>LEGO SPIKE Prime</em>');
-  const es = document.getElementById('heroSub');
-  if (es) es.textContent = s.hero_subtitle;
-  const em = document.getElementById('materialText');
-  if (em) em.textContent = s.material_text;
 
-  // Announcement
+  // Update hero subtitle if overridden in site.json
+  const es = document.getElementById('heroSub');
+  if (es && s.hero_subtitle) es.textContent = s.hero_subtitle;
+
+  // Announcement bar + card
   if (s.announcement_active && s.announcement) {
     const bar = document.getElementById('announcementBar');
     const card = document.getElementById('announcementCard');
@@ -108,27 +106,12 @@ function renderSite() {
     if (card) { card.textContent = '📢 ' + s.announcement; card.style.display = 'block'; }
   }
 
-  // Intro cards
-  const cards = document.getElementById('introCards');
-  if (cards) {
-    const projects = [
-      { id:'t1', tag:'T1', color:'#8B7355', title:'Pentsamendu Konputazionala', desc:'Algoritmoak eta arazo-deskonposaketa. Hasiera-puntua.', meta:'Teoria · Hasiera' },
-      { id:'p1', tag:'P1', color:'#2E7DD1', title:'Semaforoa', desc:'Baldintzak eta kolore-sentsorea trafikoa kontrolatzeko.', meta:'4–5 saio · Hasiera maila' },
-      { id:'p2', tag:'P2', color:'#7A4FC9', title:'Esploratzaile Robota', desc:'FOR eta WHILE begiztak nabigazioa autonomorako.', meta:'5–6 saio · Erdi maila' },
-      { id:'p4', tag:'P4', color:'#3A8C3A', title:'Aparkaleku Adimenduna', desc:'Azken proiektua: dena sistema erreal batean integratuta.', meta:'6–7 saio · Azken proiektua' },
-    ];
-    cards.innerHTML = projects.map(p => `
-      <div class="project-card" data-goto="${p.id}">
-        <div class="card-tag" style="--tc:${p.color}">${p.tag}</div>
-        <h3>${p.title}</h3>
-        <p>${p.desc}</p>
-        <div class="card-meta"><span>${p.meta}</span></div>
-        <div class="card-arrow">→</div>
-      </div>
-    `).join('');
-    cards.querySelectorAll('.project-card').forEach(c =>
-      c.addEventListener('click', () => goToUnit(c.dataset.goto))
-    );
+  // Hero image — if site.json has an intro_image, show it
+  if (s.intro_image) {
+    const ph = document.getElementById('introImgPlaceholder');
+    if (ph) {
+      ph.outerHTML = `<img src="${s.intro_image}" alt="Portu adimenduna" class="intro-img-real">`;
+    }
   }
 }
 
