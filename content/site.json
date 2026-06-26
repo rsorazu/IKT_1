@@ -204,14 +204,14 @@
   },
   "unlocked": {
     "t1": true,
-    "t2": false,
-    "t3a": false,
-    "p1": false,
-    "t3b": false,
-    "p2": false,
-    "t3c": false,
-    "p3": false,
-    "p4": false
+    "t2": true,
+    "t3a": true,
+    "p1": true,
+    "t3b": true,
+    "p2": true,
+    "t3c": true,
+    "p3": true,
+    "p4": true
   },
   "intro_image": ""
 }
