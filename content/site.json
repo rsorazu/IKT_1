@@ -3,7 +3,203 @@
   "subtitle": "1. Batxilergoa",
   "hero_title": "Programatzen ikasi LEGO SPIKE Prime-rekin",
   "hero_subtitle": "Lau proiektu progresibo. Oinarrizko instrukzioetatik sistema autonomo osoak arte. Bloke-programazioa, benetako logika.",
-  "announcement": ".",
+  "announcement": "",
   "announcement_active": false,
-  "material_text": "LEGO SPIKE Prime Hub · Distantzia, kolore eta indar-sentsoreak · Motorrak · SPIKE aplikazioa (web edo mahaigaineko bertsioa)"
+  "material_text": "LEGO SPIKE Prime Hub · Distantzia, kolore eta indar-sentsoreak · Motorrak · SPIKE aplikazioa (web edo mahaigaineko bertsioa)",
+  "delivery1": {
+    "heading": "Zer entregatu behar da? — P1 Semaforoa",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafo bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Zutabeak: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
+  },
+  "delivery2": {
+    "heading": "Zer entregatu behar da? — P2 Kamioien Robota",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafo bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "2b",
+        "title": "Rutaren diseinua",
+        "content": "Marraztu paperean diseinatu zenuen rutaren eskema (FOR begiztako ibilbidea). Azaldu zenbat gradu behar dituen zure robotak 90° biratzeko eta nola kalibratu zenuen."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Zutabeak: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
+  },
+  "delivery3": {
+    "heading": "Zer entregatu behar da? — P3 Portuko Garabi Automatikoa",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafo bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "2b",
+        "title": "Egoera-makina",
+        "content": "Txertatu paperean diseinatu zenuen egoera-taularen argazkia (6 egoerak eta horien arteko trantsizioak). Azaldu zergatik aukeratu zenituen egoera horiek."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Zutabeak: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
+  },
+  "delivery4": {
+    "heading": "Zer entregatu behar da? — P4 Porto Adimenduna",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafo bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "4b",
+        "title": "Kolore-klasifikazioa",
+        "content": "Azaldu nola funtzionatzen duen kolore-detekzioak: kolore-sentsoreak zein balioak irakurtzen ditu kolore bakoitzarentzat? Nola erabaki zenuen zein zona dagokion kolore bakoitzari? Azaldu erroreen kudeaketa (kolore ezezaguna)."
+      },
+      {
+        "num": "4c",
+        "title": "Porto sistemaren integrazioa",
+        "content": "Azaldu nola koordinatzen diren P1 (semaforoa), P2 (kamioiaren robota) eta P4 (garabi klasifikatzailea) sistema bakarrean. Zein puntutan komunikatzen dira sistemak? Zer gertatu zen lehen aldiz elkarrekin probatu zenituztenean?"
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Zutabeak: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
+  }
 }
