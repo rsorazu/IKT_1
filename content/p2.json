@@ -3,41 +3,71 @@
   "title": "Kamioien Robota",
   "eyebrow": "P2 · Proiektua",
   "description": "Karga autonomoki garraiatzen duen ibilgailua portuan",
-  "chips": ["FOR begiztа", "WHILE begiztа", "Distantzia-sentsorea", "Kolore-sentsorea", "5–6 saio"],
+  "chips": [
+    "FOR begiztа",
+    "WHILE begiztа",
+    "Distantzia-sentsorea",
+    "Kolore-sentsorea",
+    "5–6 saio"
+  ],
   "accent": "#7A4FC9",
   "context_heading": "Porturako garraio autonomoa",
   "context_paragraphs": [
-    "Portu moderno askotan gizakiek ez dituzte kamioiak gidatzen — robotek egiten dute. Ibilgailu autonomo hauek bide programatuak jarraitzen dituzte, oztopoak saihesten dituzte eta helmugara iristen direnean automatikoki gelditzen dira.",
-    "Proiektu honetan portuko kamioiaren rola hartuko du zure robotak. Haiek erabakiko dute zein bide egin, oztopoak saihestuko dituzte eta garabia dagoen zona detektatuko dute lurreko kolore-sentsorearekin. Kamioi autonomoa etorkizunean P3ko garabiarekin elkarlanean arituko da."
+    "Porto moderno askotan gizakiek ez dituzte kamioiak gidatzen — robotek egiten dute. Ibilgailu autonomo hauek ruta programatuak jarraitzen dituzte, oztopoak saihesten dituzte eta helmugara iristen direnean automatikoki gelditzen dira.",
+    "Proiektu honetan portuko kamioiaren rola hartuko du zure robotak. Haiek erabakiko dute zein ruta egin (FOR begiztarekin), oztopoak saihestuko dituzte (WHILE begiztarekin) eta grua dagoen zona detektatuko dute lurreko kolore-sentsorearekin. Robota P3ko gruarekin elkarlanean arituko da."
   ],
-  "research_question": "Nola gidatzen du kamioi batek modu autonomoan, oztopoak saihestuz eta helmuga zehatza detektatuz?",
+  "research_question": "Nola nabigatzen du robot batek modu autonomoan, oztopoak saihestuz eta helmuga zehatza detektatuz?",
   "objectives": [
-    "FOR begiztа erabili ruta programatu bat egiteko",
-    "WHILE begiztа erabili oztopoak saihesteko",
-    "Distantzia-sentsorea irakurri eta oztopoak hautemateko erabili",
-    "Kolore-sentsorea erabili garabi-eremura iritsi dela detektatzeko",
-    "FOR eta WHILE begiztak programa konplexu batean konbinatu",
-    "Azpiprogramak erabiliz kodea antolatu"
+    "FOR begiztа erabiltzea ruta programatu bat egiteko",
+    "WHILE begiztа erabiltzea oztopoak saihesteko",
+    "Distantzia-sentsorea irakurri eta oztopoak hautemateko erabiltzea",
+    "Kolore-sentsorea erabiltzea grua-zonara iristean detektatzeko",
+    "FOR eta WHILE begiztak programa konplexu batean konbinatzea",
+    "Azpiprogramak erabiliz kodea antolatzea"
   ],
   "material": [
-    { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
-    { "icon": "⚙️", "name": "Motor handiak (gurpilak)", "qty": "×2 — A eta B atakak" },
-    { "icon": "📡", "name": "Distantzia-sentsorea (oztopoak)", "qty": "×1 — C ataka" },
-    { "icon": "🎨", "name": "Kolore-sentsorea (garabi-eremua detektatu)", "qty": "×1 — D ataka (lurrera begira)" },
-    { "icon": "📱", "name": "SPIKE aplikazioa", "qty": "×1 bikoteko" },
-    { "icon": "🟨", "name": "Kartulina horia (garabi-eremua markatzeko)", "qty": "1 orri" }
+    {
+      "icon": "🧱",
+      "name": "LEGO SPIKE Prime Hub",
+      "qty": "×1"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Motor handiak (gurpilak)",
+      "qty": "×2 — A eta B atakak"
+    },
+    {
+      "icon": "📡",
+      "name": "Distantzia-sentsorea (oztopoak)",
+      "qty": "×1 — C ataka"
+    },
+    {
+      "icon": "🎨",
+      "name": "Kolore-sentsorea (grua-zona detektatu)",
+      "qty": "×1 — D ataka (lurrean begira)"
+    },
+    {
+      "icon": "📱",
+      "name": "SPIKE aplikaziodun gailua",
+      "qty": "×1 bikoteko"
+    },
+    {
+      "icon": "🟨",
+      "name": "Kartulina horia (grua-zona markatzeko)",
+      "qty": "1 orri"
+    }
   ],
   "material_tip": {
     "icon": "💡",
-    "title": "Maketa prestatzeko aholkua",
-    "text": "Portuko bidea zinta itsasgarria edo kartulina piezen bidez markatu. Garabi-eremua kartulina hori batekin markatu — kolore-sentsoreak lurrean hori hautematean robota gelditu egingo da. Oztopoak bide inguruetan kokatu."
+    "title": "Maqueta prestatzeko aholkua",
+    "text": "Portuko karrilak cinta adhesivoarekin edo kartulina piezen bidez markatu. Grua-zona kartulina hori batekin markatu — kolore-sentsoreak lurrean hori hautematean robota gelditu egingo da. Oztopoak (beste LEGO pieza batzuk) karrilean barreiatu."
   },
   "phases": [
     {
       "num": "1",
       "title": "Txasisa eraiki eta kalibratu",
       "session": "1. saioa",
-      "content": "Trakzio desberdinak dituen kamioia eraiki: bi motor - gurpilak, distantzia-sentsorea aurrean eta kolore-sentsorea lurrari begira. Diagnosi-programa bat sortu bi sentsoreen balioak pantailan erakusteko — kalibratzeko ezinbestekoa.",
+      "content": "Trakzio diferentzialeko robota eraiki: bi motor gurpilak, distantzia-sentsorea aurrean eta kolore-sentsorea lurrean begira. Diagnostiko-programa bat sortu bi sentsoreen balioak pantailan erakusteko — kalibratzeko ezinbestekoa.",
       "checkpoint": [
         "Bi motorrak ondo konektatuta eta norabide onean",
         "Distantzia-sentsoreak cm-tan irakurtzen du",
@@ -87,28 +117,55 @@
       "title": "Erronka zabalgarria",
       "session": "5–6. saioa",
       "challenges": [
-        { "stars": "★", "title": "Oztopoaren erregistroa", "text": "Zenbatu zenbat oztopo aurkitu dituen rutan zehar eta erakutsi amaieran" },
-        { "stars": "★", "title": "Abiadura aldakorra", "text": "Zuzenean ibiltzean azkar, birak egitean motel — portuko errealitatetik gertuago" },
-        { "stars": "★★", "title": "Bi helmuga", "text": "Lurreko bi kolore desberdin (horia eta gorria) bi zona desberdinetara eramaten du robota" }
+        {
+          "stars": "★",
+          "title": "Oztopoaren erregistroa",
+          "text": "Zenbatu zenbat oztopo aurkitu dituen rutan zehar eta erakutsi amaieran"
+        },
+        {
+          "stars": "★",
+          "title": "Abiadura aldakorra",
+          "text": "Zuzenean ibiltzean azkar, birak egitean motel — portuko errealitatetik gertuago"
+        },
+        {
+          "stars": "★★",
+          "title": "Bi helmuga",
+          "text": "Lurreko bi kolore desberdin (horia eta gorria) bi zona desberdinetara eramaten du robota"
+        }
       ]
     }
   ],
   "quiz": [
     {
       "question": "Robotak portuko ruta egin behar du (4 alde). Zein begiztа erabiltzen duzu?",
-      "options": ["WHILE — oztopo bat topatu arte", "FOR — 4 aldiz errepikatu", "Betirako errepikatu baldintza batekin", "Ez da begiztarik behar — 4 bloke idazten dira"],
+      "options": [
+        "WHILE — oztopo bat topatu arte",
+        "FOR — 4 aldiz errepikatu",
+        "Betirako errepikatu baldintza batekin",
+        "Ez da begiztarik behar — 4 bloke idazten dira"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Ruta finkoa denean (4 alde) eta kopurua aldez aurretik ezagutzen dugunean, FOR da aukera egokia."
     },
     {
       "question": "Robota oztopo bat topatu eta gelditu da baina ez da saihesten. Zein da arazorik ohikoena?",
-      "options": ["Distantzia-sentsorea hautsita dago", "WHILE begiztak motorra gelditu du baina saihesteko subprogramaren deia falta da", "FOR begiztа erabili behar da WHILE beharrean", "Abiadura handiegia da"],
+      "options": [
+        "Distantzia-sentsorea hautsita dago",
+        "WHILE begiztak motorra gelditu du baina saihesteko subprogramaren deia falta da",
+        "FOR begiztа erabili behar da WHILE beharrean",
+        "Abiadura handiegia da"
+      ],
       "correct": 1,
       "feedback": "Zuzena! WHILE begiztak motorra gelditzen du, baina gero saihesteko azpiprogramari deitu behar zaio. Egiaztatu 'esquivar()' azpiprogramaren deia WHILE begiztatik kanpo dagoela."
     },
     {
       "question": "Kolore-sentsorea lurrean begira dago eta grua-zonako kartulina horia hautematen du. Zer egin behar du programak?",
-      "options": ["Rutarekin jarraitu", "Motorrak gelditu eta LEDa berdez piztu", "Oztopo bat saihestu", "Berrabiarazi"],
+      "options": [
+        "Rutarekin jarraitu",
+        "Motorrak gelditu eta LEDa berdez piztu",
+        "Oztopo bat saihestu",
+        "Berrabiarazi"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Kolore horia = helmuga = gelditu eta seinale berdea piztu. P3ko gruak seinale hori erabiliko du karga jasotzeko."
     }
@@ -124,5 +181,49 @@
       "Porto adimendunaren bigarren sistema eraiki duzu — P3ko gruarekin lan egingo duena"
     ],
     "next": "Hurrengo blokea: T3c — Gertaerak eta Egoerak"
+  },
+  "delivery": {
+    "heading": "Zer entregatu behar da?",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da, irakasleak irekiko duen tarea bidez. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafoa bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Taula honek zutabe hauek izan behar ditu: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
   }
 }
