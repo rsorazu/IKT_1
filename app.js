@@ -7,7 +7,7 @@ const CONTENT_FILES = ['t1','t2','t3a','p1','t3b','p2','t3c','p3','p4'];
 
 // ── State ────────────────────────────────────────────────────────
 const DATA = {};
-let completedUnits = JSON.parse(localStorage.getItem('ikt-completed') || '[]');
+// Progress tracking removed
 
 // ── Load all JSON content ────────────────────────────────────────
 async function loadAllContent() {
@@ -72,6 +72,23 @@ function objListHTML(items) {
 }
 
 // ── Render site globals ──────────────────────────────────────────
+function isUnlocked(unitId) {
+  if (!DATA.site || !DATA.site.unlocked) return true; // default open
+  if (unitId === 'intro' || unitId === 'glossari') return true; // always open
+  return DATA.site.unlocked[unitId] === true;
+}
+
+function renderLockedUnit(unitId) {
+  const section = document.getElementById(`unit-${unitId}`);
+  if (!section) return;
+  section.innerHTML = `
+    <div class="locked-screen">
+      <div class="locked-icon">🔒</div>
+      <h2 class="locked-title">Bloke hau oraindik ez da ireki</h2>
+      <p class="locked-desc">Irakasleak bloke hau desblokeatu arte itxaron. Aurrerago irekiko da.</p>
+    </div>`;
+}
+
 function renderSite() {
   const s = DATA.site;
   if (!s) return;
@@ -426,7 +443,7 @@ function renderProjectUnit(id) {
       <button class="tab" data-tab="fases">Faseak</button>
       ${d.proof_items ? '<button class="tab" data-tab="proves">Probak</button>' : ''}
       <button class="tab" data-tab="exercicis">Ariketak</button>
-      ${d.delivery ? '<button class="tab" data-tab="delivery">📋 Entrega</button>' : ''}
+      ${DATA.site && DATA.site['delivery'+id.replace('p','')] ? '<button class="tab" data-tab="delivery">📋 Entrega</button>' : ''}
     </div>
     <div class="tab-content active" data-content="context">
       <h2>${d.context_heading||d.title}</h2>
@@ -449,12 +466,12 @@ function renderProjectUnit(id) {
       <div id="quiz-${id}"></div>
       ${summaryCard(d.summary, nextId)}
     </div>
-    ${d.delivery ? `
+    ${(()=>{ const del = DATA.site && DATA.site['delivery'+id.replace('p','')]; return del ? `
     <div class="tab-content" data-content="delivery">
-      <h2>${d.delivery.heading}</h2>
-      <p style="color:var(--text-muted);margin-bottom:20px">${d.delivery.intro}</p>
+      <h2>${del.heading}</h2>
+      <p style="color:var(--text-muted);margin-bottom:20px">${del.intro}</p>
       <div class="delivery-sections">
-        ${(d.delivery.sections||[]).map(s => `
+        ${(del.sections||[]).map(s => `
           <div class="delivery-section">
             <div class="delivery-num">${s.num}</div>
             <div class="delivery-body">
@@ -465,12 +482,12 @@ function renderProjectUnit(id) {
       </div>
       <div class="delivery-format">
         <strong>📄 Formatua eta aholkuak</strong>
-        <ul>${(d.delivery.format_tips||[]).map(t=>`<li>${t}</li>`).join('')}</ul>
+        <ul>${(del.format_tips||[]).map(t=>`<li>${t}</li>`).join('')}</ul>
       </div>
       <div class="delivery-deadline">
-        <span>⏰</span> ${d.delivery.deadline}
+        <span>⏰</span> ${del.deadline}
       </div>
-    </div>` : ''}
+    </div>` : ''; })()} 
   `;
 
   wireTabs(section);
@@ -728,6 +745,7 @@ const sidebarClose = document.getElementById('sidebarClose');
 const topbarTitle  = document.getElementById('topbarTitle');
 
 function goToUnit(unitId) {
+  // If locked, show locked screen but still navigate (visual only)
   units.forEach(u => u.classList.remove('active'));
   navItems.forEach(n => n.classList.remove('active'));
   const unit = document.getElementById('unit-' + unitId);
@@ -741,21 +759,7 @@ function goToUnit(unitId) {
 }
 
 function updateProgress(unitId) {
-  if (!completedUnits.includes(unitId) && unitId !== 'intro' && unitId !== 'glossari') {
-    completedUnits.push(unitId);
-    localStorage.setItem('ikt-completed', JSON.stringify(completedUnits));
-  }
-  // Show ✓ badges on completed nav items
-  navItems.forEach(nav => {
-    const id = nav.dataset.unit;
-    const existing = nav.querySelector('.nav-progress');
-    if (completedUnits.includes(id) && !existing) {
-      const badge = document.createElement('span');
-      badge.className = 'nav-progress';
-      badge.textContent = '✓';
-      nav.appendChild(badge);
-    }
-  });
+  // Progress tracking removed — web is a support tool, not a course
 }
 
 navItems.forEach(item => item.addEventListener('click', () => goToUnit(item.dataset.unit)));
@@ -974,6 +978,31 @@ bmStyle.textContent = `.bm-row{display:flex;align-items:center;gap:12px;margin-b
 document.head.appendChild(bmStyle);
 
 // ── Bootstrap ────────────────────────────────────────────────────
+function renderLocks() {
+  const unlocked = DATA.site && DATA.site.unlocked || {};
+  navItems.forEach(nav => {
+    const unitId = nav.dataset.unit;
+    if (!unitId || unitId === 'intro' || unitId === 'glossari') return;
+    const locked = unlocked[unitId] !== true;
+    // Update nav appearance
+    nav.classList.toggle('nav-locked', locked);
+    // Add/remove lock icon
+    const existing = nav.querySelector('.nav-lock-icon');
+    if (locked && !existing) {
+      const icon = document.createElement('span');
+      icon.className = 'nav-lock-icon';
+      icon.textContent = '🔒';
+      nav.appendChild(icon);
+    } else if (!locked && existing) {
+      existing.remove();
+    }
+    // Replace unit content with locked screen if locked
+    if (locked) {
+      renderLockedUnit(unitId);
+    }
+  });
+}
+
 async function init() {
   await loadAllContent();
 
@@ -989,8 +1018,8 @@ async function init() {
   // Glossary search
   document.getElementById('glossarySearch')?.addEventListener('input', e => renderGlossary(e.target.value));
 
-  // Restore progress badges
-  completedUnits.forEach(id => updateProgress(id));
+  // Apply lock state to nav and units
+  renderLocks();
 
   // Hide loading screen
   const ls = document.getElementById('loadingScreen');
