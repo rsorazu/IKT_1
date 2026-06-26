@@ -798,7 +798,7 @@ function buildSortExercise(containerId, data) {
       <div class="quiz-q">${data.title}</div>
       <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px">Arrastatu urratsak orden egokian jartzeko:</p>
       <div class="algo-steps" id="${containerId}-list"></div>
-      <button class="ex-check-btn" onclick="checkSort('${containerId}',${JSON.stringify(data.correct_order||data.correctOrder||[])})">Egiaztatu ordena</button>
+      <button class="ex-check-btn" id="${containerId}-btn">Egiaztatu ordena</button>
       <div class="ex-result" id="${containerId}-result"></div>
     </div>`;
   const list = document.getElementById(`${containerId}-list`);
