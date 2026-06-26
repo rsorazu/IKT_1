@@ -801,7 +801,7 @@ function buildSortExercise(containerId, data) {
       <div class="quiz-q">${data.title}</div>
       <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px">Arrastatu urratsak orden egokian jartzeko:</p>
       <div class="algo-steps" id="${containerId}-list"></div>
-      <button class="ex-check-btn" onclick="checkSort('${containerId}',${JSON.stringify(data.correct_order||data.correctOrder||[])})">Egiaztatu ordena</button>
+      <button class="ex-check-btn" id="${containerId}-btn">Egiaztatu ordena</button>
       <div class="ex-result" id="${containerId}-result"></div>
     </div>`;
   const list = document.getElementById(`${containerId}-list`);
@@ -859,7 +859,9 @@ function buildDragClassify(containerId, items, zones) {
       ondragstart="this.classList.add('dragging');event.dataTransfer.setData('text/plain',this.dataset.label+'|||'+'${containerId}')">
       ${item.label}
     </div>`).join('');
-  container.innerHTML = `
+  container.innerHTML =document.getElementById(`${containerId}-btn`).addEventListener('click', () => {
+  checkSort(containerId, data.correct_order || data.correctOrder || []);
+}); 
     <div class="quiz-card">
       <div class="quiz-num">Ariketa — Sailkatu elementuak</div>
       <div class="quiz-q">Arrastatu osagai bakoitza bere kategorian:</div>
