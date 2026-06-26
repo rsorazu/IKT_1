@@ -34,6 +34,11 @@ collections:
             widget: boolean
             default: false
           - { label: "Material testua", name: material_text, widget: text }
+          - label: "Portadako argazkia"
+            name: intro_image
+            widget: image
+            required: false
+            hint: "Portuaren argazkia portadan erakusteko"
           - label: "🔓 Blokeoak desblokeatu"
             name: unlocked
             widget: object
