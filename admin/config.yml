@@ -34,6 +34,92 @@ collections:
             widget: boolean
             default: false
           - { label: "Material testua", name: material_text, widget: text }
+          - label: "🔓 Blokeoak desblokeatu"
+            name: unlocked
+            widget: object
+            hint: "Aktibatu bloke bakoitza ikasleentzat ikusgai egiteko"
+            fields:
+              - { label: "T1 — Pentsamendu Konputazionala", name: t1, widget: boolean, default: true }
+              - { label: "T2 — Sentsoreak eta Eragileak", name: t2, widget: boolean, default: false }
+              - { label: "T3a — Baldintzak eta Aldagaiak", name: t3a, widget: boolean, default: false }
+              - { label: "P1 — Semaforoa", name: p1, widget: boolean, default: false }
+              - { label: "T3b — Begiztak", name: t3b, widget: boolean, default: false }
+              - { label: "P2 — Kamioien Robota", name: p2, widget: boolean, default: false }
+              - { label: "T3c — Gertaerak eta Egoerak", name: t3c, widget: boolean, default: false }
+              - { label: "P3 — Portuko Garabia", name: p3, widget: boolean, default: false }
+              - { label: "P4 — Porto Adimenduna", name: p4, widget: boolean, default: false }
+          - label: "📋 Entrega P1 — Semaforoa"
+            name: delivery1
+            widget: object
+            fields:
+              - { label: "Izenburua", name: heading, widget: string }
+              - { label: "Sarrera testua", name: intro, widget: text }
+              - label: "Atalak"
+                name: sections
+                widget: list
+                fields:
+                  - { label: "Zenbakia", name: num, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Edukia", name: content, widget: text }
+              - label: "Formato-aholkuak"
+                name: format_tips
+                widget: list
+                field: { label: "Aholkua", name: item, widget: string }
+              - { label: "Epea", name: deadline, widget: string }
+          - label: "📋 Entrega P2 — Kamioien Robota"
+            name: delivery2
+            widget: object
+            fields:
+              - { label: "Izenburua", name: heading, widget: string }
+              - { label: "Sarrera testua", name: intro, widget: text }
+              - label: "Atalak"
+                name: sections
+                widget: list
+                fields:
+                  - { label: "Zenbakia", name: num, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Edukia", name: content, widget: text }
+              - label: "Formato-aholkuak"
+                name: format_tips
+                widget: list
+                field: { label: "Aholkua", name: item, widget: string }
+              - { label: "Epea", name: deadline, widget: string }
+          - label: "📋 Entrega P3 — Portuko Garabia"
+            name: delivery3
+            widget: object
+            fields:
+              - { label: "Izenburua", name: heading, widget: string }
+              - { label: "Sarrera testua", name: intro, widget: text }
+              - label: "Atalak"
+                name: sections
+                widget: list
+                fields:
+                  - { label: "Zenbakia", name: num, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Edukia", name: content, widget: text }
+              - label: "Formato-aholkuak"
+                name: format_tips
+                widget: list
+                field: { label: "Aholkua", name: item, widget: string }
+              - { label: "Epea", name: deadline, widget: string }
+          - label: "📋 Entrega P4 — Porto Adimenduna"
+            name: delivery4
+            widget: object
+            fields:
+              - { label: "Izenburua", name: heading, widget: string }
+              - { label: "Sarrera testua", name: intro, widget: text }
+              - label: "Atalak"
+                name: sections
+                widget: list
+                fields:
+                  - { label: "Zenbakia", name: num, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Edukia", name: content, widget: text }
+              - label: "Formato-aholkuak"
+                name: format_tips
+                widget: list
+                field: { label: "Aholkua", name: item, widget: string }
+              - { label: "Epea", name: deadline, widget: string }
 
   # ── GLOSSARY ─────────────────────────────────────────────────
   - name: glossary
