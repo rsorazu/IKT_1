@@ -1666,3 +1666,164 @@ code {
   max-width: 360px;
   line-height: 1.6;
 }
+
+/* ── NEW INTRO PAGE ──────────────────────────────────────────── */
+.intro-hero-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 52px 48px 48px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, #2E7DD1 6%, #FFFFFF) 0%,
+    var(--bg) 100%);
+}
+.intro-hero-text { display: flex; flex-direction: column; gap: 14px; }
+.intro-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+  margin: 0;
+}
+.intro-main-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 420px;
+}
+.intro-hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.intro-img-real {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+/* Sections */
+.intro-section {
+  padding: 40px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.intro-section-alt {
+  background: var(--bg3);
+}
+.intro-section-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.intro-section-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* Metodologia steps */
+.metodo-steps {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.metodo-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  min-width: 140px;
+  text-align: center;
+}
+.metodo-icon { font-size: 1.8rem; }
+.metodo-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.metodo-arrow {
+  font-size: 1.4rem;
+  color: var(--text-dim);
+  font-weight: 300;
+}
+.intro-metodo-note {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Material cards */
+.material-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.material-card-new {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.material-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+.material-card-body strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.material-card-body p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+.material-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--spike-blue);
+  text-decoration: none;
+}
+.material-link:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-hero-new {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 24px;
+  }
+  .intro-section { padding: 28px 20px; }
+  .metodo-steps { gap: 8px; }
+  .metodo-step { min-width: 110px; padding: 14px 16px; }
+  .metodo-arrow { font-size: 1rem; }
+}
