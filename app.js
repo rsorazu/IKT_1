@@ -845,21 +845,23 @@ function buildDragClassify(containerId, items, zones) {
   const container = document.getElementById(containerId);
   if (!container || !items) return;
   const shuffled = [...items].sort(() => Math.random() - 0.5);
-  const zonesHTML = zones.map(z => `
-    <div class="drag-zone-wrap">
-      <div class="drag-zone-label" style="color:${z.color};border-color:${z.color}">${z.label}</div>
-      <div class="ex-drop-zone" id="${containerId}-zone-${z.id}" data-zone="${z.id}"
-        ondragover="event.preventDefault();this.classList.add('drag-active')"
-        ondragleave="this.classList.remove('drag-active')"
-        ondrop="handleDrop(event,'${containerId}')">
-        <span style="font-size:0.8rem;color:var(--text-dim);align-self:center;padding:4px">Arrastatu hona</span>
-      </div>
-    </div>`).join('');
-  const itemsHTML = shuffled.map(item => `
-    <div class="ex-drag-item" draggable="true" data-correct="${item.correct}" data-label="${item.label}"
-      ondragstart="this.classList.add('dragging');event.dataTransfer.setData('text/plain',this.dataset.label+'|||'+'${containerId}')">
-      ${item.label}
-    </div>`).join('');
+  const zonesHTML = zones.map(z => [
+    '<div class="drag-zone-wrap">',
+    '<div class="drag-zone-label" style="color:' + z.color + ';border-color:' + z.color + '">' + z.label + '</div>',
+    '<div class="ex-drop-zone" id="' + containerId + '-zone-' + z.id + '" data-zone="' + z.id + '"',
+    ' ondragover="event.preventDefault();this.classList.add(\'drag-active\')"',
+    ' ondragleave="this.classList.remove(\'drag-active\')"',
+    ' ondrop="handleDrop(event,\'' + containerId + '\'">',
+    '<span style="font-size:0.8rem;color:var(--text-dim);align-self:center;padding:4px">Arrastatu hona</span>',
+    '</div></div>'
+  ].join('')).join('');
+  const itemsHTML = shuffled.map(item => [
+    '<div class="ex-drag-item" draggable="true"',
+    ' data-correct="' + item.correct + '"',
+    ' data-label="' + item.label + '">',
+    item.label,
+    '</div>'
+  ].join('')).join('');
   container.innerHTML = `
     <div class="quiz-card">
       <div class="quiz-num">Ariketa — Sailkatu elementuak</div>
@@ -869,7 +871,13 @@ function buildDragClassify(containerId, items, zones) {
       <button class="ex-check-btn" onclick="checkClassify('${containerId}')">Egiaztatu</button>
       <div class="ex-result" id="${containerId}-result"></div>
     </div>`;
-  container.querySelectorAll('.ex-drag-item').forEach(item => item.addEventListener('dragend', () => item.classList.remove('dragging')));
+  container.querySelectorAll('.ex-drag-item').forEach(item => {
+    item.addEventListener('dragend', () => item.classList.remove('dragging'));
+    item.addEventListener('dragstart', e => {
+      item.classList.add('dragging');
+      e.dataTransfer.setData('text/plain', item.dataset.label + '|||' + containerId);
+    });
+  });
 }
 window.handleDrop = function(event, containerId) {
   event.preventDefault();
