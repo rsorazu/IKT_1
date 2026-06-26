@@ -29,7 +29,7 @@ function el(tag, cls, html) {
 }
 function photoPlaceholder(photo) {
   if (!photo) return '';
-  const src = photo.image || (photo.description && photo.description.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i) ? photo.description : '');
+  const src = photo.image || '';
   if (src && src.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i)) {
     return `<img src="${src}" alt="${photo.description||''}"
       style="width:100%;border-radius:10px;margin:16px 0;display:block;border:0.5px solid var(--border)">`;
@@ -248,7 +248,7 @@ function renderT1() {
       <h2>${d.tabs[0].heading}</h2>
       ${(d.tabs[0].paragraphs||[]).map(p=>`<p>${p}</p>`).join('')}
       <div class="theory-cards">${pillarsHTML}</div>
-      ${photoPlaceholder(d['tabs[0].photo'])}
+      ${photoPlaceholder(d.tabs[0].photo)}
     </div>
     <div class="tab-content" data-content="algo">
       <h2>${d.tabs[1].heading}</h2>
@@ -258,7 +258,7 @@ function renderT1() {
       <p>${d.tabs[1].example_intro||''}</p>
       <div class="algo-steps" id="t1-algo-display"></div>
       ${infoBoxHTML(d.tabs[1].info_box)}
-      ${photoPlaceholder(d['tabs[1].photo'])}
+      ${photoPlaceholder(d.tabs[1].photo)}
       <p>${d.tabs[1].closing||''}</p>
     </div>
     <div class="tab-content" data-content="deskomposa">
@@ -273,7 +273,7 @@ function renderT1() {
         </div>
       </div>
       ${infoBoxHTML(d.tabs[2].info_box)}
-      ${photoPlaceholder(d['tabs[2].photo'])}
+      ${photoPlaceholder(d.tabs[2].photo)}
     </div>
     <div class="tab-content" data-content="exercicis">
       <h2>Ariketak</h2>
@@ -426,6 +426,7 @@ function renderProjectUnit(id) {
       <button class="tab" data-tab="fases">Faseak</button>
       ${d.proof_items ? '<button class="tab" data-tab="proves">Probak</button>' : ''}
       <button class="tab" data-tab="exercicis">Ariketak</button>
+      ${d.delivery ? '<button class="tab" data-tab="delivery">📋 Entrega</button>' : ''}
     </div>
     <div class="tab-content active" data-content="context">
       <h2>${d.context_heading||d.title}</h2>
@@ -448,6 +449,28 @@ function renderProjectUnit(id) {
       <div id="quiz-${id}"></div>
       ${summaryCard(d.summary, nextId)}
     </div>
+    ${d.delivery ? `
+    <div class="tab-content" data-content="delivery">
+      <h2>${d.delivery.heading}</h2>
+      <p style="color:var(--text-muted);margin-bottom:20px">${d.delivery.intro}</p>
+      <div class="delivery-sections">
+        ${(d.delivery.sections||[]).map(s => `
+          <div class="delivery-section">
+            <div class="delivery-num">${s.num}</div>
+            <div class="delivery-body">
+              <strong>${s.title}</strong>
+              <p>${s.content}</p>
+            </div>
+          </div>`).join('')}
+      </div>
+      <div class="delivery-format">
+        <strong>📄 Formatua eta aholkuak</strong>
+        <ul>${(d.delivery.format_tips||[]).map(t=>`<li>${t}</li>`).join('')}</ul>
+      </div>
+      <div class="delivery-deadline">
+        <span>⏰</span> ${d.delivery.deadline}
+      </div>
+    </div>` : ''}
   `;
 
   wireTabs(section);
