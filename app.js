@@ -414,7 +414,10 @@ function renderProjectUnit(id) {
     </div>` : '';
 
   section.innerHTML = `
-    <div class="unit-header" style="--accent:${d.accent||'#2E7DD1'}">
+    <div class="unit-header" style="--accent:${d.accent||'#2E7DD1'};position:relative">
+  <a href="https://spike.legoeducation.com" target="_blank" class="spike-shortcut">
+    <span class="spike-shortcut-icon">🟡</span> SPIKE App ↗
+  </a>
       <span class="unit-eyebrow">${d.eyebrow}</span>
       <h1>${d.title}</h1>
       <p class="unit-desc">${d.description}</p>
