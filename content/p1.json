@@ -162,49 +162,5 @@
       "Porto adimendunaren lehen sistema eraiki duzu"
     ],
     "next": "Hurrengo blokea: T3b — Begiztak"
-  },
-  "delivery": {
-    "heading": "Zer entregatu behar da?",
-    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da, irakasleak irekiko duen tarea bidez. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
-    "sections": [
-      {
-        "num": "1",
-        "title": "Sarrera",
-        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafoa bat edo bi)"
-      },
-      {
-        "num": "2",
-        "title": "Diseinu-fasea",
-        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
-      },
-      {
-        "num": "3",
-        "title": "Eraikuntza",
-        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
-      },
-      {
-        "num": "4",
-        "title": "Kodea eta erabakiak",
-        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
-      },
-      {
-        "num": "5",
-        "title": "Proba-taula",
-        "content": "Sortu taula bat Word-en proba sistematikoekin. Taula honek zutabe hauek izan behar ditu: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
-      },
-      {
-        "num": "6",
-        "title": "Ondorioak",
-        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
-      }
-    ],
-    "format_tips": [
-      "3-4 orrialde (sarrera eta ondorioak barne)",
-      "Letra tamaina 11-12pt, lerro-tartea 1.15",
-      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
-      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
-      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
-    ],
-    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
   }
 }
