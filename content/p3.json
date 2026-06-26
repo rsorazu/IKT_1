@@ -3,7 +3,12 @@
   "title": "Portuko Garabi Automatikoa",
   "eyebrow": "P3 · Proiektua",
   "description": "Karga automatikoki jasotzen eta mugitzen duen garabi adimenduna",
-  "chips": ["Gertaerak", "Egoera-makina", "Motor kontrola", "6–7 saio"],
+  "chips": [
+    "Gertaerak",
+    "Egoera-makina",
+    "Motor kontrola",
+    "6–7 saio"
+  ],
   "accent": "#D94060",
   "context_heading": "Garabi automatiko bat eraiki",
   "context_paragraphs": [
@@ -19,12 +24,36 @@
     "Sistema bat posizio estandarretik abiatzen eta hara itzultzen programatzea"
   ],
   "material": [
-    { "icon": "🧱", "name": "LEGO SPIKE Prime Hub", "qty": "×1" },
-    { "icon": "⚙️", "name": "Motor handia (garabi horizontala)", "qty": "×1 — A ataka" },
-    { "icon": "⚙️", "name": "Motor ertaina (ganxoa gora/behera)", "qty": "×1 — B ataka" },
-    { "icon": "📡", "name": "Distantzia-sentsorea (kamioia detektatu)", "qty": "×1 — C ataka" },
-    { "icon": "📱", "name": "SPIKE aplikaziodun gailua", "qty": "×1 bikoteko" },
-    { "icon": "🪝", "name": "Ganxoa LEGO piezez eraikita", "qty": "Motor B-ri lotuta" }
+    {
+      "icon": "🧱",
+      "name": "LEGO SPIKE Prime Hub",
+      "qty": "×1"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Motor handia (garabi horizontala)",
+      "qty": "×1 — A ataka"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Motor ertaina (ganxoa gora/behera)",
+      "qty": "×1 — B ataka"
+    },
+    {
+      "icon": "📡",
+      "name": "Distantzia-sentsorea (kamioia detektatu)",
+      "qty": "×1 — C ataka"
+    },
+    {
+      "icon": "📱",
+      "name": "SPIKE aplikaziodun gailua",
+      "qty": "×1 bikoteko"
+    },
+    {
+      "icon": "🪝",
+      "name": "Ganxoa LEGO piezez eraikita",
+      "qty": "Motor B-ri lotuta"
+    }
   ],
   "material_tip": {
     "icon": "💡",
@@ -96,28 +125,55 @@
       "title": "Erronka zabalgarria",
       "session": "6–7. saioa",
       "challenges": [
-        { "stars": "★", "title": "Kontaketa", "text": "Zenbatu zenbat karga jaso dituen. Pantailan erakutsi." },
-        { "stars": "★", "title": "Mantentze modua", "text": "Botoia sakatzean garabia posizio estandarrean gelditu eta 'MANT' erakutsi" },
-        { "stars": "★★", "title": "Erroreen kudeaketa", "text": "Karga ez badago posizioaren ondoren 3 segundu, 'ERROREA' erakutsi eta posizio estandarrera itzuli" }
+        {
+          "stars": "★",
+          "title": "Kontaketa",
+          "text": "Zenbatu zenbat karga jaso dituen. Pantailan erakutsi."
+        },
+        {
+          "stars": "★",
+          "title": "Mantentze modua",
+          "text": "Botoia sakatzean garabia posizio estandarrean gelditu eta 'MANT' erakutsi"
+        },
+        {
+          "stars": "★★",
+          "title": "Erroreen kudeaketa",
+          "text": "Karga ez badago posizioaren ondoren 3 segundu, 'ERROREA' erakutsi eta posizio estandarrera itzuli"
+        }
       ]
     }
   ],
   "quiz": [
     {
       "question": "Garabiak 6 egoera ditu. Kamioiaren seinale bat jasotzen duenean, zein egoeratik abiatzen da?",
-      "options": ["Edozein egoeratik", "Beti egoera 0tik (ITXARONEAN)", "Azken egoeratik", "Egoera 3tik (JASOTZEN)"],
+      "options": [
+        "Edozein egoeratik",
+        "Beti egoera 0tik (ITXARONEAN)",
+        "Azken egoeratik",
+        "Egoera 3tik (JASOTZEN)"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Sistema beti posizio estandarretik (egoera 0) abiatzen da. Horrela ziurtatzen da garabia beti leku berean dagoela seinale bat jaso aurretik."
     },
     {
       "question": "Motor B-k ganxoa jaisten du baina karga ez du hartzen. Zein da arazorik ohikoena?",
-      "options": ["Motorra hautsita dago", "Gradu ez nahikoa — ganxoa ez da kargara iristen", "WHILE begiztа erabili behar da", "Egoera-aldagaia ez da eguneratzen"],
+      "options": [
+        "Motorra hautsita dago",
+        "Gradu ez nahikoa — ganxoa ez da kargara iristen",
+        "WHILE begiztа erabili behar da",
+        "Egoera-aldagaia ez da eguneratzen"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Graduak kalibrazio bidez zehaztu behar dira. Gehitu graduak apurka apurka ganxoa kargatik iristen den arte."
     },
     {
       "question": "Zergatik da garrantzitsua garabiak posizio estandarrera itzultzea sekuentzia bukaeran?",
-      "options": ["Estetikoa delako", "Hurrengo operazioa beti leku berean hasi dadin", "Motorra gehiegi berotzea saihesteko", "Programak hala eskatzen duelako"],
+      "options": [
+        "Estetikoa delako",
+        "Hurrengo operazioa beti leku berean hasi dadin",
+        "Motorra gehiegi berotzea saihesteko",
+        "Programak hala eskatzen duelako"
+      ],
       "correct": 1,
       "feedback": "Zuzena! Posizio estandarra abiapuntua da beti. Ez bada itzultzen, hurrengo sekuentzia posizio oker batetik hasiko da eta oztopoak edo akatsak sor daitezke."
     }
@@ -133,5 +189,49 @@
       "P2ko kamioiarekin integrazioa lortu duzu"
     ],
     "next": "Hurrengo blokea: P4 — Porto Adimenduna"
+  },
+  "delivery": {
+    "heading": "Zer entregatu behar da?",
+    "intro": "Proiektu honen entrega Microsoft Teams-en egingo da, irakasleak irekiko duen tarea bidez. Entregak txosten bat izan behar du Word formatuan (3-4 orrialde), egitura honekin:",
+    "sections": [
+      {
+        "num": "1",
+        "title": "Sarrera",
+        "content": "Zer eraiki duzu? Zergatik da erabilgarria sistema hau bizitza errealean? Nola erlazionatzen da portu industrial batekin? (Paragrafoa bat edo bi)"
+      },
+      {
+        "num": "2",
+        "title": "Diseinu-fasea",
+        "content": "Nola planifikatu duzu proiektua? Txertatu paperean egindako eskemak edo egoera-taularen argazkia. Azaldu zein erabaki hartu zenituen diseinuan eta zergatik."
+      },
+      {
+        "num": "3",
+        "title": "Eraikuntza",
+        "content": "Maquetaren argazkiak txertatu eta deskribatu. Zein zailtasun aurkitu zenituen eraikitzean eta nola konpondu zenituen?"
+      },
+      {
+        "num": "4",
+        "title": "Kodea eta erabakiak",
+        "content": "Nola funtzionatzen du programak? Azaldu bloke nagusiak (baldintzak, begiztak, azpiprogramak). Zergatik aukeratu zenituen soluzio hauek eta ez beste batzuk? Txertatu pantaila-kaptura bat edo bi kodearen zati garrantzitsuenak erakutsiz."
+      },
+      {
+        "num": "5",
+        "title": "Proba-taula",
+        "content": "Sortu taula bat Word-en proba sistematikoekin. Taula honek zutabe hauek izan behar ditu: Proba zenbakia | Zer probatu den | Espero zen emaitza | Benetako emaitza | Ondo/Gaizki"
+      },
+      {
+        "num": "6",
+        "title": "Ondorioak",
+        "content": "Zer ikasi duzu proiektu honekin? Zer aldatuko zenuke berriz hasiko bazina? Zer gehituko zenuke denbora gehiago izanez gero?"
+      }
+    ],
+    "format_tips": [
+      "3-4 orrialde (sarrera eta ondorioak barne)",
+      "Letra tamaina 11-12pt, lerro-tartea 1.15",
+      "Izenburua eta azpitituluak Word-eko estiloekin (Titulua 1, Titulua 2)",
+      "Argazkiak eta taulak oin-ohar batekin (adib: '1. irudia: Maquetaren argazkia')",
+      "Entrega: Microsoft Teams — irakasleak irekiko du tarea"
+    ],
+    "deadline": "Epea: irakasleak Teams-en zehaztuko du"
   }
 }
