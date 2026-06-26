@@ -256,7 +256,7 @@ body {
   margin-left: var(--sidebar-w);
   flex: 1;
   min-height: 100vh;
-  max-width: 900px;
+  max-width: 100%;
 }
 
 /* ── UNITS ───────────────────────────────────────────────────── */
