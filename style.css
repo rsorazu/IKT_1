@@ -256,7 +256,7 @@ body {
   margin-left: var(--sidebar-w);
   flex: 1;
   min-height: 100vh;
-  max-width: 100%;
+  max-width: 900px;
 }
 
 /* ── UNITS ───────────────────────────────────────────────────── */
@@ -1758,7 +1758,7 @@ code {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 20px 28px;
-  min-width: 180px;
+  min-width: 140px;
   text-align: center;
 }
 .metodo-icon { font-size: 1.8rem; }
@@ -1782,7 +1782,7 @@ code {
 /* Material cards */
 .material-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
 }
 .material-card-new {
@@ -1827,23 +1827,114 @@ code {
   .metodo-step { min-width: 110px; padding: 14px 16px; }
   .metodo-arrow { font-size: 1rem; }
 }
-/* ── SPIKE SHORTCUT ──────────────────────────────────────────── */
-.spike-shortcut {
-  position: absolute;
-  top: 20px;
-  right: 24px;
+
+/* ── ZERBAIT EZ DABIL ────────────────────────────────────────── */
+.help-protocol {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #FFD700;
-  border: 1px solid #E8C000;
-  border-radius: 10px;
-  padding: 7px 12px;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #1a1200;
-  transition: opacity 0.15s;
+  flex-direction: column;
+  gap: 0;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 28px;
 }
-.spike-shortcut:hover { opacity: 0.85; }
-.spike-shortcut-icon { font-size: 1.1rem; }
+.help-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.help-step:last-child { border-bottom: none; }
+.help-step-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--spike-blue);
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.help-step-body strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.help-step-body p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.help-problems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.help-problem {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.help-symptom {
+  background: color-mix(in srgb, #D4880A 8%, var(--bg3));
+  border-bottom: 1px solid color-mix(in srgb, #D4880A 20%, var(--border));
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.help-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.help-causes {
+  padding: 12px 16px;
+  border-right: 1px solid var(--border);
+}
+.help-causes strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.help-causes ul {
+  padding-left: 16px;
+  margin: 0;
+}
+.help-causes li {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.help-solution {
+  padding: 12px 16px;
+  background: color-mix(in srgb, #3A8C3A 5%, #FFFFFF);
+}
+.help-solution strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #3A8C3A;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.help-solution p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .help-detail { grid-template-columns: 1fr; }
+  .help-causes { border-right: none; border-bottom: 1px solid var(--border); }
+}
