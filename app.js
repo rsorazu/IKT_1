@@ -11,7 +11,7 @@ const DATA = {};
 
 // ── Load all JSON content ────────────────────────────────────────
 async function loadAllContent() {
-  const promises = ['site','glossary',...CONTENT_FILES].map(f =>
+  const promises = ['site','glossary',...CONTENT_FILES,'help_p1','help_p2','help_p3','help_p4'].map(f =>
     fetch(`content/${f}.json`)
       .then(r => r.json())
       .then(d => { DATA[f] = d; })
@@ -427,6 +427,7 @@ function renderProjectUnit(id) {
       ${d.proof_items ? '<button class="tab" data-tab="proves">Probak</button>' : ''}
       <button class="tab" data-tab="exercicis">Ariketak</button>
       ${DATA.site && DATA.site['delivery'+id.replace('p','')] ? '<button class="tab" data-tab="delivery">📋 Entrega</button>' : ''}
+      ${DATA['help_'+id] ? '<button class="tab" data-tab="help">🆘 Zerbait ez dabil?</button>' : ''}
     </div>
     <div class="tab-content active" data-content="context">
       <h2>${d.context_heading||d.title}</h2>
@@ -470,7 +471,19 @@ function renderProjectUnit(id) {
       <div class="delivery-deadline">
         <span>⏰</span> ${del.deadline}
       </div>
-    </div>` : ''; })()} 
+    </div>` : ''; })()}
+    ${(()=>{
+      const help = DATA['help_'+id];
+      if (!help) return '';
+      const stepsHTML = (help.protocol.steps||[]).map(s =>
+        '<div class="help-step"><div class="help-step-num">' + s.num + '</div><div class="help-step-body"><strong>' + s.title + '</strong><p>' + s.text + '</p></div></div>'
+      ).join('');
+      const problemsHTML = (help.problems||[]).map(p => {
+        const causesHTML = (p.causes||[]).map(c => '<li>' + c + '</li>').join('');
+        return '<div class="help-problem"><div class="help-symptom">⚠️ ' + p.symptom + '</div><div class="help-detail"><div class="help-causes"><strong>Zergatik?</strong><ul>' + causesHTML + '</ul></div><div class="help-solution"><strong>✓ Konponbidea</strong><p>' + p.solution + '</p></div></div></div>';
+      }).join('');
+      return '<div class="tab-content" data-content="help"><h2>' + help.protocol.heading + '</h2><p style="color:var(--text-muted);margin-bottom:20px">' + help.protocol.intro + '</p><div class="help-protocol">' + stepsHTML + '</div><h3 style="margin:28px 0 16px;font-size:1rem">Arazo ohikoak</h3><div class="help-problems">' + problemsHTML + '</div></div>';
+    })()}
   `;
 
   wireTabs(section);
@@ -798,7 +811,7 @@ function buildSortExercise(containerId, data) {
       <div class="quiz-q">${data.title}</div>
       <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px">Arrastatu urratsak orden egokian jartzeko:</p>
       <div class="algo-steps" id="${containerId}-list"></div>
-      <button class="ex-check-btn" id="${containerId}-btn">Egiaztatu ordena</button>
+      <button class="ex-check-btn" onclick="checkSort('${containerId}',${JSON.stringify(data.correct_order||data.correctOrder||[])})">Egiaztatu ordena</button>
       <div class="ex-result" id="${containerId}-result"></div>
     </div>`;
   const list = document.getElementById(`${containerId}-list`);
