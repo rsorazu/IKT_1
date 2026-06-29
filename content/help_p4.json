@@ -1,0 +1,63 @@
+{
+  "protocol": {
+    "heading": "Zerbait ez dabil?",
+    "intro": "Irakaslearengana joan aurretik, jarraitu urrats hauek:",
+    "steps": [
+      { "num": "1", "title": "Irakurri mezua", "text": "Hubak edo aplikazioak zer dio? Erroreren bat erakusten du?" },
+      { "num": "2", "title": "Isolatu arazoa", "text": "Kolorea detektatzea? Helmugara mugitzea? Bakoitza banaka probatu." },
+      { "num": "3", "title": "Sinplifikatu", "text": "Probatu lehenengo kolore bakarrarekin (gorria soilik). Ondo dabil? Gero gehitu bigarren kolorea." },
+      { "num": "4", "title": "Azaldu bikoteari", "text": "Esan ozenki zer kolore detektatu du eta zein zonara joan den. Zer espero zenuen?" },
+      { "num": "5", "title": "Bilatu web-ean", "text": "P3 eta P4 fitxak begiratu. P3ko sekuentzia-arazoak P4n ere aplika daitezke." }
+    ]
+  },
+  "problems": [
+    {
+      "symptom": "Garabiak kolore guztiak zona berdinera eramaten ditu",
+      "causes": [
+        "'helmuga' aldagaia ez da gordetzen kolore irakurri ondoren",
+        "Baldintza-katea oker egituratuta — bada/bestela bada beharrean bada/bada"
+      ],
+      "solution": "Egiaztatu egoera 1 (KOLOREA IRAKURTZEN) exekutatzen denean 'helmuga' aldagaiak balio zuzena hartzen duela. Gehitu 'helmuga erakutsi' pantailan diagnostikatzeko."
+    },
+    {
+      "symptom": "Kolore-sentsoreak kolore okerra irakurtzen du",
+      "causes": [
+        "Sentsorea karga gainean ez dago — altuera desegokian",
+        "Argi-baldintza aldatu da — gelan argi gehiago edo gutxiago",
+        "Edukiontziaren kolorea ez da nahikoa saturatua (kolore iluna, grisa...)"
+      ],
+      "solution": "Ireki sentsore-monitorearen eta egiaztatu zein balio irakurtzen duen kolore bakoitzerako. Berrkalibratu baldintzen atariak behar izanez gero."
+    },
+    {
+      "symptom": "Motor A ez doa helmuga egokira",
+      "causes": [
+        "Helmuga A, B eta C zonetarako gradu desberdinak ez daude ondo kalibratuta",
+        "'helmuga' aldagaiaren balioa ez dator bat baldintzan jarritakoarekin"
+      ],
+      "solution": "Kalibratu gradu bakoitza banaka: gorria → A zonara, urdina → B zonara, berdea → C zonara. Idatzi balio bakoitza."
+    },
+    {
+      "symptom": "Sistema osoa probatzean P1, P2 eta P4 ez daude koordinatuta",
+      "causes": [
+        "P2ko kamioiak LEDa pizten du baina P4k ez du detektatzen (distantzia-sentsorea posizioz kanpo)",
+        "P4k sekuentzia hasten du P2 oraindik mugitzen ari dela"
+      ],
+      "solution": "Egiaztatu P4ko distantzia-sentsorea P2ko kamioiaren LED-aren aurrean zuzenean dagoela. Gehitu itxarona P2k gelditu arte."
+    },
+    {
+      "symptom": "Kolore ezezagunarekin sistema blokeatuta geratzen da",
+      "causes": [
+        "Erroreen kudeaketa falta da — 'bestela' adar bat ez dago kolore ezezagunerako"
+      ],
+      "solution": "Gehitu 'bestela' adar bat: 'ERROREA' erakutsi pantailan eta itzuli posizio estandarrera."
+    },
+    {
+      "symptom": "Sekuentzia bigarren aldiz ez dabil lehenengo aldian bezain ondo",
+      "causes": [
+        "Posizio estandarrera ez da ondo itzuli — gradu pilaketa gertatu da",
+        "Antirebote falta da — kamioiak oraindik ere distantzia txikia erakusten du"
+      ],
+      "solution": "Gehitu itxarona sekuentzia bukatu ondoren. Ziurtatu motor guztiak posizio absolutura itzultzen direla, ez erlatiboa."
+    }
+  ]
+}

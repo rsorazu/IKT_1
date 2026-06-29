@@ -1,0 +1,64 @@
+{
+  "protocol": {
+    "heading": "Zerbait ez dabil?",
+    "intro": "Irakaslearengana joan aurretik, jarraitu urrats hauek:",
+    "steps": [
+      { "num": "1", "title": "Irakurri mezua", "text": "Hubak edo aplikazioak zer dio? Erroreren bat erakusten du?" },
+      { "num": "2", "title": "Isolatu arazoa", "text": "Zein egoeratan ez dabil? Probatu egoera bakoitza banaka: ITXARONEAN, HURBILTZEN, JAISTEN..." },
+      { "num": "3", "title": "Sinplifikatu", "text": "Probatu sekuentziako lehen bi egoerak soilik. Ondo dabiltza? Gero gehitu hurrengo egoera." },
+      { "num": "4", "title": "Azaldu bikoteari", "text": "Esan ozenki zer egoeratan dagoen eta zer egin beharko lukeen. Askotan azaltzen ari zarela konturatzen zara zergatik ez doan." },
+      { "num": "5", "title": "Bilatu web-ean", "text": "T3c fitxan gertaerak eta egoerak azaltzen dira. P3 egoera-taula ere begiratu." }
+    ]
+  },
+  "problems": [
+    {
+      "symptom": "Garabiak ez du kamioiaren seinale detektatzen",
+      "causes": [
+        "Distantzia-sentsorea C atakara konektatu gabe",
+        "Ataria oker ezarrita — kamioia 20 cm-ra dago baina ataria 10 cm-koa da",
+        "Kamioiak LEDa pizten du baina garabiak distantzia-sentsorea ez du begiztan"
+      ],
+      "solution": "Egiaztatu sentsoreak kamioia detektatzen duela sentsore-monitorearekin. Doitu ataria 15-25 cm artean."
+    },
+    {
+      "symptom": "Garabiak ez doa posizio estandarretik",
+      "causes": [
+        "Egoera-aldagaia ez da 0ra hasieratu programa hasi aurretik",
+        "Kamioiaren detekzio-baldintza ez dago begiztan"
+      ],
+      "solution": "Egiaztatu 'egoera 0ra ezarri' blokea sombreraren ondoren dagoela, begiztatik kanpo."
+    },
+    {
+      "symptom": "Ganxoa ez da kargara iristen",
+      "causes": [
+        "Motor B-ren graduak ez daude kalibratuak — ez da nahikoa jaisten",
+        "Kargaren posizioa aldatu da"
+      ],
+      "solution": "Kalibratu motor B-ren graduak apurka: hasi 90°-tik eta gehitu 10° jaitsi arte karga ukitzen duen arte."
+    },
+    {
+      "symptom": "Sekuentzia erdian gelditzen da",
+      "causes": [
+        "Egoera-aldagaia ez da eguneratzen egoera batetik bestera pasatzean",
+        "Motor bloke batek errorea sortu du (kable soltea, mugaraino iritsi)"
+      ],
+      "solution": "Egiaztatu egoera aldatzen duen blokea exekutatzen dela. Gehitu 'egoera erakutsi' bloke bat pantailan diagnostikatzeko."
+    },
+    {
+      "symptom": "Garabiak ez du posizio estandarrera itzultzen",
+      "causes": [
+        "Azken egoeraren ondoren (UZTEN) itzulera falta da",
+        "Motor A-ren itzulera-graduak oker daude"
+      ],
+      "solution": "Sekuentziaren bukaeran gehitu motor A-ren itzulera posizio estandarrera eta 'egoera 0ra ezarri'."
+    },
+    {
+      "symptom": "Sekuentzia berriro hasten da nahi gabe",
+      "causes": [
+        "Egoera 0ra itzuli ondoren kamioiaren sentsoreak oraindik distantzia txikia irakurtzen du",
+        "Antirebote falta da — itxarona sekuentzia bukaeran"
+      ],
+      "solution": "Gehitu 2-3 segundoko itxarona sekuentzia bukatu eta posizio estandarrera itzuli ondoren."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "protocol": {
+    "heading": "Zerbait ez dabil?",
+    "intro": "Irakaslearengana joan aurretik, jarraitu urrats hauek:",
+    "steps": [
+      { "num": "1", "title": "Irakurri mezua", "text": "Hubak edo aplikazioak zer dio? Erroreren bat erakusten du?" },
+      { "num": "2", "title": "Isolatu arazoa", "text": "Zer zati ez dabil? Mugimendua? Biraketa? Sentsorea? Bakoitza banaka probatu." },
+      { "num": "3", "title": "Sinplifikatu", "text": "Probatu FOR begiztarekin soilik lehenengo, gero WHILE gehitu. Ez ibili dena aldi berean probatzen." },
+      { "num": "4", "title": "Azaldu bikoteari", "text": "Esan ozenki zer gertatzen den. Askotan azaltzen ari zarela konturatzen zara zergatik ez doan." },
+      { "num": "5", "title": "Bilatu web-ean", "text": "T3b fitxan FOR eta WHILE azalpena dago. P2 faseak ere begiratu." }
+    ]
+  },
+  "problems": [
+    {
+      "symptom": "Robota ez doa zuzenean",
+      "causes": [
+        "Motor batek besteak baino indar gehiago du — gurpil batek gehiago biratzen du",
+        "Bi motorrak abiadura berean ez daude"
+      ],
+      "solution": "Doitu motore baten abiadura gutxitu arte biak berdin joaten diren arte. Probatu 90/90, 85/90, 80/90..."
+    },
+    {
+      "symptom": "Karratu forma ez da ixten — angeluak ez dira zuzenak",
+      "causes": [
+        "Biraketa-graduak ez daude kalibratuta",
+        "Azaleraren arabera gradu desberdinak behar ditu (alfombra vs. suelo liso)"
+      ],
+      "solution": "Hasi 90° eta doitu 5°ko saltoetan karratua ixten den arte. Beti azalera berdinean probatu."
+    },
+    {
+      "symptom": "Robotak ez du oztopoa hautematen",
+      "causes": [
+        "Distantzia-sentsorea C atakara konektatu gabe",
+        "Baldintzan cm-ko ataria oker ezarrita (adib: < 5 cm — oso txikia)",
+        "Sentsorea ez dago aurrerantz begira"
+      ],
+      "solution": "Ireki sentsore-monitorearen eta begiratu distantzia-balioa. Doitu ataria: < 20 cm normalean ondo dabil."
+    },
+    {
+      "symptom": "WHILE begizta ez da gelditzen",
+      "causes": [
+        "Baldintza oker idatzita — adibidez 'distantzia > 20' beharrean 'distantzia < 20'",
+        "Sentsoreak ez du behar bezala irakurtzen"
+      ],
+      "solution": "Egiaztatu baldintza: robotak aurrera joan behar du oztopo bat EGON ARTE, beraz 'distantzia > 20 cm ARTE errepikatu'."
+    },
+    {
+      "symptom": "Kolore-sentsoreak grua-zona ez du hautematen",
+      "causes": [
+        "Sentsorea lurretik altuera desegokian dago",
+        "Kartulina kolorearen izena ez dator bat programan jarritakoarekin",
+        "Sentsorea D atakara konektatu gabe"
+      ],
+      "solution": "Jarri sentsorea lurretik 1-2 cm-ra. Sentsore-monitorearekin egiaztatu zein kolore-izen irakurtzen duen kartulina gainean."
+    },
+    {
+      "symptom": "Robota FOR begiztan behin bakarrik mugitzen da",
+      "causes": [
+        "Motor blokeak FOR begiztatik KANPO daude"
+      ],
+      "solution": "Ziurtatu motor blokeak FOR begizta BARRUAN txertatuta daudela, ez ondoren."
+    }
+  ]
+}

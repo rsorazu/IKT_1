@@ -1,0 +1,56 @@
+{
+  "protocol": {
+    "heading": "Zerbait ez dabil?",
+    "intro": "Irakaslearengana joan aurretik, jarraitu urrats hauek:",
+    "steps": [
+      { "num": "1", "title": "Irakurri mezua", "text": "Hubak edo aplikazioak zer dio? Erroreren bat erakusten du?" },
+      { "num": "2", "title": "Isolatu arazoa", "text": "Zer zati ez dabil zehazki? Sentsorea? LEDa? Hesia? Bakoitza banaka probatu." },
+      { "num": "3", "title": "Sinplifikatu", "text": "Kendu bloke guztiak eta utzi soilik arazozkoa. Bloke bakarrak ondo dabil?" },
+      { "num": "4", "title": "Azaldu bikoteari", "text": "Esan ozenki zer gertatzen den. Askotan azaltzen ari zarela konturatzen zara zergatik ez doan." },
+      { "num": "5", "title": "Bilatu web-ean", "text": "T3a fitxan baldintzei buruzko azalpena dago. P1 faseak ere begiratu." }
+    ]
+  },
+  "problems": [
+    {
+      "symptom": "Sentsoreak beti kolore berdina irakurtzen du",
+      "causes": [
+        "Txartela ez dago sentsorearen aurrean zuzenean — jarri sentsorearen aurrean cm gutxira",
+        "Argi gehiegi edo gutxiegi gelan — probatu argi desberdinetan",
+        "Konparazioan jarritako kolore-izena ez dator bat sentsorearen balioaren zehaztasunarekin"
+      ],
+      "solution": "Ireki aplikazioko sentsore-monitorearen eta begiratu zein kolore-izen zehatz irakurtzen duen. Baldintzan izen hori bera jarri."
+    },
+    {
+      "symptom": "Programa koloreari ez dio erreakzionatzen",
+      "causes": [
+        "'Betirako errepikatu' begizta falta da — programa behin bakarrik exekutatzen da eta gelditzen da",
+        "Baldintza begiztatik KANPO dago — soilik behin egiaztatzen da"
+      ],
+      "solution": "Ziurtatu baldintza blokea 'betirako errepikatu' begizta BARRUAN dagoela."
+    },
+    {
+      "symptom": "Hesia ez da mugitzen",
+      "causes": [
+        "Motorra B atakara konektatu gabe edo kable soltea",
+        "Motor-blokean ataka okerra jarrita (A jarri beharrean B)"
+      ],
+      "solution": "Egiaztatu kablea klik egiten duela. Aplikazioko motor-monitorearekin probatu motorra zuzenean."
+    },
+    {
+      "symptom": "Zenbatzaileak ez du igotzen",
+      "causes": [
+        "Aldagaiaren hasieraketa begizta BARRUAN dago — berrabiarazten da iterazio bakoitzean",
+        "Zenbatzaile blokea baldintzetik KANPO dago"
+      ],
+      "solution": "Mugitu 'zenbatzailea 0ra ezarri' blokea begiztatik kanpora, sombreraren ondoren."
+    },
+    {
+      "symptom": "LEDa ez da aldatzen",
+      "causes": [
+        "LED kolore blokea baldintza barruan ez dago",
+        "Baldintza-katea ez da ondo egituratuta (bada/bestela bada/bestela)"
+      ],
+      "solution": "Egiaztatu LED blokea baldintza bloke barruan txertatuta dagoela, kanpoan ez."
+    }
+  ]
+}
