@@ -62,27 +62,27 @@
     "items": [
       {
         "id": "1",
-        "text": "Hartu bi ogi xerra"
+        "text": "Sua piztu"
       },
       {
         "id": "2",
-        "text": "Ireki esnekiaren ontzia"
+        "text": "Zartagina sutan jarri"
       },
       {
         "id": "3",
-        "text": "Hartu labana bat"
+        "text": "Olioa zartaginean bota"
       },
       {
         "id": "4",
-        "text": "Zabaldu esnekia lehen xerran"
+        "text": "Arrautza zartaginean hautsi"
       },
       {
         "id": "5",
-        "text": "Jarri bigarren xerra gainean"
+        "text": "Zuriongoa zuri egon arte itxaron"
       },
       {
         "id": "6",
-        "text": "Moztu erdian"
+        "text": "Sua itzali eta arrautza platerera atera"
       }
     ],
     "correct_order": [
